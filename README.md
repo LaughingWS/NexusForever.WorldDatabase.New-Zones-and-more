@@ -1,32 +1,36 @@
-## NexusForever World Database
-
-### Information
-This repository contains the *optional* world data for NexusForever, while the schema for the world database is included in the main repository the actual data resides here.  
-
-For entity information the data is split by continent, zone and finally by creature.  
-The example below is taken from the `Alizar/Celestion.sql` SQL file and is for the creature `Hunter Zynanna`.
-``` SQL
--- --------------------------------------
--- Hunter Zynanna
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 47427, @WORLD, 301, 1991.417, -912.8641, -1900.929, 0, 0, 0, 27858, 9210, 171, 171);
-INSERT INTO `entity_spline` (`Id`, `SplineId`, `Mode`, `Speed`, `FX`, `FY`, `FZ`) VALUES
-    (@GUID+1, 14461, 1, 3, 0, 0, 0);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-    (@GUID+1, 0, 2372),
-    (@GUID+1, 10, 8),
-    (@GUID+1, 15, 0),
-    (@GUID+1, 20, 0),
-    (@GUID+1, 21, 0),
-    (@GUID+1, 22, 0);
-```
-
-The initial files in the repository were created with a custom tool that ingested sniffs taken while retail was still live, this gives a good starting point but a lot of manual work is required to tweak and make fixes.  
-
-Each file is considered a dump, all changes reside in the same file and should be able reapplied when changes occur.
-
-### Installation
-Unlike the content found in the auth and character databases, data in the world database is not created automatically via a database migration and needs to be applied manually.  
-Run all of the SQL files found in this repository on your world database, each file is independant from one another, you can install as many or as little as you would like.
+Welcome to my custom Database! I am still working on this file.
+#1  Thayd: I have removed all the events from here (I hope)
+#2  Whitevale: I removed Winterfest from here
+#3  Thayd Shade's eve: Shade's eve is in Thayd
+#4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed.
+#5  Datascape: almost done with this
+#6  Initialization Core Y-83: Just starting out with this
+#7  UP20 maybe UPG raid: i think this is the new raid that was never finished
+#8  Protopia: Maybe a new zone, a lot of work needed
+#9  PEIsland: Maybe a test zone or a new zone. I need to add a lot more things to this file, about 100 more things
+#10 Eternity Islands: Said to be a new zone, a lot of work is needed
+#11 Murkmire: new zone coming 'soon'
+#12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client.
+#13 Halon Ring: Long way to go.
+#14 Dreadmoor: long way to go.
+#15 Coralus: I don't have the map yet...
+#16 Algoroc Neighborhood: IDK what this is
+#17 Crowe's Nest: unknown zone
+#18 Designer Island: maybe test zone
+#19 Ikthian Island: unknown
+#20 Initiate Island: unknown
+#21 Lopp Party Island: unknown
+#22 Neighborhood: next level housing?
+#23 Randyland: test zone?
+#24 Resolution Point: unknown
+#25 The Smallholds: unknown
+#26 Valis: unknown
+#27 Whispering crag fields: unknown
+#28 AI Test World: test zone
+#29 Berke Test World: test zone
+#30 Pellicane test world: test zone
+#31 Public Quest Island: test zone
+#32 Quest Test Island: test zone
+#33 coming soon: Looks like a new Dungeon
+#34 coming soon: Looks like a new Dungeon
+#35 Coming soon: Looks like a new Adventure
