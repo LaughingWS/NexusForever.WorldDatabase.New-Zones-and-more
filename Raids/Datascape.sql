@@ -1,7 +1,7 @@
 -- ----------------------------------------
 -- Datascape raid made by hand by Laughing
 -- ---------------------------------------------------------------------------------------------------------------------------------------
--- Todo: Find skin for Intrusion Detection Handler, Maelstrom, Gloomclaw, and some minis + Trash from Fire, Water, Earth, and Escher Room
+-- Todo: Find skin for Intrusion Detection Handler, Gloomclaw, and some minis + Trash from Fire, Water, Earth, and Escher Room
 -- PublicEvents things need to be added. Not in SQL
 -- Need to fix up X, Y, Z, RX for all. 
 -- Get real HP (and shields if any) The HP and shield are just place holders, not 100% real
