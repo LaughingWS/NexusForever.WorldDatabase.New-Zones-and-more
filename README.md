@@ -12,11 +12,11 @@ Welcome to my custom Database! I am still working on this file.
 #11 Murkmire: new zone. 25% completed                                                                        
 #12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 99% completed         
 #13 Halon Ring: 0.5% completed                                                               
-#14 Dreadmoor: 1% completed
-#15 Coralus: 1% completed
-#16 Algoroc Neighborhood: 100% completed???
-#17 Crowe's Nest: unknown zone. 100% completed
-#18 Designer Island: maybe test zone. 100% completed
+#14 Dreadmoor: 1% completed                                                                   
+#15 Coralus: 1% completed                                                                       
+#16 Algoroc Neighborhood: 100% completed???                                                        
+#17 Crowe's Nest: unknown zone. 100% completed                                                        
+#18 Designer Island: maybe test zone. 100% completed                                                          
 #19 Ikthian Island: unknown 99% completed
 #20 Initiate Island: unknown 99% completed
 #21 Lopp Party Island: unknown 99% completed
