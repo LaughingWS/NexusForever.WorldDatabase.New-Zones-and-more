@@ -3,15 +3,15 @@ Welcome to my custom Database! I am still working on this file.
 #2  Whitevale: I removed Winterfest from here 100% completed                                              
 #3  Thayd Shade's eve: Shade's eve is in Thayd 100% completed?                                                  
 #4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed. 40% completed                        
-#5  Datascape: 60% completed
-#6  Initialization Core Y-83: 10% completed
-#7  UP20 maybe UPG raid: 99% completed
-#8  Protopia: Maybe a new zone. 3.5% completed
-#9  PEIsland: Maybe a test zone or a new zone. 35% completed
-#10 Eternity Islands: Said to be a new zone. 2% completed
-#11 Murkmire: new zone. 25% completed
-#12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 99% completed
-#13 Halon Ring: 0.5% completed
+#5  Datascape: 60% completed                                                                             
+#6  Initialization Core Y-83: 10% completed                                                              
+#7  UP20 maybe UPG raid: 99% completed                                                                  
+#8  Protopia: Maybe a new zone. 3.5% completed                                                              
+#9  PEIsland: Maybe a test zone or a new zone. 35% completed                                                 
+#10 Eternity Islands: Said to be a new zone. 2% completed                                                
+#11 Murkmire: new zone. 25% completed                                                                        
+#12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 99% completed         
+#13 Halon Ring: 0.5% completed                                                               
 #14 Dreadmoor: 1% completed
 #15 Coralus: 1% completed
 #16 Algoroc Neighborhood: 100% completed???
