@@ -1,36 +1,38 @@
 Welcome to my custom Database! I am still working on this file. I listed them in rows and this is what i get.
-#1  Thayd: I have removed all the events from here (I hope)
-#2  Whitevale: I removed Winterfest from here
-#3  Thayd Shade's eve: Shade's eve is in Thayd
-#4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed.
-#5  Datascape: almost done with this
-#6  Initialization Core Y-83: Just starting out with this
-#7  UP20 maybe UPG raid: i think this is the new raid that was never finished
-#8  Protopia: Maybe a new zone, a lot of work needed
-#9  PEIsland: Maybe a test zone or a new zone. I need to add a lot more things to this file, about 100 more things
-#10 Eternity Islands: Said to be a new zone, a lot of work is needed
-#11 Murkmire: new zone coming 'soon'
-#12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client.
-#13 Halon Ring: Long way to go.
-#14 Dreadmoor: long way to go.
-#15 Coralus: I don't have the map yet...
-#16 Algoroc Neighborhood: IDK what this is
-#17 Crowe's Nest: unknown zone
-#18 Designer Island: maybe test zone
-#19 Ikthian Island: unknown
-#20 Initiate Island: unknown
-#21 Lopp Party Island: unknown
-#22 Neighborhood: next level housing?
-#23 Randyland: test zone?
-#24 Resolution Point: unknown
-#25 The Smallholds: unknown
-#26 Valis: unknown
-#27 Whispering crag fields: unknown
-#28 AI Test World: test zone
-#29 Berke Test World: test zone
-#30 Pellicane test world: test zone
-#31 Public Quest Island: test zone
-#32 Quest Test Island: test zone
-#33 coming soon: Looks like a new Dungeon
-#34 coming soon: Looks like a new Dungeon
-#35 Coming soon: Looks like a new Adventure
+#1  Thayd: I have removed all the events from here (I hope) 100% completed
+#2  Whitevale: I removed Winterfest from here 100% completed
+#3  Thayd Shade's eve: Shade's eve is in Thayd 100% completed?
+#4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed. 40% completed
+#5  Datascape: 60% completed
+#6  Initialization Core Y-83: 10% completed
+#7  UP20 maybe UPG raid: 99% completed
+#8  Protopia: Maybe a new zone. 3.5% completed
+#9  PEIsland: Maybe a test zone or a new zone. 35% completed
+#10 Eternity Islands: Said to be a new zone. 2% completed
+#11 Murkmire: new zone. 25% completed
+#12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 99% completed
+#13 Halon Ring: 0.5% completed
+#14 Dreadmoor: 1% completed
+#15 Coralus: 1% completed
+#16 Algoroc Neighborhood: 100% completed???
+#17 Crowe's Nest: unknown zone. 100% completed
+#18 Designer Island: maybe test zone. 100% completed
+#19 Ikthian Island: unknown 99% completed
+#20 Initiate Island: unknown 99% completed
+#21 Lopp Party Island: unknown 99% completed
+#22 Neighborhood: next level housing? 99% completed
+#23 Randyland: test zone? 99.9% completed
+#24 Resolution Point: unknown 99% completed
+#25 The Smallholds: unknown 99% completed
+#26 Valis: unknown. 99% completed
+#27 Whispering crag fields: unknown 99% completed 
+#28 AI Test World: test zone. 99% completed
+#29 Berke Test World: test zone 99% completed
+#30 Pellicane test world: test zone 99% completed
+#31 Public Quest Island: test zone 99% completed
+#32 Quest Test Island: test zone 99% completed
+#33 Celestion: removed Shades eve 100% completed
+#34 Deradune:Removed HB event 100% completed
+#35 coming soon: Looks like a new Dungeon
+#36 coming soon: Looks like a new Dungeon
+#37 Coming soon: Looks like a new Adventure
