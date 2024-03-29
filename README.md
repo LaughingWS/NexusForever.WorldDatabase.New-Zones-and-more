@@ -1,8 +1,8 @@
 Welcome to my custom Database! I am still working on this file.                                                   
 #1  Thayd: I have removed all the events from here (I hope) 100% completed             
 #2  Whitevale: I removed Winterfest from here 100% completed                                              
-#3  Thayd Shade's eve: Shade's eve is in Thayd 100% completed?
-#4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed. 40% completed
+#3  Thayd Shade's eve: Shade's eve is in Thayd 100% completed?                                                  
+#4  Thayd Winterfest: This is what winterfest was in Thayd file before, this is not a full event and more work is needed. 40% completed                        
 #5  Datascape: 60% completed
 #6  Initialization Core Y-83: 10% completed
 #7  UP20 maybe UPG raid: 99% completed
