@@ -1,4 +1,4 @@
-Welcome to my custom Database! I am still working on this file. I listed them in rows and this is what i get.
+Welcome to my custom Database! I am still working on this file.
 #1  Thayd: I have removed all the events from here (I hope) 100% completed
 #2  Whitevale: I removed Winterfest from here 100% completed
 #3  Thayd Shade's eve: Shade's eve is in Thayd 100% completed?
