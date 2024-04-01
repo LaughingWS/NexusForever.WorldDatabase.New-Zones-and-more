@@ -26,13 +26,13 @@ Welcome to my custom Database! I am still working on this file.
 #25 The Smallholds: unknown 99% completed                                                          
 #26 Valis: unknown. 99% completed                                                                 
 #27 Whispering crag fields: unknown 99% completed                                                  
-#28 AI Test World: test zone. 99% completed
-#29 Berke Test World: test zone 99% completed
-#30 Pellicane test world: test zone 99% completed
-#31 Public Quest Island: test zone 99% completed
-#32 Quest Test Island: test zone 99% completed
-#33 Celestion: removed Shades eve 100% completed
-#34 Deradune:Removed HB event 100% completed
-#35 coming soon: Looks like a new Dungeon
-#36 coming soon: Looks like a new Dungeon
-#37 Coming soon: Looks like a new Adventure
+#28 AI Test World: test zone. 99% completed                                                       
+#29 Berke Test World: test zone 99% completed                                                        
+#30 Pellicane test world: test zone 99% completed                                                  
+#31 Public Quest Island: test zone 99% completed                                                     
+#32 Quest Test Island: test zone 99% completed                                                    
+#33 Celestion: removed Shades eve 100% completed                                                         
+#34 Deradune:Removed HB event 100% completed                                                
+#35 coming soon: Looks like a new Dungeon                                                       
+#36 coming soon: Looks like a new Dungeon                                                       
+#37 Coming soon: Looks like a new Adventure                                                     
