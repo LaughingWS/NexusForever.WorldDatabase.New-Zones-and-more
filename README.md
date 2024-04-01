@@ -17,15 +17,15 @@ Welcome to my custom Database! I am still working on this file.
 #16 Algoroc Neighborhood: 100% completed???                                                        
 #17 Crowe's Nest: unknown zone. 100% completed                                                        
 #18 Designer Island: maybe test zone. 100% completed                                                          
-#19 Ikthian Island: unknown 99% completed
-#20 Initiate Island: unknown 99% completed
-#21 Lopp Party Island: unknown 99% completed
-#22 Neighborhood: next level housing? 99% completed
-#23 Randyland: test zone? 99.9% completed
-#24 Resolution Point: unknown 99% completed
-#25 The Smallholds: unknown 99% completed
-#26 Valis: unknown. 99% completed
-#27 Whispering crag fields: unknown 99% completed 
+#19 Ikthian Island: unknown 99% completed                                                               
+#20 Initiate Island: unknown 99% completed                                                                   
+#21 Lopp Party Island: unknown 99% completed                                                              
+#22 Neighborhood: next level housing? 99% completed                                                   
+#23 Randyland: test zone? 99.9% completed                                                              
+#24 Resolution Point: unknown 99% completed                                                           
+#25 The Smallholds: unknown 99% completed                                                          
+#26 Valis: unknown. 99% completed                                                                 
+#27 Whispering crag fields: unknown 99% completed                                                  
 #28 AI Test World: test zone. 99% completed
 #29 Berke Test World: test zone 99% completed
 #30 Pellicane test world: test zone 99% completed
