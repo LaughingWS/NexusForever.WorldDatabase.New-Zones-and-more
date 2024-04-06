@@ -827,9 +827,9 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0,  1),
 (@GUID+1, 10, 50),
 (@GUID+1, 20,  1);
--- --------------------------------- --
---miniboss Augmented Herald of Avatus?
--- --------------------------------- --
+-- --------------------------------- ---
+-- miniboss Augmented Herald of Avatus?
+-- --------------------------------- ---
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`,  `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0,   48374, @WORLD, 2371,      1,             1,            1,        1,       0, 0, 1,     1071, 1071);
