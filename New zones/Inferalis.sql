@@ -1,8 +1,9 @@
--------------------------------------------
--- Inferalis Zone Made by hand by Laughing
--- --------------------------------------------------------------
--- TODO : Get world ID, area ID, DisplayInfo. Place X, Y, Z, RX.
--- --------------------------------------------------------------
+-- --------------------------------------
+-- Inferalis Zone
+-- Made by hand by Laughing
+-- -------------------------------------------------
+-- TODO : Get world ID, area ID & Place X, Y, Z, RX
+-- -------------------------------------------------
 SET @WORLD = 0;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (0);
 -- --------------------------------------
@@ -10,7 +11,7 @@ DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (0);
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 8, 25533, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 219, 219);
+(@GUID+1, 8, 25533, @WORLD, 0, 0, 0, 0, 0, 0, 25384, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
 -- --------------------------------------
@@ -18,7 +19,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 8, 25534, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 219, 219);
+(@GUID+1, 8, 25534, @WORLD, 0, 0, 0, 0, 0, 0, 25384, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
 -- --------------------------------------
@@ -26,6 +27,6 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 8, 25535, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 219, 219);
+(@GUID+1, 8, 25535, @WORLD, 0, 0, 0, 0, 0, 0, 25384, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
