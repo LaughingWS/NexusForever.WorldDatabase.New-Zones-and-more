@@ -1,9 +1,11 @@
 -- --------------------------------------
--- Northern Wilds Zone Dump
--- --------------------------------------
+-- Northern Wilds Zone
+-- Edited by Laughing
+-- -------------------------------------- ---
+-- TODO: Fix RY for flares + add more things
+-- -------------------------------------- ---
 SET @WORLD = 426;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (35, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 609, 618, 645, 646, 647, 648, 649, 650, 651, 722, 728, 729, 852, 853, 949, 1112, 2438, 4354, 4355, 4356, 4357, 4358, 4359, 4360, 4361);
-
 -- --------------------------------------
 -- 
 -- --------------------------------------
@@ -173,14 +175,21 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 11063, @WORLD, 596, 4185.583, -722.6909, -5695.496, 3.005061, 0, 0, 26124, 9064, 171, 171);
+    (@GUID+1, 0, 11063, @WORLD, 596, 4185.583, -722.6909, -5695.496, 3.005061, 0, 0, 26124, 9064, 171, 171),
+    (@GUID+2, 0, 11063, @WORLD, 595, 4341.92,  -751.769,  -5682.94,  1.83237,  0, 0, 26124, 9064, 171, 171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 9.897122E+07),
     (@GUID+1, 10, 50),
     (@GUID+1, 15, 0),
     (@GUID+1, 20, 8.497122E+07),
     (@GUID+1, 21, 18),
-    (@GUID+1, 22, 0);
+    (@GUID+1, 22, 0),
+    (@GUID+2, 0, 9.897122E+07),
+    (@GUID+2, 10, 50),
+    (@GUID+2, 15, 0),
+    (@GUID+2, 20, 8.497122E+07),
+    (@GUID+2, 21, 18),
+    (@GUID+2, 22, 0);
 -- --------------------------------------
 -- Commander Durek
 -- --------------------------------------
@@ -2038,6 +2047,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+2, 21, 0),
     (@GUID+2, 22, 0);
 -- --------------------------------------
+-- Scientist Lusk
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 0, 12484, @WORLD, 604, 4800.96, -710.371, -5651.72, 0.414, 0, 0, 27273, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0,  1360),
+    (@GUID+1, 10,    6);
+-- --------------------------------------
 -- HOLDOUT: Conquer the Yeti
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -2252,6 +2270,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+11, 20, 0),
     (@GUID+11, 21, 0),
     (@GUID+11, 22, 0);
+-- --------------------------------------
+-- Signal Flare 1
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 10, 12521, @WORLD, 595, 4388.27, -744.866, -5637.15, 2.60117, 0, 0, 23093, 219, 219);
 -- --------------------------------------
 -- Dominion Blasterbot
 -- --------------------------------------
@@ -2485,6 +2509,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 10, 12677, @WORLD, 597, 4539.04, -732.0856, -5724.045, -3.141593, 0, 0, 26026, 8979, 171, 171);
+-- --------------------------------------
+-- Bartol Sunward
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 0, 12737, @WORLD, 595, 4355.85, -750.466, -5681.75, -1.60201, 0, 0, 26018, 9063, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 73);
 -- --------------------------------------
 -- Xenobite Egg
 -- --------------------------------------
@@ -2746,6 +2778,19 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 10, 12946, @WORLD, 949, 4450.798, -728.0698, -5524.522, -1.700473, 0, 0, 22938, 0, 219, 219);
+-- --------------------------------------
+-- Deadeye Brightland
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 0, 12959, @WORLD, 597, 4486.94, -725.526, -5394.19, 2.96754, 0, 0, 26124, 9064, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 9.897122E+07),
+    (@GUID+1, 10, 50),
+    (@GUID+1, 15, 0),
+    (@GUID+1, 20, 8.497122E+07),
+    (@GUID+1, 21, 18),
+    (@GUID+1, 22, 0);
 -- --------------------------------------
 -- Hidden Path
 -- --------------------------------------
@@ -3223,6 +3268,18 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+5, 20, 0),
     (@GUID+5, 21, 0),
     (@GUID+5, 22, 0);
+-- --------------------------------------
+-- Signal Flare 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 10, 13150, @WORLD, 595, 4367.88, -743.842, -5639.73, 1, 0, 0, 23093, 219, 219);
+-- --------------------------------------
+-- Signal Flare 3
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 10, 13151, @WORLD, 595, 4347.38, -744.708, -5637.11, 1, 0, 0, 23093, 219, 219);
 -- --------------------------------------
 -- 
 -- --------------------------------------
