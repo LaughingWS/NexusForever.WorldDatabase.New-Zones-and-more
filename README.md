@@ -6,9 +6,9 @@ Welcome to my custom Database! I will do updates every month.
 #5  Datascape: 82% completed                                                                             
 #6  Initialization Core Y-83: 10% completed                                                              
 #7  Ultimate Protogames Raid: 100%* completed                                                                  
-#8  Protopia: Maybe a new zone. 100%* completed                                                              
+#8  Protopia: Maybe a new zone. 90% completed                                                              
 #9  PEIsland: Maybe a test zone or a new zone. 100%* completed                                                 
-#10 Eternity Islands: Said to be a new zone. 100%* completed                                                
+#10 Eternity Islands: Said to be a new zone. 90% completed                                                
 #11 Murkmire: new zone. 26% completed                                                                        
 #12 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 100%* completed         
 #13 Halon Ring: 0.5% completed                                                               
