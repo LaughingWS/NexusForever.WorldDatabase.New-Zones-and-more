@@ -38,7 +38,7 @@ Welcome to my custom Database! I will do updates every month.
 #37 Deradune: xPrix event 100% completed                                                                                                                
 #38 Illium: Added Dungeon Chase Event 100% completed                                                                                           
 #39 Illium: xPrix Event 100% completed                                                                                                                 
-#40 serrasar: zone that was never added 100%* completed
+#40 serrasar: zone that was never added 100%* completed                                                                                
 #41 Thayd: This has a portal to Halon Ring, it is in the place that Carbon wanted it in.                                                                                                                                                               
 #42 coming soon: Looks like a new Dungeon                                                       
 #43 coming soon: Looks like a new Dungeon                                                       
