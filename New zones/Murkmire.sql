@@ -2,112 +2,130 @@
 --  Murkmire Zone 
 --  Made by hand by Laughing
 -- -----------------------------------------------------------------------------------------------
--- TODO : Get Area IDs, DisplayInfo, OutfitInfo, Factions, QuestChecklistIdx?. Place X, Y, Z, RX
+-- TODO : Get area IDs, DisplayInfo, OutfitInfo, Factions, QuestChecklistIdx?. Place X, Y, Z, RX
 -- ----------------------------------------------------------------------------------------------
 SET @WORLD = 51;
-DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (947);
+DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (0, 859, 860, 861, 862, 864, 870, 947, 951, 952, 953, 954, 955, 956, 958, 959, 963, 2245, 2246, 2247, 2248, 2249, 2250, 2251, 2253, 2358, 2359, 3030, 4192);
+-- --------------------------------------
+-- Q8192 Sign of Dodger object #2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 2, @WORLD, 2247, 721.915, -968.518, 2542.749, 0, 0, 0, 23177, 0, 219, 219, 1);
+-- --------------------------------------
+-- Q8199 Sign of Pylo object #2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 3, @WORLD, 2249, 1260.774, -965.694, 1535.149, 0, 0, 0, 21374, 0, 219, 219, 1);
+-- --------------------------------------
+-- TSCooking Workbench??????
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 4990, @WORLD, 862, 3331.953, -917.215, 3112.438, 0, 0, 0, 21959, 0, 0, 0, 1);
 -- --------------------------------------
 -- (Invis) Corpse Pile - Whispering Thicket - Corpse Burnign Vignette
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 14737, @WORLD, 947, 2648.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
+(@GUID+1, 0, 14737, @WORLD, 947, 2648.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 219, 219, 0);
 -- --------------------------------------
 -- Silkfang Defiler - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15709, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 537, 537, 0);
+(@GUID+1, 0, 15709, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 537, 537, 0);
 -- --------------------------------------
 -- Silkfang Brute - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15710, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 537, 537, 0);
+(@GUID+1, 0, 15710, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 537, 537, 0);
 -- --------------------------------------
 -- Silkfang Bleeder - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15711, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 537, 537, 0);
+(@GUID+1, 0, 15711, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 537, 537, 0);
 -- --------------------------------------
 -- Silkfang Weaver - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15712, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 537, 537, 0);
+(@GUID+1, 0, 15712, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 537, 537, 0);
 -- --------------------------------------
 -- Silkfang Flayer - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15713, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 537, 537, 0);
+(@GUID+1, 0, 15713, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 537, 537, 0);
 -- --------------------------------------
 -- Oakwraith Branchbuster - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15714, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15714, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Oakwraith Rootbreaker - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15715, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15715, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Oakwraith Woodrotter - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15716, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15716, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Oakwraith Logchomper - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15717, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15717, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Oakwraith Wretch - Cluster Creaturen
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15718, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15718, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Oakwraith Flayer - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15719, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
+(@GUID+1, 0, 15719, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 501, 501, 0);
 -- --------------------------------------
 -- Ghostlight Bounder - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15720, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
+(@GUID+1, 0, 15720, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 306, 306, 0);
 -- --------------------------------------
 -- Ghostlight Blazer - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15721, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
+(@GUID+1, 0, 15721, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 306, 306, 0);
 -- --------------------------------------
 -- Ghostlight Gleamer - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15722, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
+(@GUID+1, 0, 15722, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 306, 306, 0);
 -- --------------------------------------
 -- Ghostlight Roamer - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15723, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
+(@GUID+1, 0, 15723, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 306, 306, 0);
 -- --------------------------------------
 -- Summoned Guardian - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15724, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
+(@GUID+1, 0, 15724, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 306, 306, 0);
 -- --------------------------------------
 -- Ravenous Slayer Champion - Solo Creature
 -- --------------------------------------
@@ -197,145 +215,167 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15743, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15743, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Punisher - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15744, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15744, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Charger - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15745, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15745, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Ravener - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15746, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15746, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Packleader - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15747, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15747, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Striker - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15748, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15748, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Rusher - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15749, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15749, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Warhowler - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15750, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
+(@GUID+1, 0, 15750, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 493, 493, 0);
 -- --------------------------------------
 -- Deadfeather Rotbeak - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15751, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 198, 198, 0);
+(@GUID+1, 0, 15751, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 198, 198, 0);
 -- --------------------------------------
 -- Deadfeather Bonechewer - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15752, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 198, 198, 0);
+(@GUID+1, 0, 15752, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 198, 198, 0);
 -- --------------------------------------
 -- Deadfeather Buzzard - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15753, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 198, 198, 0);
+(@GUID+1, 0, 15753, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 198, 198, 0);
 -- --------------------------------------
 -- Deadfeather Striker - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15754, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 198, 198, 0);
+(@GUID+1, 0, 15754, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 198, 198, 0);
 -- --------------------------------------
 -- Deadfeather Raptor - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 15755, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 198, 198, 0);
+(@GUID+1, 0, 15755, @WORLD, 947, 2640.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 198, 198, 0);
 -- --------------------------------------
 -- Lobomir Bogda 1 Quest Giver - Murkmire Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15781, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Milos Zlatkosa 1 - Quest Giver - Whispering Thicket (Kel Venoth)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15782, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Sanya Deslava 1 - Quest Giver - Whispering Thicket (Kel Venoth)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15783, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- ludmila davorka 1 - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15784, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Vid Milandre 1 - Quest Giver - Whispering Thicket (Kel Venoth)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15785, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Anika Bohumila - Rescued 1 - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15786, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Vaclaw Branium - Rescued 2 - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15787, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Haig the Trapper 1 - Shadow Village Emissary - Quest Giver - Whispering Thicket (Kel Venoth)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15788, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Roman Tomasz - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15789, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Zardeth Ramognesi 1 - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15790, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Placeholder the Woodborough Quest NPC - Quest Giver - Woodborough
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15791, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 379, 379, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Shambling Expedition Member (Male) - q4371
 -- --------------------------------------
@@ -354,12 +394,16 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15795, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Sanya Deslava 2 - Quest Giver - Whispering Thicket (Survey Camp 4)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15796, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Fevered Soldier - Cluster Creature - q4371
 -- --------------------------------------
@@ -383,7 +427,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 15862, @WORLD, 947, 2650.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
+(@GUID+1, 10, 15862, @WORLD, 947, 2650.7, -909.461, 3729.92, 0, 0, 0, 23187, 0, 219, 219, 0);
 -- --------------------------------------
 -- Kel Venoth Defender - Solo Creature - Q4348
 -- --------------------------------------
@@ -498,6 +542,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 15890, @WORLD, 947, 2645.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- q4373 - Sergeant Trogdan - Tract 1 - Episode 4
 -- --------------------------------------
@@ -660,6 +706,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16064, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Vid Milandre 4 - Spawned Combat ONLY - Q4365 Tract 1 Ep 2 - KLW
 -- --------------------------------------
@@ -738,6 +786,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16094, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Crate of Vitalus Serum - Whispering Thicket - Q4357 - Collect Object
 -- --------------------------------------
@@ -877,6 +927,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16239, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
+-- Haig the trapper 7 - Shadow Village Emissary - Q4349 Escort
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16245, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+-- --------------------------------------
 -- Silkfang Hatchling - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -972,42 +1028,56 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16342, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Svetlana Zelharina - Kel Venoth Consumables - Vendor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16344, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Ada Zelharina - Kel Venoth Heavy Armor - Vendor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16347, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Quartermaster Vitomir 1 - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16348, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Demyan Zelharina - Kel Venoth Weapons - Vendor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16349, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Emil Zelharina - Kel Venoth Light Armor - Vendor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16350, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Kazimir Zelharina - Kel Venoth Rep - Vendor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16351, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Ravenous Corpse - Whispering Thicket - Phase 0
 -- --------------------------------------
@@ -1025,223 +1095,239 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16361, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16361, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
 -- --------------------------------------
 -- Bilanka Noviklav - Q4463 - Quest Giver - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16362, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16362, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Miniature Drillbot - q4469 - Explorer
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16370, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16370, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Crystal Vein - q4469 - Explorer
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16371, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16371, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Cave Door - Rock Door - q4469 - Silkfang Caverns - Explorer
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 4, 16395, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 4, 16395, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 0, 0, 0);
 -- --------------------------------------
 -- Yuriy Dragomir - Quest Giver - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16396, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16396, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Icy Everyone Door Trigger - q4502 - Explorer
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16397, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16397, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Everyone Door Trigger - q4469 - Explorer
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16398, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16398, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Stranded Defiance Soldier - q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16423, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16423, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Stranded Supplies - q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16425, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16425, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Firebreak - q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16426, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16426, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Crate of Firebreaks - q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16427, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16427, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Rampaging Ravenous - q4476
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16470, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16470, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Captain Vilar Stalinsk - Q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16473, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16473, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Supply Run Soldier - Q4477
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16474, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16474, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Scientist Branislav - Quest Giver - Whispering Thicket - Scientist
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16475, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16475, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Suspicious Mordesh Male - Act 2 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16476, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16476, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Suspicious Mordesh Female - Act 2 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16477, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16477, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Assistant Executioner - Act 2 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16478, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16478, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Agonizing Mordesh Male - Act 3 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16479, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16479, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Agonizing Mordesh Female - Act 3 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16480, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16480, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Medical Cot - Act 3 Vign - Kel Venoth - KLW
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16481, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16481, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Malverine - Ossun - Data Cube -  Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16483, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16483, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Mistflower - Scientist Mission Object
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16485, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16485, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 0, 0, 0);
 -- --------------------------------------
 -- Gloomstock - Scientist Mission Object
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16486, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16486, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 0, 0, 0);
 -- --------------------------------------
 -- Ravenous Corpse - Whispering Thicket - Milos Vignette
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16491, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16491, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Force Commander Miklos - Tract 1 Soldier Daily Quest Giver
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16492, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16492, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Ranger Teodor - Tract 1 Explorer Daily Quest Giver
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16494, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16494, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Dominant Ghostlight Stag - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16533, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16533, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
 -- --------------------------------------
 -- Grizzled Ghostlight Longhorn - q4492
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16534, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16534, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 306, 306, 0);
 -- --------------------------------------
 -- Stillstalker Pit Trap - q4491 - Tract 1 - Explorer Daily
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16535, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16535, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 219, 219, 0);
 -- --------------------------------------
 -- Stillstalker Charger - q4491 - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16536, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16536, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
 -- --------------------------------------
 -- Stillstalker Ambusher - q4491 - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16537, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16537, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 493, 493, 0);
 -- --------------------------------------
 -- Dropped Vitalus Serum - q4486 Flavor - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 16538, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 16538, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- At-risk Vitalus Serum - q4486 Patron - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16539, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16539, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Oakwraith Serum Wretch - q4486 - Cluster Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16540, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16540, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 501, 501, 0);
 -- --------------------------------------
 -- Flavor Serum  - Whispering Thicket
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 16541, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 16541, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 171, 171, 0);
 -- --------------------------------------
 -- Ravenous Slayer Champion - Solo Creature
 -- --------------------------------------
@@ -1272,6 +1358,18 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16549, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Heavily Scuffed Tree Stump - q4492 Clue
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 16559, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Fallen Oakwraith - q4492 Clue
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16560, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Suspicious Barrel - q4496 - Quest Object
 -- --------------------------------------
@@ -1368,6 +1466,12 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16583, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Ghostlight Victim's Remains - q4492 Boss Clue
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 16584, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Kel Venoth Supplies - Whispering Thicket - Q4349 - Activate Object
 -- --------------------------------------
@@ -1544,63 +1648,84 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 16736, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Vid Milandre 5 - New Reaper - Quest Giver - Tract 2 (Woodborough)
+-- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16742, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Lobomir Bogda 7 - Alchemist - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16743, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Sanya Deslava 5 - Physician - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16744, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Teague Riverstone 1 - Defiance Spymaster - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16745, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Jago Jelasco 1 - Overseers - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16746, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Jogo Jelasco 1 - Overseers - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16747, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Naco Botista 1 - Technicians - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16748, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Nico Botista 1 - Technicians - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16749, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Ermo Eligo 1 - Inventor - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16750, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Dyriex 1 - Dominion Spymaster - Quest Giver - Tract 2 (Woodborough)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16751, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Coov the Butcher 1 - Cultist Leader - Tract 2
 -- --------------------------------------
@@ -1613,48 +1738,64 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16768, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Jago Jelasco 2 - Overseers - Quest Giver - Tract 2 (Woodborough Phased)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16769, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Sanya Deslava 6 - Physician - Quest Giver - Tract 2 (Woodborough Phased)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16770, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Ermo Eligo 2 - Inventor - Quest Giver - Tract 2 (Woodborough Phased)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16771, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Farmer Nedal - Farmer - Quest Giver q4581
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16772, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Farmer Anson - Farmer - Quest Giver q4582
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16773, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Tomlin Crickshaw - Farmer - Quest Giver q4582
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16774, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Jules Boudin - q4597 - Tract 2 - Quest Giver
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16775, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Farmer Stevan Leadletters - Q4554 - Tract 2 - KLW
 -- --------------------------------------
@@ -1764,6 +1905,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16830, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
+-- Rootbrute Trap q4581
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16831, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
 -- Bogshroom Loamlurker - Neutralizer - Solo Creature
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -1780,7 +1927,13 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16849, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16849, @WORLD, 2249, 1305.09, -966.21, 1510.20, 0, 0, 0, 23150, 0, 379, 379, 0),
+(@GUID+2, 0, 16849, @WORLD, 2248,  724.64, -976.59, 2289.59, 0, 0, 0, 23150, 0, 379, 379, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0,   1),
+(@GUID+1, 10, 34),
+(@GUID+2, 0,   1),
+(@GUID+2, 10, 34);
 -- --------------------------------------
 -- Jules Boudin Intro - Tract 2
 -- --------------------------------------
@@ -1792,7 +1945,13 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 16852, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 16852, @WORLD, 2249, 1238.34, -959.61, 1580.76, 0, 0, 0, 23150, 0, 379, 379, 0),
+(@GUID+2, 0, 16852, @WORLD, 2248,  717.97, -976.58, 2170.80, 0, 0, 0, 23150, 0, 379, 379, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0,   1),
+(@GUID+1, 10, 34),
+(@GUID+2, 0,   1),
+(@GUID+2, 10, 34);
 -- --------------------------------------
 -- Swampslime Rumbleshell - Juggernaut - Solo Creature
 -- --------------------------------------
@@ -1872,6 +2031,18 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16882, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
+-- Hidden Boudin Survivor (Male) - q4599 - Quest Target
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16885, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Hidden Boudin Survivor (Male) - q4599 - Quest Target
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16886, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
 -- q4599 - Turret Installation Point - Tract 2
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -1902,6 +2073,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16898, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
+-- Burning Crop Bush - q4582
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16908, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
 -- q4602 - Charge Placement Location - Tract 2
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -1913,6 +2090,18 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 16921, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Boudin Prisoner (Male) - q4601 - Quest Target
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16922, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Boudin Prisoner (Female) - q4601 - Quest Target
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 16923, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Kron the Interrogator - Osun Female - q4601 - Tract 2
 -- --------------------------------------
@@ -1997,12 +2186,16 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 40995, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Supervisor Arborgreen - Able Group - Questgiver- PHC
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 40986, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Weaponsmith Dunpepper - Able Group - Weaponsmith - PHC
 -- --------------------------------------
@@ -2045,6 +2238,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 41066, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Adjutant Trixion - Charlie Group - Trainer - PHC
 -- --------------------------------------
@@ -2104,43 +2299,67 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41376, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41376, @WORLD, 947, 1138.876, -948.235, 2499.874, -1.07314, 0, 0, 27878, 9075, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 9.897122E+07),
+    (@GUID+1, 10, 50),
+    (@GUID+1, 15, 0),
+    (@GUID+1, 20, 8.497122E+07),
+    (@GUID+1, 21, 18),
+    (@GUID+1, 22, 0);
 -- --------------------------------------
--- mondo zax - tract 1 quest giver - twh
+-- Mondo Zax - tract 1 quest giver - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41377, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41377, @WORLD, 955, 1433.929, -928.341, 1955.883, -3.13539, 0, 0, 25202, 9079, 170, 170, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 9.897122E+07),
+    (@GUID+1, 10, 50),
+    (@GUID+1, 15, 0),
+    (@GUID+1, 20, 8.497122E+07),
+    (@GUID+1, 21, 18),
+    (@GUID+1, 22, 0);
 -- --------------------------------------
 -- T1 -  NPC Caradoc Riverrun -  ARY
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41414, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41414, @WORLD, 947, 1179.849, -949.841, 2468.731, 0, 0, 0, 28671, 8128, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- T1 - NPC Penia -  ARY
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41419, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41419, @WORLD, 955, 1415.782, -928.466, 1958.116, -2.62856, 0, 0, 28242, 9269, 170, 170, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- dodger - tract 1 quest giver - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41431, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41431, @WORLD, 2247, 661.7863, -954.528, 2604.295, 0.327841, 0, 0, 28245, 8979, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- pylo - tract 1 quest giver - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41432, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41432, @WORLD, 2249, 1142.237, -938.849, 1436.734, 0, 0, 0, 28246, 9204, 170, 170, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- sound-keeper - tract 1 quest giver - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41468, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41468, @WORLD, 956, 597.3215, -950.475, 1863.184, -0.72647, 0, 0, 22435, 0, 1140, 1140, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- Virulent Crawler - T1 - ARY (Temp)
 -- --------------------------------------
@@ -2164,7 +2383,47 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41499, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1,  0, 41499, @WORLD, 2359, 242.45, -918.71,    1541.13, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+2,  0, 41499, @WORLD, 2359, 192.52, -913.09143, 1522.64, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+3,  0, 41499, @WORLD, 2359, 251.33, -918.23047, 1539.55, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+4,  0, 41499, @WORLD, 2359, 302.79, -920.7191,  1564.46, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+5,  0, 41499, @WORLD, 2359, 233.71, -921.7069,  1596.77, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+6,  0, 41499, @WORLD, 2359, 251.68, -920.8386,  1582.35, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+7,  0, 41499, @WORLD, 2359, 316.42, -924.5867,  1587.59, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+8,  0, 41499, @WORLD, 2359, 232.83, -938.22,    1732.31, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+9,  0, 41499, @WORLD, 2359, 272.24, -931.33,    1768.22, 0, 0, 0, 22435, 0, 1138, 1138, 0),
+(@GUID+10, 0, 41499, @WORLD, 2359, 194.68, -940.03,    1920.98, 0, 0, 0, 22435, 0, 1138, 1138, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,   0, 16000),
+(@GUID+1,  10,    37),
+(@GUID+1,  20,     1),
+(@GUID+2,   0, 16000),
+(@GUID+2,  10,    37),
+(@GUID+2,  20,     1),
+(@GUID+3,   0, 16000),
+(@GUID+3,  10,    37),
+(@GUID+3,  20,     1),
+(@GUID+4,   0, 16000),
+(@GUID+4,  10,    37),
+(@GUID+4,  20,     1),
+(@GUID+5,   0, 16000),
+(@GUID+5,  10,    37),
+(@GUID+5,  20,     1),
+(@GUID+6,   0, 16000),
+(@GUID+6,  10,    37),
+(@GUID+6,  20,     1),
+(@GUID+7,   0, 16000),
+(@GUID+7,  10,    37),
+(@GUID+7,  20,     1),
+(@GUID+8,   0, 16000),
+(@GUID+8,  10,    37),
+(@GUID+8,  20,     1),
+(@GUID+9,   0, 16000),
+(@GUID+9,  10,    37),
+(@GUID+9 , 20,     1),
+(@GUID+10,  0, 16000),
+(@GUID+10, 10,    37),
+(@GUID+10, 20,     1);
 -- --------------------------------------
 -- mindbreak spotter - template tract 1 - twh
 -- --------------------------------------
@@ -2176,25 +2435,34 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41505, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41505, @WORLD, 947, 16.03, -921.145, 1832.214, -1.4204, 0, 0, 27751, 0, 1138, 1138, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 19900),
+(@GUID+1, 10,    37);
 -- --------------------------------------
 -- Mind-Walker - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41506, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41506, @WORLD, 959, 2360.871, -966.608, 2064.922, 1.04534, 0, 0, 22433, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Blood-Drinker - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41507, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41507, @WORLD, 959, 2342.66, -965.21, 2042.655, 2.15098, 0, 0, 22435, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Soul-Singer - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 41509, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- mired whipthorn - tract 1 - twh
 -- --------------------------------------
@@ -2212,7 +2480,10 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41512, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41512, @WORLD, 861, 3256.53, -978.31, 3142.09, 0, 0, 0, 24997, 0, 1155, 1155, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0,   1),
+(@GUID+1, 10, 34);
 -- --------------------------------------
 -- Lugwrench Splitshot -  1 - D3 Pistols - HCon
 -- --------------------------------------
@@ -2236,25 +2507,33 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41517, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41517, @WORLD, 947, 1782.55, -945.983, 3071.329, 0, 0, 0, 21349, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Eggo - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41518, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41518, @WORLD, 870, 1785.54, -945.86, 3077.01, -2.83782, 0, 0, 21349, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Zedmo - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 41519, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Stano - Quest Giver - Tract 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41521, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41521, @WORLD, 947, 889.99, -905.95, 2882.48, 0, 0, 0, 21349, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- ghastly creepling - tract 1 - twh
 -- --------------------------------------
@@ -2272,7 +2551,13 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41525, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41525, @WORLD, 2248,  656.82, -971.37, 2138.26, -0.870013, 0, 0, 21479, 0, 567, 567, 0),
+(@GUID+2, 0, 41525, @WORLD, 2249, 1332.95, -967.77, 1585.87, -0.870013, 0, 0, 21479, 0, 567, 567, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 16300),
+(@GUID+1, 10,    37),
+(@GUID+2,  0, 16300),
+(@GUID+2, 10,    37);
 -- --------------------------------------
 -- festering sludge - tract 1 - twh
 -- --------------------------------------
@@ -2284,7 +2569,11 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41527, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41527, @WORLD, 2251, -42.8892, -1175.2, 1878.88, 1.02946, 0, 0, 23187, 0, 233, 233, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 16300),
+(@GUID+1, 10,    37),
+(@GUID+1, 20,     1);
 -- --------------------------------------
 -- Lugwrench Slasher - 1 - D2 Claws - HCon
 -- --------------------------------------
@@ -2344,43 +2633,134 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41554, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41554, @WORLD, 2246, 1129.696, -967.742, 2119.972, 0, 0, 0, 26467, 0, 493, 493, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 20,  1);
 -- --------------------------------------
 -- Gorash - 1 - D3 Osun - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41565, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41565, @WORLD, 2253, 157.35, -834.39, 2878.29, -1.8219, 0, 0, 24569, 0, 691, 691, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 11600),
+(@GUID+1, 10,    38),
+(@GUID+1, 20,  4000);
 -- --------------------------------------
 -- Borash - 1 - D3 Osun - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41572, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41572, @WORLD, 2253, 163.78, -834.39, 2868.14, -1.8219, 0, 0, 24569, 0, 691, 691, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 11600),
+(@GUID+1, 10,    38),
+(@GUID+1, 20,  4000);
+-- --------------------------------------
+-- Phantasmal Stalker - Dagun - Fodder - STH
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41599, @WORLD, 958, 1274.5, -905.24, 3172.2, -1.4204, 0, 0, 21312, 0, 327, 327, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 10600),
+(@GUID+1, 10,    35);
 -- --------------------------------------
 -- Gauge - 1 - Episode 2 Quest Giver - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41605, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41605, @WORLD, 952, 2987.721, -938.459, 2774.186, 0.520518, 0, 0, 23465, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Hinge - 1 - Episode 2 Quest Giver - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41606, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41606, @WORLD, 947, 2965.804, -937.341, 2743.901, 0, 0, 0, 23466, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 20, 1);
 -- --------------------------------------
 -- Perelli - 1 - Episode 6 Quest Giver - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41607, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41607, @WORLD, 947, 451.63, -971.94, 2703.29, 0, 0, 0, 21349, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 20, 1);
 -- --------------------------------------
 -- Serillo - 1 - Episode 6 Quest Giver - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 41608, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 20, 1);
+-- --------------------------------------
+-- Phantasmal Spirit - Human Male - Unarmed - Standard - STH
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41629, @WORLD, 958, 1398.65, -902.30, 3041.92, 0, 0, 0, 21355, 7485, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 10,    35),
+(@GUID+1, 20, 1);
+-- --------------------------------------
+-- Phantasmal Spirit - Human Female - Standard 1 - 2H Staff - Air - STH
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41630, @WORLD, 958, 1191.95, -905.41, 3150.89, 0, 0, 0, 23409, 8066, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 12700),
+(@GUID+1, 10,    35),
+(@GUID+1, 20,     1);
+-- --------------------------------------
+-- Phantasmal Spirit - Granok Male - Unarmed - D4 - 2H Hammer
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41631, @WORLD, 958, 1215.40, -892.81, 3058.28, 0, 0, 0, 22575, 7761, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 12300),
+(@GUID+1, 10,    35),
+(@GUID+1, 20,     1);
+-- --------------------------------------
+-- Phantasmal Spirit - Draken Female - Solo Champion - 2H Sword
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41636, @WORLD, 958, 1292.51, -896.65, 2955.43, 0, 0, 0, 22993, 7881, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 11700),
+(@GUID+1, 10,    35),
+(@GUID+1, 20,     1);
+-- --------------------------------------
+-- Phantasmal Spirit - Chua - Standard 1 - 1H (Melee Weapon)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41641, @WORLD, 958, 1324.38, -890.33, 3036.34, 0, 0, 0, 21471, 0, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 12900),
+(@GUID+1, 10,    35),
+(@GUID+1, 20,     1);
+-- --------------------------------------
+-- Phantasmal Spirit - Aurin Female - Minion - Claws - STH
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 41647, @WORLD, 958, 1340.58, -922.84, 2937.94, 0, 0, 0, 24405, 8453, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 7900),
+(@GUID+1, 10,   35),
+(@GUID+1, 20,    1);
 -- --------------------------------------
 -- Blighted Swarmer - T1 - ARY
 -- --------------------------------------
@@ -2400,29 +2780,55 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 10, 41726, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
+-- Hexcomb Augmentor Eldan Augmentor Bot - Champion
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 41753, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
 -- ""Rusty Wrench"" Figgs -  1 - Q8168 Boss Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41814, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41814, @WORLD, 0, 3273.64, -924.874, 3114.148, 0, 0, 0, 24275, 9043, 218, 218, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 10, 34),
+(@GUID+1, 20, 1);
 -- --------------------------------------
 -- ""Spark Plug"" Scragg - 1 - Q8172 Boss Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41844, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41844, @WORLD, 863, 2464.054, -924.598, 3327.974, -1.53759, 0, 0, 24369, 9137, 430, 430, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 35),
+(@GUID+1, 20,  1);
 -- --------------------------------------
 -- Captured Freebot - 1 - Q8166 Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41906, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41906, @WORLD, 953, 3486.61, -928.38, 2809.86, 0, 0, 0, 21328, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Injured Freebot - 1 - Q8170 Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 41908, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 41908, @WORLD, 860, 2764.83, -953.81, 3142.61, 0, 0, 0, 21328, 0, 219, 219, 0),
+(@GUID+2, 0, 41908, @WORLD, 860, 2764.83, -953.81, 3142.61, 0, 0, 0, 21328, 0, 219, 219, 0),
+(@GUID+3, 0, 41908, @WORLD, 860, 2764.83, -953.81, 3142.61, 0, 0, 0, 21328, 0, 219, 219, 0),
+(@GUID+4, 0, 41908, @WORLD, 860, 2764.83, -953.81, 3142.61, 0, 0, 0, 21328, 0, 219, 219, 0),
+(@GUID+5, 0, 41908, @WORLD, 860, 2764.83, -953.81, 3142.61, 0, 0, 0, 21328, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1),
+(@GUID+2, 0, 1),
+(@GUID+3, 0, 1),
+(@GUID+4, 0, 1),
+(@GUID+5, 0, 1);
 -- --------------------------------------
 -- Freebot Prisoner - 1 - Episode 2 Flavor - HCon
 -- --------------------------------------
@@ -2440,37 +2846,37 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41981, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41981, @WORLD, 2247, 1009.64, -953.51, 2476.65, 0, 0, 0, 27903, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain infestation var001 - tract 1 q8191 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41982, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41982, @WORLD, 2247, 1018.51, -957.70, 2425.29, 0, 0, 0, 27904, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain infestation var002 - tract 1 q8191 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41983, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41983, @WORLD, 2247, 1016.76, -948.12, 2498.59, 0, 0, 0, 27905, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain infestation var000 - tract 1 q8198 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41985, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41985, @WORLD, 864, 1394.81, -963.09, 1794.27, 0, 0, 0, 27903, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain infestation var001 - tract 1 q8198 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41986, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41986, @WORLD, 864, 1351.11, -966.28, 1725.07, 0, 0, 0, 27904, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain infestation var002 - tract 1 q8198 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 41987, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 41987, @WORLD, 864, 1410.53, -962.31, 1761.77, 0, 0, 0, 27905, 0, 219, 219, 0);
 -- --------------------------------------
 -- Figg's Supply Crate - 1 - Q8168 Quest Target - HCon
 -- --------------------------------------
@@ -2482,79 +2888,96 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42140, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42140, @WORLD, 2319, 3371.625, -929.344, 3324.969, 0, 0, 0, 24997, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Leaking Pipe - T1 - ARY
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42142, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42142, @WORLD, 2251, 476.38, -868.93, 1881.00, 0, 0, 0, 24252, 0, 219, 219, 0);
 -- --------------------------------------
 -- dodger's pack  - tract 1 q8192 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42143, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42143, @WORLD, 2247, 915.021, -943.483, 2518.903, 0, 0, 0, 23177, 0, 219, 219, 0);
 -- --------------------------------------
 -- pylo's pack  - tract 1 q8199 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42144, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42144, @WORLD, 2249, 1382.337, -957.493, 1597.897, 0, 0, 0, 21374, 9072, 219, 219, 0);
 -- --------------------------------------
 -- energy cell - q8193 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 42180, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1,  8, 42180, @WORLD, 2248, 678.31, -972.50, 2148.33, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+2,  8, 42180, @WORLD, 2248, 702.52, -978.59, 2227.14, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+3,  8, 42180, @WORLD, 2248, 742.35, -976.80, 2118.48, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+4,  8, 42180, @WORLD, 2248, 650.76, -975.80, 2198.66, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+5,  8, 42180, @WORLD, 2248, 661.52, -965.41, 2091.19, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+6,  8, 42180, @WORLD, 2248, 681.96, -972.57, 2214.29, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+7,  8, 42180, @WORLD, 2248, 645.92, -976.84, 2222.14, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+8,  8, 42180, @WORLD, 2248, 729.29, -975.71, 2187.04, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+9,  8, 42180, @WORLD, 2248, 697.15, -970.34, 2128.01, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+10, 8, 42180, @WORLD, 2248, 695.87, -961.01, 2149.81, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+11, 8, 42180, @WORLD, 2248, 737.46, -978.58, 2208.99, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+12, 8, 42180, @WORLD, 2248, 782.08, -978.37, 2144.48, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+13, 8, 42180, @WORLD, 2248, 741.34, -971.19, 2080.67, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+14, 8, 42180, @WORLD, 2248, 697.17, -961.87, 2070.18, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+15, 8, 42180, @WORLD, 2248, 628.18, -968.31, 2125.33, 0, 0, 0, 26945, 0, 219, 219, 0);
 -- --------------------------------------
 -- energy cell - q8200 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 42182, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1,  8, 42182, @WORLD, 2250,  951.64, -972.24, 1709.49, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+2,  8, 42182, @WORLD, 2250, 1013.93, -966.99, 1711.61, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+3,  8, 42182, @WORLD, 2250,  987.32, -967.48, 1691.61, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+4,  8, 42182, @WORLD, 2250, 1002.52, -970.17, 1732.93, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+5,  8, 42182, @WORLD, 2250, 1005.08, -967.43, 1699.40, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+6,  8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+7,  8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+8,  8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+9,  8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+10, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+11, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+12, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+13, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+14, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0),
+(@GUID+15, 8, 42182, @WORLD, 2250, 1, -9, 1, 0, 0, 0, 26945, 0, 219, 219, 0);
 -- --------------------------------------
 -- strain cocoon - q8193 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42183, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42183, @WORLD, 2248, 627.42, -971.95, 2160.92, 0, 0, 0, 27977, 0, 219, 219, 0),
+(@GUID+2, 0, 42183, @WORLD, 2248, 645.50, -971.23, 2096.54, 0, 0, 0, 27977, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1),
+(@GUID+2, 0, 1);
 -- --------------------------------------
 -- strain cocoon - q8200 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42184, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42184, @WORLD, 2250, 982.83, -968.03, 1694.52, 0, 0, 0, 27977, 0, 219, 219, 0),
+(@GUID+2, 0, 42184, @WORLD, 2250, 992.31, -968.03, 1767.84, 0, 0, 0, 27977, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1),
+(@GUID+2, 0, 1);
 -- --------------------------------------
 -- Torque - 1 - Q8171 Holdout Trigger - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42216, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Lugwrench Lackey - 1 - Q8171 Holdout Creature - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42228, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Alerted Securitybot - 1 - Q8171 Holdout Creature - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42229, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Lugwrench Brute - 1 - Q8171 Holdout Creature - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42230, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Lugwrench Dropship - 1 - Q8171 Holdout Creature - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42232, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42216, @WORLD, 863, 2490.55, -954.232, 3053.39, 0, 0, 0, 23466, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0,   1),
+(@GUID+1, 10, 35);
 -- --------------------------------------
 -- rotting lykaios - q8194/8201 tract 1 - twh
 -- --------------------------------------
@@ -2573,6 +2996,34 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 10, 42275, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Q8441 - Doombing
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42320, @WORLD, 2322, 3252.147, -956.392, 1879.174, 1.6792, 0, 0, 24713, 0, 257, 257, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 14500),
+(@GUID+1, 10,    34),
+(@GUID+1, 20,     1);
+-- --------------------------------------
+-- Geometric Mapper Unit_ONE
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 42419, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 22904, 0, 219, 219, 0);
+-- --------------------------------------
+-- Geometric Mapper Unit_TWO
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 42420, @WORLD, 4192, 3142.848, -956.367, 1933.62, 0, 0, 0, 22904, 0, 219, 219, 0);
+-- --------------------------------------
+-- Geometric Mapper Unit_THREE
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 42421, @WORLD, 4192, 3121.947, -956.351, 1869.862, 0, 0, 0, 22904, 0, 219, 219, 0);
 -- --------------------------------------
 -- Enter the Transport Ship - 1 - Q8173 To Alternator's Ship - HCon
 -- --------------------------------------
@@ -2602,25 +3053,35 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42440, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42440, @WORLD, 2333, 175.4126, -921.18,  2011.814, 0, 0, 0, 22431, 0, 0, 0, 0),
+(@GUID+2, 10, 42440, @WORLD, 2333, 176.2956, -934.584, 1790.117, 0, 0, 0, 22431, 0, 0, 0, 0),
+(@GUID+3, 10, 42440, @WORLD, 2333, 181.7196, -893.94,  1566.388, 0, 0, 0, 22431, 0, 0, 0, 0);
+-- --------------------------------------
+-- Q8442_High Priest Star-Seer
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42443, @WORLD, 3030, 3183.23, -959.506, 1812.71, -2.91774, 0, 0, 27750, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- Reprogramming Console - 1 - Q8174 Quest Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42446, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42446, @WORLD, 861, 3219.92, -977.15, 3138.97, 0, 0, 0, 23951, 0, 219, 219, 0);
 -- --------------------------------------
 -- Lugwrench Banner - 1 - Q8175 Quest Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42451, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42451, @WORLD, 2319, 3429.68, -929.47, 3290.76, 0, 0, 0, 28072, 0, 219, 219, 0);
 -- --------------------------------------
 -- Holo-Emitter - 1 - Q8175 Quest Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42452, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42452, @WORLD, 2319, 3425.04, -929.45, 3277.04, 0, 0, 0, 27450, 0, 219, 219, 0);
 -- --------------------------------------
 -- The Alternator - 1 - Q8175  Flavor Holo - HCon
 -- --------------------------------------
@@ -2632,7 +3093,11 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 8, 42454, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 8, 42454, @WORLD, 863, 2640.45, -951.71, 3047.70, 0, 0, 0, 24206, 0, 219, 219, 0),
+(@GUID+2, 8, 42454, @WORLD, 863, 2707.26, -951.76, 3118.49, 0, 0, 0, 24206, 0, 219, 219, 0),
+(@GUID+3, 8, 42454, @WORLD, 863, 2645.56, -951.96, 3157.34, 0, 0, 0, 24206, 0, 219, 219, 0),
+(@GUID+4, 8, 42454, @WORLD, 863, 2662.50, -951.45, 3052.85, 0, 0, 0, 24206, 0, 219, 219, 0),
+(@GUID+5, 8, 42454, @WORLD, 863, 2608.53, -952.10, 3123.04, 0, 0, 0, 24206, 0, 219, 219, 0);
 -- --------------------------------------
 -- Symbol of Freedom - 1 - Q8176 Quest Flavor - HCon
 -- --------------------------------------
@@ -2650,13 +3115,16 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42463, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42463, @WORLD, 863, 2628.531, -951.734, 3062.344, 0, 0, 0, 28548, 0, 219, 219, 0),
+(@GUID+2, 10, 42463, @WORLD, 863, 2442.906, -954.344, 3018.469, 0, 0, 0, 28548, 0, 219, 219, 0);
 -- --------------------------------------
 -- Caged Strongjaw - 1 - D2 Melee - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42464, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42464, @WORLD, 863, 2659.70, -951.16, 3062.11, 0, 0, 0, 24888, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Thought-Speaker - 1 - Q8177 Receiver - HCon
 -- --------------------------------------
@@ -2668,31 +3136,46 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42477, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42477, @WORLD, 2251, 261.47, -1183.25, 1852.02, 0, 0, 0, 22432, 0, 1140, 1140, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Osun Cage - 1 - Q8181 Quest Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42488, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42488, @WORLD, 2253, 145.6394, -833.14, 2864.141, 0, 0, 0, 26926, 0, 219, 219, 0);
 -- --------------------------------------
 -- Power-Up Dispenser - 1 - Q8180 Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42490, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42490, @WORLD, 947, 458.16, -970.92, 2706.35, 0, 0, 0, 22904, 0, 219, 219, 0);
+-- --------------------------------------
+-- Q8445 - Eldan Projection Panel
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 42491, @WORLD, 958, 1578.07, -924.26, 2859.09,  2.26089,  0, 0, 24340, 0, 219, 219, 0),
+(@GUID+2, 10, 42491, @WORLD, 958, 1171.88, -901.65, 3218.16, -0.761692, 0, 0, 24340, 0, 219, 219, 0);
 -- --------------------------------------
 -- corruption source - q8218 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42509, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42509, @WORLD, 2251, -160.05, -1179.94, 1813.27, 0, 0, 0, 24324, 0, 0, 0, 0);
 -- --------------------------------------
 -- Lugwrench Mine - 1 - Environmental Hazard - Proving Grounds - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 10, 42535, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Q8446 - Holo-Oooze Grenade Case
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42536, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Lugwrench Turret - 1 - Proving Grounds Hazard - HCon
 -- --------------------------------------
@@ -2722,19 +3205,27 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 42599, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 42599, @WORLD, 0, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Jump Boost - 1 - Q8180 Episode 2 Buff - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 1, 42600, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 1, 42600, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 27490, 0, 219, 219, 0);
+-- --------------------------------------
+-- Q8448_Fear Analysis Replicator Panel
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42618, @WORLD, 958, 1234.53, -891.239, 3027.1, -1.94732, 0, 0, 23102, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Figg's Explosives - 1 - Q8168 Quest Target - HCon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42632, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 42632, @WORLD, 861, 3167.69, -977.699, 3210.231, 0, 0, 0, 28040, 0, 219, 219, 0);
 -- --------------------------------------
 -- Grimfang Cocoon - T1 - ARY
 -- --------------------------------------
@@ -2837,12 +3328,6 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 10, 42957, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Hexcomb Hive Settler Depot - 1 - Exile Settler Depot - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 42969, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Lugwrench Botworks Settler Depot - 1 - Exile Settler Depot - HCon
 -- --------------------------------------
@@ -3028,7 +3513,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 43108, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 43108, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 25593, 0, 219, 219, 0);
 -- --------------------------------------
 -- Pylo's Pyromancy - 1 - Settler Improvement - HCon
 -- --------------------------------------
@@ -3041,12 +3526,6 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 11, 43111, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
--- --------------------------------------
--- Wooden Table - 1 - Settler Improvement - HCon
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 43136, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
 -- --------------------------------------
 -- Control Panel - Tract 1 - M2678 Target - BFS
 -- --------------------------------------
@@ -3172,7 +3651,9 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 43325, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 43325, @WORLD, 947, 2214.345, -951.459, 2532.944, 0, 0, 0, 22432, 0, 219, 219, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- Power Generator - 1 - Q8607 Quest Target - Settler Inf - HCon
 -- --------------------------------------
@@ -3274,13 +3755,17 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 43465, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 43465, @WORLD, 954, 1215.534, -949.811, 2483.36, 0, 0, 0, 29221, 9902, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- mordesh volunteer female - q8196 tract 1 - twh
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 0, 43466, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 0, 43466, @WORLD, 954, 1206.54, -951.87, 2474.21, 0, 0, 0, 291584, 9902, 171, 171, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- --------------------------------------
 -- Corrupted Bot - T1 - ARY
 -- --------------------------------------
@@ -3316,7 +3801,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 10, 43614, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+(@GUID+1, 10, 43614, @WORLD, 862, 3402.145, -911.544, 3158.875, 0, 0, 0, 22603, 0, 219, 219, 0);
 -- --------------------------------------
 -- T1 - Lab Core Activate - ARY
 -- --------------------------------------
@@ -3425,3 +3910,45 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
 (@GUID+1, 0, 60254, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23187, 9072, 167, 167, 0);
+-- --------------------------------------
+-- Comes from scripts (coming soon)
+-- --------------------------------------
+-- --------------------------------------
+-- Lugwrench Lackey - 1 - Q8171 Holdout Creature - HCon
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42228, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 21355, 7485, 218, 218, 0);
+-- --------------------------------------
+-- Alerted Securitybot - 1 - Q8171 Holdout Creature - HCon
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42229, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 21309, 0, 233, 233, 0);
+-- --------------------------------------
+-- Lugwrench Brute - 1 - Q8171 Holdout Creature - HCon
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42230, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 21692, 0, 430, 430, 0);
+-- --------------------------------------
+-- Lugwrench Dropship - 1 - Q8171 Holdout Creature - HCon
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 42232, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 22960, 0, 219, 219, 0);
+-- --------------------------------------
+-- Comes from paths (coming soon) 
+-- --------------------------------------
+-- --------------------------------------
+-- Wooden Table - 1 - Settler Improvement - HCon
+-- --------------------------------------
+-- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+-- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+-- (@GUID+1, 10, 43136, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 28632, 0, 219, 219, 0);
+-- --------------------------------------
+-- Hexcomb Hive Settler Depot - 1 - Exile Settler Depot - HCon
+-- --------------------------------------
+-- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+-- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+-- (@GUID+1, 10, 42969, @WORLD, 947, 2647.7, -909.461, 3729.92, 0, 0, 0, 23966, 0, 171, 171, 0);
