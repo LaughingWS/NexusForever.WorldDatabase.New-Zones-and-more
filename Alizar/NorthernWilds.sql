@@ -2275,7 +2275,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 12521, @WORLD, 595, 4388.27, -744.866, -5637.15, 2.60117, 0, 0, 23093, 219, 219);
+    (@GUID+1, 10, 12521, @WORLD, 595, 4385.998, -744.902, -5636.93, 2.60117, 0, 0, 23093, 219, 219);
 -- --------------------------------------
 -- Dominion Blasterbot
 -- --------------------------------------
@@ -3273,13 +3273,13 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 13150, @WORLD, 595, 4367.88, -743.842, -5639.73, 1, 0, 0, 23093, 219, 219);
+    (@GUID+1, 10, 13150, @WORLD, 595, 4367.455, -743.67, -5638.63, 0, 0, 0, 23093, 219, 219);
 -- --------------------------------------
 -- Signal Flare 3
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 13151, @WORLD, 595, 4347.38, -744.708, -5637.11, 1, 0, 0, 23093, 219, 219);
+    (@GUID+1, 10, 13151, @WORLD, 595, 4347.792, -744.507, -5636.98, 0, 0, 0, 23093, 219, 219);
 -- --------------------------------------
 -- 
 -- --------------------------------------
