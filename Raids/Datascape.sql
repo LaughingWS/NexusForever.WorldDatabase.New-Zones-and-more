@@ -496,9 +496,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`,  `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0,   31885, @WORLD, 1590,   2985.78,      -794.348,    3396.41,      -0.693315,       0, 0, 27107, 1171, 1171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1, 0,   1),
-(@GUID+1, 10, 50),
-(@GUID+1, 20,  1);
+(@GUID+1, 0,  18000000),
+(@GUID+1, 10,       50);
 -- ---------------------------------
 -- Bonechewer Rockhorde
 -- ---------------------------------
@@ -762,7 +761,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- ---------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 48916, @WORLD, 4478,            -4350.04,             -913.187,    2404.41,   -1.44454, 0, 0, 36939, 1171, 1171);
+(@GUID+1, 0, 48916, @WORLD, 4478,  -4350.04,             -913.187,    2404.41,   -1.44454, 0, 0, 36939, 1171, 1171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 12500000),
 (@GUID+1, 10,       50);
