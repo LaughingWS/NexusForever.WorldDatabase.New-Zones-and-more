@@ -176,7 +176,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 0, 11063, @WORLD, 596, 4185.583, -722.6909, -5695.496, 3.005061, 0, 0, 26124, 9064, 171, 171),
-    (@GUID+2, 0, 11063, @WORLD, 595, 4341.92,  -751.769,  -5682.94,  1.83237,  0, 0, 26124, 9064, 171, 171);
+    (@GUID+2, 0, 11063, @WORLD, 595, 4341.266, -751.7649, -5682.928, 1.83237,  0, 0, 26124, 9064, 171, 171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 9.897122E+07),
     (@GUID+1, 10, 50),
@@ -195,7 +195,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 11066, @WORLD, 595, 4339.032, -751.6527, -5678.932, 0.5756423, -0.005885807, 0.001948225, 22825, 9065, 171, 171);
+    (@GUID+1, 0, 11066, @WORLD, 595, 4339.035, -751.7676, -5678.818, 0.5756423, -0.005885807, 0.001948225, 22825, 9065, 171, 171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 9.897122E+07),
     (@GUID+1, 10, 50),
@@ -2514,9 +2514,9 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 12737, @WORLD, 595, 4355.85, -750.466, -5681.75, -1.60201, 0, 0, 26018, 9063, 171, 171);
+(@GUID+1, 0, 12737, @WORLD, 595, 4355.914, -750.5439, -5681.914, -1.60201, 0, 0, 26018, 9063, 171, 171);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-    (@GUID+1, 0, 73);
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Xenobite Egg
 -- --------------------------------------
