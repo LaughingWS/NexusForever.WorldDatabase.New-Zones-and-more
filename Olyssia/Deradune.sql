@@ -2,9 +2,9 @@
 -- Deradune Zone
 -- Edited by Laughing
 -- ---------------------------------------------------------------------------------
--- TODO: look at OI for:  Researcher Zamm, Captured Shadeleaf Weaver, Minon TogorV2
--- Look at DI for:        Researcher Zamm, Minon TogorV2           
--- get RX for:            Huntress KezziaV3, Minon TogorV2
+-- TODO: look at OI for:  Researcher Zamm, Captured Shadeleaf Weaver, Minion TogorV2
+-- Look at DI for:        Researcher Zamm, Minion TogorV2           
+-- get RX for:            Huntress KezziaV3, Minion TogorV2
 -- ---------------------------------------------------------------------------------
 SET @WORLD = 22;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (483, 484, 485, 486, 490, 494, 495, 496, 497, 498, 503, 582, 583, 584, 585, 586, 587, 588, 619, 620, 621, 637, 638, 639, 640, 641, 658, 659, 660, 668, 1173, 1174, 1182, 1189, 1190, 1212, 1213, 1215, 1216, 1235, 1263, 1268, 1269, 1275, 1285, 1286, 1293, 1294, 1295, 1296, 1297, 1298, 1299, 1321, 1322, 1324, 1334, 1338, 1339, 1340, 1342, 1351, 1352, 1353, 1354, 1355, 1357, 1368, 1369, 1370, 1371, 1372, 1378, 1379, 1380, 1478, 1496, 1497, 1529, 1530, 1531, 1532, 1586, 1587, 1588, 1703, 1704, 1705, 1706, 1707, 1708, 1709, 1752, 1753, 1758, 1759, 1770, 1771, 1772, 1774, 1880, 2125, 2850, 2851, 2852, 2878, 4119, 4120, 4121, 4128, 4129, 4130, 4131, 4132, 4133, 4322, 4323, 6021);
@@ -3730,7 +3730,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 0, 9611, @WORLD, 484, -5713.057, -974.5681, -643.2203, -2.371764, 0, 0, 26524, 9194, 170, 170),
-    (@GUID+2, 0, 9611, @WORLD, 484, -5610.37, -977.378, -683.298, 2.27408, 0, 0, 26524, 9194, 170, 170);
+    (@GUID+2, 0, 9611, @WORLD, 484, -5610.407, -977.378, -683.1832, 2.27408, 0, 0, 26524, 9194, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 2343),
     (@GUID+1, 10, 7),
@@ -5322,10 +5322,10 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 10137, @WORLD, 484, -5607.23, -978.717, -611.17, -0.55503, 0, 0, 22531, 9063, 219, 219);
+    (@GUID+1, 0, 10137, @WORLD, 484, -5607.229, -978.7174, -611.1704, -0.55503, 0, 0, 22531, 9063, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-    (@GUID+1, 0,  1),
-    (@GUID+1, 10, 6);
+    (@GUID+1, 0,  990),
+    (@GUID+1, 10,   6);
 -- --------------------------------------
 -- Hunt Mistress Kivia
 -- --------------------------------------
@@ -5375,14 +5375,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+2, 10, 10262, @WORLD, 497, -5886.359, -998.4381, -633.5212, 2.555653, 0, 0, 21445, 0, 219, 219),
     (@GUID+3, 10, 10262, @WORLD, 497, -5779.48, -998.2274, -411.6973, -2.61939, 0, 0, 21445, 0, 219, 219);
 -- --------------------------------------
--- Huntress Kezzia (look on youtube for RX)
+-- Huntress Kezzia (fix RX)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 10334, @WORLD, 1529, -4901.67, -955.493, -649.913, 0, 0, 0, 26524, 9194, 170, 170);
+    (@GUID+1, 0, 10334, @WORLD, 1529, -4901.673, -955.4927, -649.9134, 1.305855346, 0, 0, 26524, 9194, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-    (@GUID+1,  0, 1),
-    (@GUID+1, 10, 7);
+    (@GUID+1,  0, 974),
+    (@GUID+1, 10,   7);
 -- --------------------------------------
 -- Exile Ship
 -- --------------------------------------
@@ -13556,7 +13556,7 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
     (@GUID+1, 10, 23991, @WORLD, 587, -4805.884, -896.5898, -1868.156, 2.194803, 6.470505E-07, 1.705303E-13, 22174, 0, 219, 219, 1077654);
 -- --------------------------------------
--- Clanlord Makaza
+-- Clanlord Makaza (fix location)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
@@ -15775,7 +15775,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 24687, @WORLD, 585, -4497.71, -927.384, -1308.42, 1.44373, 0, 0, 27528, 9058, 170, 170);
+(@GUID+1, 0, 24687, @WORLD, 585, -4497.709, -927.3843, -1308.415, 1.44373, 0, 0, 27528, 9058, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES      
 (@GUID+1,  0, 2000),
 (@GUID+1, 10,   10),
@@ -32234,7 +32234,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Script spawns?
 -- --------------------------------------
 -- --------------------------------------
--- Clanlord Makaza
+-- Clanlord Makaza (fix location)
 -- --------------------------------------
 -- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 -- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
