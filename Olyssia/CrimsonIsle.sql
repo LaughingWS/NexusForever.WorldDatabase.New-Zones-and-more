@@ -1,9 +1,9 @@
 -- --------------------------------------
--- Crimson Isle Zone Dump
+-- Crimson Isle
+-- Edited by Laughing
 -- --------------------------------------
 SET @WORLD = 870;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (622, 623, 629, 1217, 1218, 1219, 1225, 1226, 1227, 1236, 1237, 1244, 1284, 1320, 1325, 1360, 1361, 1611, 1885, 4674);
-
 -- --------------------------------------
 -- Discovery
 -- --------------------------------------
@@ -4774,6 +4774,22 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+27, 21, 0),
     (@GUID+27, 22, 0);
 -- --------------------------------------
+-- Mondo Zax
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 24337, @WORLD, 1284, -7582.703, -953.7923, -1292.1, 0, 0, 0, 25202, 9079, 170, 170);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 12, 0),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 245),
+(@GUID+1, 15, 1),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
+-- --------------------------------------
 -- Scrab Impaler
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -6128,10 +6144,13 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 25886, @WORLD, 1325, -7048.574, -997.1969, -1021.181, 2.612353, 0, 0, 25526, 0, 219, 219, 1118716);
+    (@GUID+1, 10, 25886, @WORLD, 1325, -7048.574, -997.1969, -1021.181, 2.612353, 0, 0, 25526, 0, 219, 219, 1118716),
+(@GUID+2, 10, 25886, @WORLD, 1325, -7079.58, -1045.62, -1037.51, 0, 0, 0, 25526, 0, 219, 219, 1118716);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 13, 0),
-    (@GUID+1, 14, 647606);
+    (@GUID+1, 14, 647606),
+(@GUID+2, 13, 0),
+(@GUID+2, 14, 647606);
 -- --------------------------------------
 -- Megatech Battlebot
 -- --------------------------------------
