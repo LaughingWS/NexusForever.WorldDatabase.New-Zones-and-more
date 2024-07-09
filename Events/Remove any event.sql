@@ -28,7 +28,7 @@ DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (717
 -- --------------------------------------
 -- Residential Renovation (WIP)
 -- --------------------------------------
-DELETE FROM `entity` WHERE `world` = 51 AND `Creature` IN (75914, 75915, 75927, 75949, 75952, 75956, 75957, 75958, 75959, 75960, 75976);
+DELETE FROM `entity` WHERE `world` = 51 AND `Creature` IN (7, 75914, 75915, 75927, 75949, 75952, 75956, 75957, 75958, 75959, 75960, 75976);
 DELETE FROM `entity` WHERE `world` = 51 AND `area` = 4959 AND `Creature` IN (0);
 DELETE FROM `entity` WHERE `world` = 22 AND `Creature` IN (75914, 75915, 75927, 75949, 75952, 75956, 75957, 75958, 75959, 75960, 75976);
 DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (0);
@@ -40,10 +40,9 @@ DELETE FROM `entity` WHERE `world` = 22 AND `Creature` IN (0);
 -- --------------------------------------
 -- Starfall (WIP)
 -- --------------------------------------
-DELETE FROM `entity` WHERE `world` = 51 AND `Creature` IN (0);
-DELETE FROM `entity` WHERE `world` = 51 AND `area` = 4959 AND `Creature` IN (0);
-DELETE FROM `entity` WHERE `world` = 22 AND `Creature` IN (0);
-DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (0);
+DELETE FROM `entity` WHERE `world` = 51 AND `Creature` IN (73058, 71788, 74962, 74963, 74964, 74965);
+DELETE FROM `entity` WHERE `world` = 22 AND `Creature` IN (73057, 74958, 74959, 74960, 74961);
+DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (71788);
 -- --------------------------------------
 -- zPrix (WIP)
 -- --------------------------------------
@@ -56,7 +55,7 @@ DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (717
 DELETE FROM `entity` WHERE `world` = 51 AND `Creature` IN (62672, 62909, 63140, 63142, 63144, 63228, 63388, 63389, 63390, 63391, 63430, 63745, 63746, 64996, 65078, 65201, 65205, 65209, 65326, 65407, 65410, 65411, 65412, 65413, 65415, 65449, 65450, 65935, 65346, 65947, 65954, 65957, 65958, 65960, 65961, 65974, 65975, 65976, 65980, 66008, 66009, 66011, 66012, 66016, 66018, 66036, 66082, 66131, 67312, 67372, 67382, 67395, 67865, 67980, 67981, 67983, 67984, 67985, 68020, 68021, 68022, 68032, 68033, 68354, 68356, 68358, 68360, 68362, 68364, 68366);
 DELETE FROM `entity` WHERE `world` = 51 AND `area` = 4959 AND `Creature` IN (0);
 DELETE FROM `entity` WHERE `world` = 22 AND `Creature` IN (0);
-DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (0);
+DELETE FROM `entity` WHERE `world` = 22 AND `area` = 2193 AND `Creature` IN (71788);
 -- --------------------------------------
 -- Winterfest (WIP)
 -- --------------------------------------
