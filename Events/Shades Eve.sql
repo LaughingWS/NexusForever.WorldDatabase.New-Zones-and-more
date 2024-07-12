@@ -815,6 +815,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+38, 10, 63228, @WORLD, 122, 3756.483, -842.8383, -1692.989, 2.570986, 0, 0, 36322, 0, 1335, 1335, 8),
     (@GUID+39, 10, 63228, @WORLD, 122, 3754.807, -842.8383, -1680.554, 1.055965, -0.007301809, 0.06790926, 36322, 0, 1335, 1335, 10);
 -- --------------------------------------
+-- Holotable
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 32, 63321, @WORLD, 4408, 3705.025, -835.5859, -1660.623, -1.287703, 0, 0, 27450, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 101);
+-- --------------------------------------
 -- Shade's Eve Reveler
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -3118,6 +3126,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
     (@GUID+1, 10, 68033, @WORLD, 4408, 3719.16, -834.5889, -1633.342, 0.8201657, -0.09591404, 0.3868529, 36780, 0, 219, 219, 1);
+-- --------------------------------------
+-- Peddler Cal
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+    (@GUID+1, 0, 68080, @WORLD, 4408, 3705.494, -842.8423, -1726.677, 2.176264, 0, 0, 21825, 9030, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+    (@GUID+1, 0, 32652),
+    (@GUID+1, 10, 50),
+    (@GUID+1, 15, 0),
+    (@GUID+1, 20, 0),
+    (@GUID+1, 21, 0),
+    (@GUID+1, 22, 0);
 -- --------------------------------------
 -- Festive Drinks Menu
 -- --------------------------------------
