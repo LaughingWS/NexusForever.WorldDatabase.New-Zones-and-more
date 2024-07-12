@@ -6,7 +6,7 @@ I will take all of July off, so no update in August, I did a big Event rework, l
 #4  Celestion: removed Shades eve 100% completed                                                                                      
 #5  Northern Wilds: Added more things to the map to fixs quests.
 #6  Illium: Removed zPrix event 100% completed                                                                       
-#7  Illium: This has a portal to Halon Ring, it is in the place that Carbine wanted it in. As a side note, beta clients have a non valid spot for it.                                                                         
+#7  Illium: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                                                         
 #8  Illium Museum: 90% completed                                                                                                                  
 #9  Crimson Isle: Portal and NPC added                                                                                                               
 #10 Levian Bay: Portals and NPCs added                                                                                                      
