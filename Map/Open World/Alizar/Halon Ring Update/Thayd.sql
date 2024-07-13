@@ -7726,8 +7726,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Zen Pond
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 54400, @WORLD, 3015, 4078.783, -818.9699, -1653.37, 3.00633, 0.5534987, -4.072597E-07, 27725, 0, 219, 219, 2619935753624);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 54400, @WORLD, 3015, 4078.783, -818.9699, -1653.37, 3.00633, 0.5534987, -4.072597E-07, 27725, 0, 219, 219, 2619935753624, 1);
 -- --------------------------------------
 -- Windmill
 -- --------------------------------------
@@ -7739,13 +7739,13 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
-    (@GUID+1, 10, 54403, @WORLD, 3015, 4093.528, -818.9697, -1629.719, 1.435536, 0.5534995, -1.751655E-07, 27725, 0, 219, 219, 283473544600, 1);
+    (@GUID+1, 10, 54403, @WORLD, 3015, 4093.528, -818.9697, -1629.719, 1.435536, 0.5534995, -1.751655E-07, 27725, 0, 219, 219, 283473544600, 3);
 -- --------------------------------------
 -- Storage Unit
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
-    (@GUID+1, 10, 54404, @WORLD, 3015, 4051.468, -818.9697, -1637.125, -1.911039, 0.5534988, 4.729468E-07, 27725, 0, 219, 219, 2791734445464, 3);
+    (@GUID+1, 10, 54404, @WORLD, 3015, 4051.468, -818.9697, -1637.125, -1.911039, 0.5534988, 4.729468E-07, 27725, 0, 219, 219, 2791734445464, 4);
 -- --------------------------------------
 -- Protostar Advertisement Plushie
 -- --------------------------------------
@@ -8755,7 +8755,6 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
-
 -- --------------------------------------
 -- Path Hoard-O-Tron 4000
 -- --------------------------------------
@@ -8857,7 +8856,6 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 14, 67490, @WORLD, 2548, 4041.405, -803.212, -2312.362, -0.06160521, 0, 0, 24632, 9253, 171, 171);
-
 -- --------------------------------------
 -- Holo-Projector User's Manual - Troubleshooting Guide
 -- --------------------------------------
