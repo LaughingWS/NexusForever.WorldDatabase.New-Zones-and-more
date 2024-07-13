@@ -8230,26 +8230,26 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Zen Pond
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 65296, @WORLD, 3014, -3309.436, -903.7229, -859.9409, 0.1227484, 0.5534987, -4.247763E-07, 27725, 0, 219, 219, 2619935741074);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 65296, @WORLD, 3014, -3309.436, -903.7229, -859.9409, 0.1227484, 0.5534987, -4.247763E-07, 27725, 0, 219, 219, 2619935741074, 1);
 -- --------------------------------------
 -- Windmill
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 65297, @WORLD, 3014, -3307.637, -903.723, -901.6152, 3.044327, 0.553498, 7.926234E-07, 27725, 0, 219, 219, 2602755871890);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 65297, @WORLD, 3014, -3307.637, -903.723, -901.6152, 3.044327, 0.553498, 7.926234E-07, 27725, 0, 219, 219, 2602755871890, 2);
 -- --------------------------------------
 -- Power Generator
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 65298, @WORLD, 3014, -3329.727, -903.7228, -879.0459, -1.448045, 0.5534992, 7.006621E-08, 27725, 0, 219, 219, 283473532050);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 65298, @WORLD, 3014, -3329.727, -903.7228, -879.0459, -1.448045, 0.5534992, 7.006621E-08, 27725, 0, 219, 219, 283473532050, 3);
 -- --------------------------------------
 -- Storage Unit
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 65299, @WORLD, 3014, -3287.171, -903.7228, -882.6173, 1.488564, 0.5534986, 3.85364E-07, 27725, 0, 219, 219, 2791734432914);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 65299, @WORLD, 3014, -3287.171, -903.7228, -882.6173, 1.488564, 0.5534986, 3.85364E-07, 27725, 0, 219, 219, 2791734432914, 4);
 -- --------------------------------------
 -- T-11 Raid Holo-Target
 -- --------------------------------------
