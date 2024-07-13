@@ -11560,8 +11560,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Darkfang Den
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 31105, @WORLD, 1632, -1723.536, -703.7089, -3398.357, 0.6876681, -0.02980822, 0.02571043, 27731, 0, 219, 219, 1342812);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 31105, @WORLD, 1632, -1723.536, -703.7089, -3398.357, 0.6876681, -0.02980822, 0.02571043, 27731, 0, 219, 219, 1342812, 1);
 -- --------------------------------------
 -- 50 Shades of Green
 -- --------------------------------------
@@ -16000,14 +16000,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Darkfang Den
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 32250, @WORLD, 1634, -1781.994, -712.3418, -3447.05, -2.537767, 0, 0, 27732, 0, 219, 219, 1342813);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 32250, @WORLD, 1634, -1781.994, -712.3418, -3447.05, -2.537767, 0, 0, 27732, 0, 219, 219, 1342813, 2);
 -- --------------------------------------
 -- Darkfang Den
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 32251, @WORLD, 1634, -1717.872, -708.1176, -3481.349, 2.792934, 0, 0, 27732, 0, 219, 219, 2186168);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 32251, @WORLD, 1634, -1717.872, -708.1176, -3481.349, 2.792934, 0, 0, 27732, 0, 219, 219, 2186168, 3);
 -- --------------------------------------
 -- Work Order Board
 -- --------------------------------------
