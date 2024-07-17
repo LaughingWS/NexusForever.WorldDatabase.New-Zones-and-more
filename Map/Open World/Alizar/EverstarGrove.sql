@@ -2,8 +2,7 @@
 -- Everstar Grove Zone Dump
 -- --------------------------------------
 SET @WORLD = 990;
-DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (662, 1414, 1415, 1416, 1417, 1418, 1419, 1420, 1421, 1422, 1464, 1465, 1466, 1467, 1477, 1966, 2432, 2569, 2570, 2571, 4381);
--- 36247 remove
+DELETE FROM `entity` WHERE `world` = @WORLD;
 -- --------------------------------------
 -- Hostile Invisible Unit for Fields (1.2 hit radius)
 -- --------------------------------------
@@ -902,6 +901,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 18),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Arwick Redleaf
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 27732, @WORLD, 1419, -115.6906, -926.4658, -3472.449, 0, 0, 0, 27879, 9074, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 7702046),
+(@GUID+1, 10, 50),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 1954338),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Fenra Skytree
 -- --------------------------------------
@@ -2522,6 +2534,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+12, 10, 28247, @WORLD, 1416, -326.9672, -1014.946, -3568.516, 1.411803, -4.390991E-09, -7.450582E-09, 24320, 0, 0, 0, 3),
     (@GUID+13, 10, 28247, @WORLD, 1416, -318.9391, -1015.118, -3566.448, 1.710891, 0, 0, 24320, 0, 0, 0, 0);
 -- --------------------------------------
+-- Livingroot Mender   last 
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28278, @WORLD, 1465, -396.8392, -1013.968, -3502.652, 0, 0, 0, 21537, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- HOLDOUT: Thrashing Wilds
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -2916,9 +2936,9 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Eldan Teleporter
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 28454, @WORLD, 1415, -210.7691, -942.2574, -3011.136, -2.733693, 0, 0, 25526, 0, 219, 219, 1181542),
-    (@GUID+2, 10, 28454, @WORLD, 1415, -241.6909, -1123.169, -3012.247, 0.628041, 0, 0, 25526, 0, 219, 219, 51540831683);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 28454, @WORLD, 1415, -210.7691, -942.2574, -3011.136, -2.733693, 0, 0, 25526, 0, 219, 219, 1181542, 1),
+    (@GUID+2, 10, 28454, @WORLD, 1415, -241.6909, -1123.169, -3012.247, 0.628041, 0, 0, 25526, 0, 219, 219, 51540831683, 2);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 12, 0),
     (@GUID+1, 13, 0),
@@ -3072,6 +3092,38 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
+INSERT INTO `entity_vendor_category` (`Id`, `Index`, `LocalisedTextID`) VALUES
+(@GUID+1, 1, 712282),
+(@GUID+1, 2, 712302),
+(@GUID+1, 3, 712312),
+(@GUID+1, 4, 712322);
+INSERT INTO `entity_vendor_item` (`Id`, `Index`, `CategoryIndex`, `ItemId`, `ExtraCost1ItemOrCurrencyId`, `ExtraCost1Quantity`, `ExtraCost1Type`, `ExtraCost2ItemOrCurrencyId`, `ExtraCost2Quantity`, `ExtraCost2Type`) VALUES
+(@GUID+1,  1, 1, 13179, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  2, 1, 13176, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  3, 1, 13194, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  4, 1, 13188, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  5, 1, 13191, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  6, 1, 13185, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  7, 2, 13148, 1, 468, 2, 0, 0, 0),
+(@GUID+1,  8, 2, 13151, 1, 328, 2, 0, 0, 0),
+(@GUID+1,  9, 2, 13154, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 10, 2, 83720, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 11, 2, 13157, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 12, 2, 83721, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 13, 3, 13160, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 14, 3, 13163, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 15, 3, 13166, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 16, 3, 83722, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 17, 3, 13169, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 18, 3, 83723, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 19, 4, 27873, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 20, 4, 27875, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 21, 4, 27876, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 22, 4, 83724, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 23, 4, 27874, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 24, 4, 83725, 1, 328, 2, 0, 0, 0);
 -- --------------------------------------
 -- Elderoot Refuge Defender
 -- --------------------------------------
@@ -3119,6 +3171,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Queen Myala Everstar (Tranced)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28789, @WORLD, 1966, -398.434, -885.8055, -3262.607, -1.650906, 0, 0, 27881, 9073, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- Arwick Redleaf
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -3133,6 +3193,30 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 1954338),
     (@GUID+1, 21, 18),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Queen Myala Everstar (Healing)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28843, @WORLD, 1416, -516.22, -905.24, -3312.32, -3.1415926536, 0, 0, 27881, 9073, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
+-- Queen Myala Everstar (Final)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28869, @WORLD, 1420, 656.0165, -957.5753, -3298.5, 0, 0, 0, 27881, 9073, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9486441),
+(@GUID+1, 10, 50),
+(@GUID+1, 12, 0),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 364031),
+(@GUID+1, 15, 1),
+(@GUID+1, 20, 0),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Dead Alchemist
 -- --------------------------------------
@@ -5390,6 +5474,22 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
     (@GUID+1, 10, 34417, @WORLD, 1416, -238.0206, -911.7328, -3157.008, 2.581403, 1.632927E-09, 2.974031E-07, 24574, 0, 219, 219, 1390999);
 -- --------------------------------------
+-- Livingroot Mender Obj 1
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 36124, @WORLD, 1465, -311.4849, -1013.241, -3578.856, 0, 0, 0, 21537, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
+-- Livingroot Mender Obj 0
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 36125, @WORLD, 1465, -405.2386, -1016.656, -3592.838, 0, 0, 0, 21537, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- Eldan Lift
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -5812,14 +5912,6 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+26, 8, 36246, @WORLD, 1416, -185.6158, -917.83, -3598.495, 2.140058, 0.1926134, 0.1218907, 29814, 0, 219, 219, 24),
     (@GUID+27, 8, 36246, @WORLD, 1416, -54.8525, -921.3651, -3585.16, 0.4744713, 0.005862694, 0.4117482, 29814, 0, 219, 219, 9),
     (@GUID+28, 8, 36246, @WORLD, 1416, -158.2007, -916.6264, -3657.836, -1.944, 0.3233145, 0.9040266, 29814, 0, 219, 219, 19);
--- --------------------------------------
--- Elderoot
--- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 36247, @WORLD, 1966, -395.283, -884.9603, -3258.846, 0, 0, 0, 27745, 0, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Firestorm Assault Deforester
 -- --------------------------------------
@@ -9715,6 +9807,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Elderoot
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 72021, @WORLD, 1416, -395.283, -884.9603, -3258.846, 0, 0, 0, 37971, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Professor Rhoda Wellspring
 -- --------------------------------------
