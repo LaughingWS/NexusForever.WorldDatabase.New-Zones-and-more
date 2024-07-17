@@ -1015,6 +1015,38 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
+INSERT INTO `entity_vendor_category` (`Id`, `Index`, `LocalisedTextID`) VALUES
+(@GUID+1, 1, 712282),
+(@GUID+1, 2, 712302),
+(@GUID+1, 3, 712312),
+(@GUID+1, 4, 712322);
+INSERT INTO `entity_vendor_item` (`Id`, `Index`, `CategoryIndex`, `ItemId`, `ExtraCost1ItemOrCurrencyId`, `ExtraCost1Quantity`, `ExtraCost1Type`, `ExtraCost2ItemOrCurrencyId`, `ExtraCost2Quantity`, `ExtraCost2Type`) VALUES
+(@GUID+1,  1, 1, 13179, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  2, 1, 13176, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  3, 1, 13194, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  4, 1, 13188, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  5, 1, 13191, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  6, 1, 13185, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  7, 2, 13148, 1, 468, 2, 0, 0, 0),
+(@GUID+1,  8, 2, 13151, 1, 328, 2, 0, 0, 0),
+(@GUID+1,  9, 2, 13154, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 10, 2, 83720, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 11, 2, 13157, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 12, 2, 83721, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 13, 3, 13160, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 14, 3, 13163, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 15, 3, 13166, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 16, 3, 83722, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 17, 3, 13169, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 18, 3, 83723, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 19, 4, 27873, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 20, 4, 27875, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 21, 4, 27876, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 22, 4, 83724, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 23, 4, 27874, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 24, 4, 83725, 1, 328, 2, 0, 0, 0);
 -- --------------------------------------
 -- Granok Mercenary{p:Granok Mercenaries}
 -- --------------------------------------
@@ -2274,8 +2306,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Signal Flare 1
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 12521, @WORLD, 595, 4385.998, -744.902, -5636.93, 2.60117, 0, 0, 23093, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 12521, @WORLD, 595, 4385.998, -744.902, -5636.93, 2.60117, 0, 0, 23093, 219, 219, 1);
 -- --------------------------------------
 -- Dominion Blasterbot
 -- --------------------------------------
@@ -3272,14 +3304,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Signal Flare 2
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 13150, @WORLD, 595, 4367.455, -743.67, -5638.63, 0, 0, 0, 23093, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 13150, @WORLD, 595, 4367.455, -743.67, -5638.63, 0, 0, 0, 23093, 219, 219, 2);
 -- --------------------------------------
 -- Signal Flare 3
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 13151, @WORLD, 595, 4347.792, -744.507, -5636.98, 0, 0, 0, 23093, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 13151, @WORLD, 595, 4347.792, -744.507, -5636.98, 0, 0, 0, 23093, 219, 219, 3);
 -- --------------------------------------
 -- 
 -- --------------------------------------
