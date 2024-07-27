@@ -11,6 +11,9 @@
 -- Have someone look at all displayinfos and see if they match 100% and not 99.9%
 -- get real speed for splines
 -- ------------------------------------------------------------------------------------------------------------
+DELETE FROM map_entrance WHERE mapId = 1333;
+INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
+(1333, 0, 19279);
 SET @WORLD = 1333;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (1, 1301, 1349, 1590, 1592, 1594, 1602, 1603, 1604, 1605, 1607, 1609, 1610, 2371, 2372, 2373, 4474, 4475, 4476, 4477, 4478, 4479);
 -- ---------------------------------
