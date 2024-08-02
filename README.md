@@ -1,5 +1,6 @@
-Welcome to my custom Database! This is my change list from the main Database. I will do updates every month.   
-I will take all of July off, so no update in August, I did a big Event rework, look at the README file in the Event folder.                                                       
+Welcome to my custom Database! I have made many updates and changes to this database set, some of the files only work in Kirmmin's builds, some only work in Rework build, so you will have to add more tables or columns to your database if you want all the files to work for you. I have posted a SQL file that has all files in one SQL script, "All in one.sql" will add everything into your database, this is the best file to use for people who don't know what they are doing :) I also have "All in one with Halon Ring update.sql" for people that want that. The two files are in the all in one folder. Events are not in the all in one SQLs, so if you want one of the events run the SQL with that event. 
+This is my change list from the main Database. I will do updates every month.   
+                                                      
 #1  Thayd: I have removed all the events from here (I hope) 100% completed             
 #2  Thayd: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                       
 #3  Whitevale: I removed Winterfest from here 100% completed                                                                                                        #4  Celestion: removed Shades eve 100% completed                                                                                      
