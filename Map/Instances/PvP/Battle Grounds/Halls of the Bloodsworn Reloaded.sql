@@ -1,7 +1,7 @@
 -- --------------------------------------
 -- Halls of the Bloodsworn: Reloaded
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 821;
+DELETE FROM map_entrance WHERE mapId = 3449;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-    (821, 0, 27435),
-    (821, 1, 27436);
+    (3449, 0, 51426),
+    (3449, 1, 51427);
