@@ -2,11 +2,11 @@
 -- Halon Ring Zone |1446/1446|
 -- Made by hand by Laughing
 -- ---------------------------------------------
--- TODO : Get area ID, Type, DisplayInfo, OutfitInfo, Factions, QuestChecklistIdx?. Place X, Y, Z, RX
+-- TODO : Get area ID, Type, DisplayInfo, OutfitInfo, Factions. Place X, Y, Z, RX
 -- look at type again
--- ---------------------------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
 SET @WORLD = 1068;
-DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (0, 868, 869, 872, 1447, 1450, 1481, 1482, 1483, 1487, 1448, 1449, 1481, 1482, 1483, 1543, 1450, 1451, 1452, 1453, 1457, 1458, 2048, 2049, 2050, 2051, 2056, 2057, 2058, 2059, 2060, 2062, 2386, 2387, 2408, 2410, 2439, 2445, 4393, 4394, 4466, 4591, 4592, 4594, 4637, 4650);
+DELETE FROM `entity` WHERE `world` = @WORLD;
 -- ---------------------------------------------
 -- Jellied Chayne - Port Grimvoid - Quest Giver
 -- ---------------------------------------------
@@ -98,151 +98,151 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 15966, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Mongo - Crater of Carnage - Solo Boss
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16399, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Short Circuit - Crater of Carnage - Champion Creature
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16400, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Margh - Crater of Carnage - Cluster Creature
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16401, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Lurgh - Crater of Carnage - Cluster Creature
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16402, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - The Rock - Crater of Carnage - Solo Boss
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16405, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Garmagon the Violent - Crater of Carnage - Solo boss
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 16406, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Transmat Terminal - Halon Ring - PAG Dev Fac
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 18, 16460, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Bind Stone Units - Halon Ring - Tract 2 - Port of Profit
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 18, 16461, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Lustrous Xenolithic Stone - Common Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25530, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Lustrous Xenolithic Stone - Uncommon Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25531, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Lustrous Xenolithic Stone - Rare Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25532, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Residual Mega-Freezon - Common Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25536, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Residual Mega-Freezon - Uncommon Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25537, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Residual Mega-Freezon - Rare Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25538, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halonite Cluster - Common Settler Resource - Lvl 50 - Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25545, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- [UNUSED] Halonite Cluster - Uncommon Settler Resource - Lvl 47-54 - Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25546, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- [UNUSED] Halonite Cluster - Rare Settler Resource - Lvl 47-54 - Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25547, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Anti-Entropic Fluid - Common Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25551, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Anti-Entropic Fluid - Uncommon Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25552, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Anti-Entropic Fluid - Rare Settler Resource - Lvl 40-46 - Malgrave & Halon Ring - DO NOT DUPLICATE - DO NOT ATTACH SCRIPTS
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 8, 25553, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - E3 - Halonzoa Stinger - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27512, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - E3 - Halonzoa Medusa - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27513, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 -  E3 - Aetherwing Glider - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27521, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - E3 - Aetherwing Drifter - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27522, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - E3 - Aetherwing Fledgling - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
@@ -256,103 +256,103 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 1);
 -- ---------------------------------------------
--- 
+-- Bloodrock Brawler - Halon Ring - Tract 1 - E3 - JGP - WK [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27540, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Bloodrock Roughshot - Halon Ring - Tract 1 - E3 - JGP -WK [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27546, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Bloodrock Pulverizer - Halon Ring - Tract 1 - E3 - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27557, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Bloodrock Boneripper (M. Granok) - Halon Ring - Tract 1 - E3 - JGP -WK [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27565, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Treasure Hunter (chua) - Halon Ring - Tract 1 - E3 - JGP
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27567, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Treasure Hunter human - Halon Ring - Tract 1 - E3 - JGP
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27571, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Treasure Hunter Mechari (M) - Halon Ring - Tract 1 - E3 - JGP
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27572, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Treasure Hunter (F. Draken) - Halon Ring - Tract 1 - E3 - JGP
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27574, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halonian Rockcrusher - Halon Ring - Tract 1 - E3 - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27592, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Rockhorde - Halon Ring - Tract 1 - E3 - JGP [HR1-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27597, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Human Male Bandit - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27689, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Human Male Big Rig Bandit - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27690, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Human Female Bandit - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27691, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Oghra - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27692, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Grund - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27694, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Eeklu - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27695, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Graylight Citizen - Grumpel - Halon Ring - Tract 1 - Graylight
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
@@ -7611,17 +7611,21 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 66175, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - PE635 - Supply Officer Kagga - Quest Giver - DJU
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66197, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 66197, @WORLD, 4592, -12148, -58.9396, -5291.11, 0, 0, 0, 36532, 10427, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
--- 
+-- Halon Ring - Tract 1 - PE635 - Researcher Waren - Quest Giver - DJU
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66204, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 66204, @WORLD, 4592, -12139.5, -58.9376, -5294.71, 0, 0, 0, 36535, 10428, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -7641,23 +7645,29 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 66239, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Bron Goldhand - Tract 1 - (Tue Thurs Sat Sun)(Quest Giver)
 -- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66251, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+   SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+   INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+   (@GUID+1, 0, 66251, @WORLD, 0, -11865.9, 55.43921, -4057.59, 0, 0, 0, 35016, 0, 219, 219);
+   INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+   (@GUID+1,  0, 1);
 -- ---------------------------------------------
--- 
+-- Q6252 - Bako - Tract 1 - (Tue Thus Sat Sun)(Quest Giver)
 -- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66252, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+   SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+   INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+   (@GUID+1, 0, 66252, @WORLD, 0, -11909, 68.96849, -3940.09, 0, 0, 28895, 0, 219, 219);
+   INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+   (@GUID+1,  0, 1);
 -- ---------------------------------------------
--- 
+-- Madame Ella - Quest Giver - Tract 1 - (Tue Thus Sat Sun)
 -- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66253, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+   SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+   INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+   (@GUID+1, 0, 66253, @WORLD, 0, -11771.5, 65.18945, -4031.87, 0, 0, 0, 28899, 0, 219, 219);
+   INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+   (@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -7671,11 +7681,13 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 66256, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Q6515 - Merchant Torook - Halon Ring - Tract 1 (Quest Giver)(Tue Thus Sat Sun)
 -- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66257, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+   SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+   INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+   (@GUID+1, 0, 66257, @WORLD, 868, -11785.1, 72.41602, -3939.46, 0, 0, 0, 23521, 0, 219, 219);
+   INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+   (@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -7977,11 +7989,13 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 67600, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Tract 1 - Aloysius Moon - Goldenhand's Lackey - Quest Giver - Graylight - DJU
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67613, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67613, @WORLD, 869, -11872.3, 55.43921, -4061.05, 0, 0, 0, 36506, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8007,11 +8021,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 67624, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Redmoon Advocate - Q6279 Q6512 - T1 - WK
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67630, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67630, @WORLD, 1451, -12569.6, 2.433838, -6073.19, 0, 0, 0, 28789, 0, 219, 219),
+(@GUID+2, 0, 67630, @WORLD, 1451, -12468.3, 17.56314, -5998.69, 0, 0, 0, 28789, 0, 219, 219);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8115,11 +8130,13 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 9, 67817, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Q9766 - Halon Ring - Soldier Daily - Quest Giver
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 67829, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 20, 67829, @WORLD, 868, -11965.7, 84.52444, -3925.64, 0, 0, 0, 23082, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8139,11 +8156,13 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 67843, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Tract 1 - Q6252 Q6367 - Bebiz the Snitch - DJU [HR1PE-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67847, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67847, @WORLD, 868, -11898.9, 52.77625, -4088.28, 0, 0, 0, 36724, 9232, 218, 218);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8151,11 +8170,13 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 20, 67848, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Tract 1 - Q6252 Q6367 - Marketa the Fence - DJU [HR1PE-CBC]
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67850, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67850, @WORLD, 868, -11898.9, 52.77625, -4088.28, 0, 0, 0, 36724, 10487, 218, 218);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8181,23 +8202,33 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 67886, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
+-- [BAM] Acidicil - Buzzbing Alien - Tract 1 - E4 - BMOT[HR1-CBC]
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 67887, @WORLD, 4466, -12664.8, 20.83305, -5353.68, 0, 0, 0, 28648, 0, 257, 257);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
+-- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 67889, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
--- 
+-- Q6277 Q6513 - Grimviod Generator - Tract 1
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 10, 67893, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 67893, @WORLD, 1452, -12897.5, -9.01935, -6086.56, 0, 0, 0, 26172, 0, 219, 219);
 -- ---------------------------------------------
--- 
+-- Bosun Jorg Grund - Q9771 - Tract 1 - E4 - BMOT
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67897, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67897, @WORLD, 1457, -12302.4, 65.86314, -5895.13, 0, 0, 0, 23520, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
@@ -8227,620 +8258,31 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 67919, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 67920, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 67921, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 8, 67943, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Halon Ring - Tract 1 - PE635 - Supply Officer Kagga - Quest Giver - DJU
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66197, @WORLD, 4592, -12148, -58.9396, -5291.11, 0, 0, 0, 36532, 10427, 171, 171);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Halon Ring - Tract 1 - PE635 - Researcher Waren - Quest Giver - DJU
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 66204, @WORLD, 4592, -12139.5, -58.9376, -5294.71, 0, 0, 0, 36535, 10428, 171, 171);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Bron Goldhand - Tract 1 - (Tue Thurs Sat Sun)(Quest Giver)
--- ---------------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 66251, @WORLD, 0, -11865.9, 55.43921, -4057.59, 0, 0, 0, 35016, 0, 219, 219);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1,  0, 1);
--- ---------------------------------------------
--- Q6252 - Bako - Tract 1 - (Tue Thus Sat Sun)(Quest Giver)
--- ---------------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 66252, @WORLD, 0, -11909, 68.96849, -3940.09, 0, 0, 28895, 0, 219, 219);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1,  0, 1);
--- ---------------------------------------------
--- Madame Ella - Quest Giver - Tract 1 - (Tue Thus Sat Sun)
--- ---------------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 66253, @WORLD, 0, -11771.5, 65.18945, -4031.87, 0, 0, 0, 28899, 0, 219, 219);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Q6515 - Merchant Torook - Halon Ring - Tract 1 (Quest Giver)(Tue Thus Sat Sun)
--- ---------------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 66257, @WORLD, 868, -11785.1, 72.41602, -3939.46, 0, 0, 0, 23521, 0, 219, 219);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Tract 1 - Aloysius Moon - Goldenhand's Lackey - Quest Giver - Graylight - DJU
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67613, @WORLD, 869, -11872.3, 55.43921, -4061.05, 0, 0, 0, 36506, 0, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Redmoon Advocate - Q6279 Q6512 - T1 - WK
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67630, @WORLD, 1451, -12569.6, 2.433838, -6073.19, 0, 0, 0, 28789, 0, 219, 219),
-(@GUID+2, 0, 67630, @WORLD, 1451, -12468.3, 17.56314, -5998.69, 0, 0, 0, 28789, 0, 219, 219);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Q9766 - Halon Ring - Soldier Daily - Quest Giver
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 67829, @WORLD, 868, -11965.7, 84.52444, -3925.64, 0, 0, 0, 23082, 0, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- Tract 1 - Q6252 Q6367 - Marketa the Fence - DJU [HR1PE-CBC]
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67850, @WORLD, 868, -11898.9, 52.77625, -4088.28, 0, 0, 0, 36724, 10487, 218, 218);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Tract 1 - Q6252 Q6367 - Bebiz the Snitch - DJU [HR1PE-CBC]
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67847, @WORLD, 868, -11898.9, 52.77625, -4088.28, 0, 0, 0, 36724, 9232, 218, 218);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- [BAM] Acidicil - Buzzbing Alien - Tract 1 - E4 - BMOT[HR1-CBC]
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67887, @WORLD, 4466, -12664.8, 20.83305, -5353.68, 0, 0, 0, 28648, 0, 257, 257);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Q6277 Q6513 - Grimviod Generator - Tract 1
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 10, 67893, @WORLD, 1452, -12897.5, -9.01935, -6086.56, 0, 0, 0, 26172, 0, 219, 219);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
--- ---------------------------------------------
--- Bosun Jorg Grund - Q9771 - Tract 1 - E4 - BMOT
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 67897, @WORLD, 1457, -12302.4, 65.86314, -5895.13, 0, 0, 0, 23520, 0, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
--- ---------------------------------------------
--- 
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 67974, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Q9773 - Corrigan Doon (Deadman's Landing)- Halon Ring - Tract 1
 -- ---------------------------------------------
@@ -8862,7 +8304,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 8, 67993, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Redmoon Bouncer - Q6274 Q6486 NPC - T1 - WK
 -- ---------------------------------------------
@@ -8876,7 +8318,79 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68038, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68040, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68044, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68046, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68047, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68052, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68053, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68054, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68056, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68058, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 68060, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68064, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68065, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Necrodust Concoction Q9783 Q9784 - T1 - WK
 -- ---------------------------------------------
@@ -8888,7 +8402,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68067, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Corrigan Doon (Doomfarer Ext) - Q6280 Q6490 Quest Giver - Tract 1
 -- ---------------------------------------------
@@ -8904,43 +8418,145 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 68073, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 68074, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 68076, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 68083, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 10, 68084, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68087, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68089, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68108, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68109, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68110, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68135, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68136, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68137, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 20, 68166, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 3, 68267, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68275, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68319, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68348, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68401, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68402, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68403, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68440, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68449, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68451, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Tract 1 - Q6249 - Swiftfell Comm Relay - DJU 
 -- ---------------------------------------------
@@ -8964,7 +8580,19 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 20, 68476, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68535, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 3, 68536, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Tract 1 - Q9817 - Darkspur Starfighter - Quest Target - DJU
 -- ---------------------------------------------
@@ -8976,19 +8604,415 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68570, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68571, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 0, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 0, 68578, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68629, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68638, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68639, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68640, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68669, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 68687, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68838, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68839, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68840, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68841, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68842, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68843, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 20, 68898, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68899, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 20, 68905, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68912, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68967, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68972, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68993, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68994, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 68995, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 14, 73095, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73109, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73124, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73216, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73227, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73249, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 14, 73407, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73418, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 73434, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73439, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73476, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73546, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73614, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73615, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 73696, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 11, 73699, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73700, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73701, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73702, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73703, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73704, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73705, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73706, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 73716, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74815, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74818, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74819, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 74823, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74839, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74840, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74841, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74842, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74843, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74844, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74845, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74846, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74865, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74866, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 74867, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 20, 74870, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74882, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74883, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74892, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 74893, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 74905, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Eldan Information Construct - Tract 1 - Grimvoid Dreadvault - Scientist Archive - WK
 -- ---------------------------------------------
