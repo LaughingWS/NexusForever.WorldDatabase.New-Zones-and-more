@@ -9080,6 +9080,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Contract Agent
 -- --------------------------------------
@@ -9093,6 +9095,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Supplier Jaymes
 -- --------------------------------------
@@ -9106,6 +9110,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Merchant Joka
 -- --------------------------------------
@@ -9119,6 +9125,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Supplier Krystof
 -- --------------------------------------
@@ -9132,6 +9140,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Supplier Bohdana
 -- --------------------------------------
@@ -9145,6 +9155,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Exile Attackship
 -- --------------------------------------
@@ -9229,6 +9241,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Supply Officer Davon
 -- --------------------------------------
@@ -9242,6 +9256,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Quartermaster Watergale
 -- --------------------------------------
@@ -9255,6 +9271,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Quartermaster Eliska
 -- --------------------------------------
@@ -9268,6 +9286,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Pet-Tamer Valanna
 -- --------------------------------------
@@ -9645,6 +9665,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Table of Really Fresh and Delicious Food
 -- --------------------------------------
