@@ -1,11 +1,11 @@
 -- --------------------------------------
 -- Levian Bay
 -- Edited by Laughing
--- ------------------------------------------------
--- TODO: get prop ID and look at RX 26007, 6, 7, 8
--- ------------------------------------------------
+-- -------------------------------------------------------------
+-- TODO: get real prop ID portal 6, 7, 8|26620 drop quest item
+-- -------------------------------------------------------------
 SET @WORLD = 1387;
-DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (1304, 1305, 1306, 1307, 1309, 1310, 1311, 1346, 1350, 1356, 1364, 1410, 1411, 2485, 2486, 2599, 2600, 2601, 2602, 2603);
+DELETE FROM `entity` WHERE `world` = @WORLD;
 -- --------------------------------------
 -- Hostile Invisible Unit for Fields (1.2 hit radius)
 -- --------------------------------------
@@ -73,11 +73,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+2, 10, 16623, @WORLD, 1306, -2755.844, -1067.72, -5705.319, 0, 0, 0, 23539, 0, 682, 682),
     (@GUID+3, 10, 16623, @WORLD, 1306, -2744.632, -1066.602, -5706.333, 0, 0, 0, 23539, 0, 682, 682),
     (@GUID+4, 10, 16623, @WORLD, 1306, -2698.377, -1067.72, -5740.685, -1.16989, 0, 0, 23539, 0, 682, 682),
-    (@GUID+5, 10, 16623, @WORLD, 1306, -2702.834, -1067.72, -5744.702, -1.16989, 0, 0, 23539, 0, 682, 682),
-    (@GUID+6, 10, 16623, @WORLD, 1306, -2697.545, -1067.72, -5734.743, -1.16989, 0, 0, 23539, 0, 682, 682),
-    (@GUID+7, 10, 16623, @WORLD, 1306, -2699.02, -1065.241, -5712.968, -1.049237, 0, 0, 23539, 0, 682, 682),
-    (@GUID+8, 10, 16623, @WORLD, 1306, -2641.2, -1064.814, -5702.902, 0.494321, 0, 0, 23539, 0, 682, 682),
-    (@GUID+9, 10, 16623, @WORLD, 1306, -2650.436, -1066.831, -5696.668, 0.494321, 0, 0, 23539, 0, 682, 682),
+    (@GUID+5, 10, 16623, @WORLD, 1306, -2702.834, -1067.72, -5744.702, -10.494321, 0, 0, 23539, 0, 682, 682),
     (@GUID+10, 10, 16623, @WORLD, 1306, -2646.937, -1066.194, -5701.504, 0.494321, 0, 0, 23539, 0, 682, 682),
     (@GUID+11, 10, 16623, @WORLD, 1306, -2752.189, -1067.72, -5711.542, -2.849254, 0, 0, 23539, 0, 682, 682),
     (@GUID+12, 10, 16623, @WORLD, 1306, -2747.711, -1067.72, -5715.534, -2.849254, 0, 0, 23539, 0, 682, 682),
@@ -1462,6 +1458,28 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+3, 21, 0),
     (@GUID+3, 22, 0);
 -- --------------------------------------
+-- Eldan Protector 
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 25988, @WORLD, 1310, -1822.79, -1053.32, -6061.09, 3.1415926536, 0, 0, 24399, 0, 893, 893),
+(@GUID+2, 0, 25988, @WORLD, 1310, -1796.28, -1053.54, -5938.87, 0,            0, 0, 24399, 0, 893, 893),
+(@GUID+3, 0, 25988, @WORLD, 1310, -1692.76, -1053.39, -5976.26, 1.5707963268, 0, 0, 24399, 0, 893, 893),
+(@GUID+4, 0, 25988, @WORLD, 1310, -1737.31, -1053.54, -5939.31, 0,            0, 0, 24399, 0, 893, 893);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1),
+(@GUID+1, 10, 4),
+(@GUID+1, 20, 1),
+(@GUID+2,  0, 1),
+(@GUID+2, 10, 4),
+(@GUID+2, 20, 1),
+(@GUID+3,  0, 1),
+(@GUID+3, 10, 4),
+(@GUID+3, 20, 1),
+(@GUID+4,  0, 1),
+(@GUID+4, 10, 4),
+(@GUID+4, 20, 1);
+-- --------------------------------------
 -- Eldan Augmentor
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -2420,18 +2438,48 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Skeech Shaman
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 26049, @WORLD, 1346, -1796.631, -956.7816, -6243.422, 0, 0, 0, 22974, 0, 1399, 1399),
+(@GUID+2, 0, 26049, @WORLD, 1346, -1833.645, -955.5369, -6223.273, 0, 0, 0, 22974, 0, 1399, 1399),
+(@GUID+3, 0, 26049, @WORLD, 1346, -1859.082, -956.4649, -6200.964, 0, 0, 0, 22974, 0, 1399, 1399),
+(@GUID+4, 0, 26049, @WORLD, 1346, -1896.189, -970.4231, -6291.878, 0, 0, 0, 22974, 0, 1399, 1399);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 654),
+(@GUID+1, 10,   4),
+(@GUID+2,  0, 844),
+(@GUID+2, 10,   5),
+(@GUID+3,  0, 654),
+(@GUID+3, 10,   4),
+(@GUID+4,  0, 654),
+(@GUID+4, 10,   4);
+INSERT INTO `entity_spline` (`Id`, `SplineId`, `Mode`, `Speed`, `FX`, `FY`, `FZ`) VALUES
+(@GUID+1, 7637, 1, 3, 0, 0, 0),
+(@GUID+2, 7638, 1, 3, 0, 0, 0),
+(@GUID+3, 7639, 1, 3, 0, 0, 0),
+(@GUID+4, 7640, 1, 3, 0, 0, 0);
+-- --------------------------------------
 -- The Caretaker
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 26071, @WORLD, 2599, -2712.817, -1326.34, -5956.517, 0, 0, 0, 24983, 0, 219, 219);
+(@GUID+1, 0, 26071, @WORLD, 2599, -2712.817, -1326.34,  -5956.517, 0, 0, 0, 24983, 0, 219, 219),
+(@GUID+2, 0, 26071, @WORLD, 2599, -2703.214, -1326.285, -5989.812, 0, 0, 0, 24983, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1, 0, 9.897122E+07),
-(@GUID+1, 10, 50),
-(@GUID+1, 15, 0),
+(@GUID+1,  0, 9.897122E+07),
+(@GUID+1, 10,           50),
+(@GUID+1, 15,            0),
 (@GUID+1, 20, 8.497122E+07),
-(@GUID+1, 21, 18),
-(@GUID+1, 22, 0);
+(@GUID+1, 21,           18),
+(@GUID+1, 22,            0),
+(@GUID+2,  0, 9.897122E+07),
+(@GUID+2, 10,           50),
+(@GUID+2, 15,            0),
+(@GUID+2, 20, 8.497122E+07),
+(@GUID+2, 21,           18),
+(@GUID+2, 22,            0);
 -- --------------------------------------
 -- Artemis Zin
 -- --------------------------------------
@@ -2538,6 +2586,12 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+33, 8, 26132, @WORLD, 1306, -2818.577, -1065.841, -6025.289, 2.463669, -0.03929282, 1.522051, 26555, 0, 219, 219),
     (@GUID+34, 8, 26132, @WORLD, 1306, -2729.905, -1066.163, -6068.334, -3.141593, 0, 0, 26555, 0, 219, 219);
 -- --------------------------------------
+-- Eldan Eldan Security Node 1
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 26134, @WORLD, 1310, -1580.45, -1062.8, -5985.08, -1.5707963268, 0, 0, 24574, 0, 219, 219);
+-- --------------------------------------
 -- Eldan Terminal
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -2577,6 +2631,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+4, 20, 0),
     (@GUID+4, 21, 0),
     (@GUID+4, 22, 0);
+-- --------------------------------------
+-- Eldan Control Panel 0
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 26173, @WORLD, 1310, -1574.888, -1062.807, -5918.626, 1.134464, 0, 0, 23102, 0, 219, 219);
 -- --------------------------------------
 -- Gloomshroud
 -- --------------------------------------
@@ -2961,10 +3021,10 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Drop Pod Landing Beacon
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 26417, @WORLD, 1307, -2454.911, -992.5074, -5074.28, 0.6946976, 0, 0, 22603, 0, 219, 219, 1132443),
-    (@GUID+2, 10, 26417, @WORLD, 1307, -2451.047, -987.081, -5128.363, 1.602353, 0, 0, 22603, 0, 219, 219, 1132444),
-    (@GUID+3, 10, 26417, @WORLD, 1307, -2529.2, -990.8531, -5120.009, -2.263398, 0, 0, 22603, 0, 219, 219, 1132445);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 26417, @WORLD, 1307, -2454.911, -992.5074, -5074.28, 0.6946976, 0, 0, 22603, 0, 219, 219, 1132443, 0),
+    (@GUID+2, 10, 26417, @WORLD, 1307, -2451.047, -987.081, -5128.363, 1.602353, 0, 0, 22603, 0, 219, 219, 1132444,  1),
+    (@GUID+3, 10, 26417, @WORLD, 1307, -2529.2, -990.8531, -5120.009, -2.263398, 0, 0, 22603, 0, 219, 219, 1132445,  2);
 -- --------------------------------------
 -- Seaspine Mollusk
 -- --------------------------------------
@@ -3002,6 +3062,38 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 10, 26503, @WORLD, 1307, -2496.049, -997.1868, -5076.473, 3.587217E-08, 0.03010384, 0.0996747, 23966, 0, 170, 170);
+-- --------------------------------------
+-- Eldan Chest
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 26613, @WORLD, 1346, -1868.551, -988.3621, -6225.621, -1.5707963268, 0, 0, 24046, 0, 219, 219);
+-- --------------------------------------
+-- Skeech Hag
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 26620, @WORLD, 1346, -1956.80, -1004.74, -6195.63,  0.488692, 0, 0, 24656, 0, 1399, 1399);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0, 1000),
+(@GUID+1, 10,    5);
+-- --------------------------------------
+-- Eldan Access Key Fragment
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 26629, @WORLD, 1346, -1965.73, -999.70, -6201.68,  0, 0, 0, 25521, 0, 219, 219),
+(@GUID+2, 8, 26629, @WORLD, 1346, -1965.64, -999.73, -6182.31,  0, 0, 0, 25521, 0, 219, 219);
+-- --------------------------------------
+-- Skeech Burrow
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26640, @WORLD, 1346, -1858.04,  -956.24,   -6198.18,  0, 0, 0, 22844, 0, 219, 219, 0),
+(@GUID+2, 10, 26640, @WORLD, 1346, -1835.271, -956.8467, -6234.227, 0, 0, 0, 22844, 0, 219, 219, 1),
+(@GUID+3, 10, 26640, @WORLD, 1346, -1892.50,  -955.92,   -6195.80,  0, 0, 0, 22844, 0, 219, 219, 2),
+(@GUID+4, 10, 26640, @WORLD, 1346, -1907.97,  -971.59,   -6232.23,  0, 0, 0, 22844, 0, 219, 219, 3),
+(@GUID+5, 10, 26640, @WORLD, 1346, -1909.30,  -971.47,   -6271.92,  0, 0, 0, 22844, 0, 219, 219, 4);
 -- --------------------------------------
 -- Eldan Teleportation Panel
 -- --------------------------------------
@@ -4501,14 +4593,25 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 28883, @WORLD, 1306, -2751.759, -1327.707, -6084.108, -1.401582, 0, 0, 29734, 0, 893, 893);
+    (@GUID+1, 0, 28883, @WORLD, 1306, -2751.759, -1327.707, -6084.108, -1.401582, 0, 0, 29734, 0, 893, 893),
+(@GUID+2, 0, 28883, @WORLD, 1310, -1709.331, -1054.453, -6042.535, 0, 0, 0, 29734, 0, 893, 893),
+(@GUID+3, 0, 28883, @WORLD, 1310, -1712.933, -1054.453, -6034.115, 0, 0, 0, 29734, 0, 893, 893);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 725),
     (@GUID+1, 10, 5),
     (@GUID+1, 15, 0),
     (@GUID+1, 20, 141),
     (@GUID+1, 21, 0),
-    (@GUID+1, 22, 0);
+    (@GUID+1, 22, 0),
+(@GUID+2,  0, 1),
+(@GUID+2, 10, 5),
+(@GUID+2, 20, 1),
+(@GUID+3,  0, 1),
+(@GUID+3, 10, 5),
+(@GUID+3, 20, 1);
+INSERT INTO `entity_spline` (`Id`, `SplineId`, `Mode`, `Speed`, `FX`, `FY`, `FZ`) VALUES
+(@GUID+2, 7426, 1, 3, 0, 0, 0),
+(@GUID+3, 7428, 1, 3, 0, 0, 0);
 -- --------------------------------------
 -- Elder Cube Holder
 -- --------------------------------------
@@ -6281,6 +6384,12 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 8, 46803, @WORLD, 1305, -3262.787, -960.7514, -5963.998, -2.481987, 0.09787008, 1.450172, 28803, 0, 170, 170);
+-- --------------------------------------
+-- Eldan Primary Access Hub 3
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 46850, @WORLD, 1310, -1766.450, -1046.11, -5815.78, 3.1415926536, 0, 0, 24574, 0, 219, 219);
 -- --------------------------------------
 -- Levian Bay Worker
 -- --------------------------------------
@@ -8978,6 +9087,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+3, 21, 0),
     (@GUID+3, 22, 0);
 -- --------------------------------------
+-- Artemis Zin
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 50949, @WORLD, 2599, -2710.448, -1326.285, -5985.644, 0, 0, 0, 25236, 9080, 170, 170);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
+-- --------------------------------------
 -- Dominion Courier
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -8993,6 +9115,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Eldan Security Node 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 50968, @WORLD, 1310, -1952.384, -1062.625, -5985.014, 1.570796, 0, 0, 24574, 0, 219, 219);
 -- --------------------------------------
 -- Eldan Transmitter
 -- --------------------------------------
@@ -9017,6 +9145,24 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 10, 51050, @WORLD, 1307, -2385.63, -986.1686, -5048.09, -3.141593, 0, 0, 26389, 0, 219, 219);
+-- --------------------------------------
+-- Eldan Control Panel 1
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 51051, @WORLD, 1310, -1603.315, -1062.807, -5890.181, 0.331, 0, 0, 23102, 0, 219, 219);
+-- --------------------------------------
+-- Eldan Control Panel 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 51052, @WORLD, 1310, -1957.041, -1062.605, -5918.462, -1.1575, 0, 0, 23102, 0, 219, 219);
+-- --------------------------------------
+-- Eldan Control Panel 3
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 51053, @WORLD, 1310, -1930.031, -1062.5, -5890.229, -0.425685, 0, 0, 23102, 0, 219, 219);
 -- --------------------------------------
 -- Trooper Koren
 -- --------------------------------------
