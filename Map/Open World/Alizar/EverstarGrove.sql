@@ -1,5 +1,6 @@
 -- --------------------------------------
--- Everstar Grove Zone Dump
+-- Everstar Grove Zone
+-- Edited by Laughing
 -- --------------------------------------
 SET @WORLD = 990;
 DELETE FROM `entity` WHERE `world` = @WORLD;
@@ -2422,6 +2423,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+6, 20, 0),
     (@GUID+6, 21, 0),
     (@GUID+6, 22, 0);
+-- --------------------------------------
+-- Q6308 - Quest Giver - Livingroot Keeper
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28179, @WORLD, 1419, -626.7022, -964.0592, -3812.9272, -2.873859, 0, 0, 22600, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Healed Everstar Plant
 -- --------------------------------------
@@ -5416,6 +5425,38 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
+INSERT INTO `entity_vendor_category` (`Id`, `Index`, `LocalisedTextID`) VALUES
+(@GUID+1, 1, 712282),
+(@GUID+1, 2, 712302),
+(@GUID+1, 3, 712312),
+(@GUID+1, 4, 712322);
+INSERT INTO `entity_vendor_item` (`Id`, `Index`, `CategoryIndex`, `ItemId`, `ExtraCost1ItemOrCurrencyId`, `ExtraCost1Quantity`, `ExtraCost1Type`, `ExtraCost2ItemOrCurrencyId`, `ExtraCost2Quantity`, `ExtraCost2Type`) VALUES
+(@GUID+1,  1, 1, 13179, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  2, 1, 13176, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  3, 1, 13194, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  4, 1, 13188, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  5, 1, 13191, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  6, 1, 13185, 1, 525, 2, 0, 0, 0),
+(@GUID+1,  7, 2, 13148, 1, 468, 2, 0, 0, 0),
+(@GUID+1,  8, 2, 13151, 1, 328, 2, 0, 0, 0),
+(@GUID+1,  9, 2, 13154, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 10, 2, 83720, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 11, 2, 13157, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 12, 2, 83721, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 13, 3, 13160, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 14, 3, 13163, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 15, 3, 13166, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 16, 3, 83722, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 17, 3, 13169, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 18, 3, 83723, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 19, 4, 27873, 1, 468, 2, 0, 0, 0),
+(@GUID+1, 20, 4, 27875, 1, 328, 2, 0, 0, 0),
+(@GUID+1, 21, 4, 27876, 1, 281, 2, 0, 0, 0),
+(@GUID+1, 22, 4, 83724, 1, 375, 2, 0, 0, 0),
+(@GUID+1, 23, 4, 27874, 1, 421, 2, 0, 0, 0),
+(@GUID+1, 24, 4, 83725, 1, 328, 2, 0, 0, 0);
 -- --------------------------------------
 -- Elderoot Circuit
 -- --------------------------------------
@@ -5879,6 +5920,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Q7539 - Quest Giver - Vengeful Mender 
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 36240, @WORLD, 1416, -365, -908.7088, -3388.3337, 0.63774, 0, 0, 21537, 0, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Elderoot Seed
 -- --------------------------------------
@@ -8179,6 +8228,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+9, 21, 0),
     (@GUID+9, 22, 0);
 -- --------------------------------------
+-- Fertile Ground - Q6308 - Planting Spot
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 46004, @WORLD, 1416, -474.27448, -945.0831, -3539.6184, 0, 0, 0, 25573, 0, 219, 219, 1),
+(@GUID+2, 10, 46004, @WORLD, 1416, -547.17896, -947.0167, -3618.763,  0, 0, 0, 25573, 0, 219, 219, 2),
+(@GUID+3, 10, 46004, @WORLD, 1416, -553.85,    -946.91,   -3531.51,   0, 0, 0, 25573, 0, 219, 219, 3);
+-- --------------------------------------
 -- Bloodbloom Sniper
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -8866,6 +8923,22 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 123),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Victor Lazarin
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 46607, @WORLD, 1419, -112.5312, -926.3713, -3476.083, 0, 0, 0, 27878, 9075, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 12, 0),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 238523),
+(@GUID+1, 15, 1),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Distress Beacon
 -- --------------------------------------
