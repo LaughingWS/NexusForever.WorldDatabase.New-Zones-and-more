@@ -13556,6 +13556,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
     (@GUID+1, 10, 23991, @WORLD, 587, -4805.884, -896.5898, -1868.156, 2.194803, 6.470505E-07, 1.705303E-13, 22174, 0, 219, 219, 1077654);
 -- --------------------------------------
+-- Emissary Aurarka's Head
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 23995, @WORLD, 587, -4638.683, -857.0726, -1710.34, 3.129549882, 0, 0, 38372, 0, 170, 170);
+-- --------------------------------------
 -- Clanlord Makaza (fix location)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -16204,14 +16210,21 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 24992, @WORLD, 486, -5034.01, -1005.459, -2011.867, 2.672607, 0, 0, 25387, 9058, 170, 170);
+    (@GUID+1, 0, 24992, @WORLD, 486, -5034.01, -1005.459, -2011.867, 2.672607, 0, 0, 25387, 9058, 170, 170),
+(@GUID+2, 0, 24992, @WORLD, 584, -5046.627, -945.3738, -1580.84, -1.1597, 0, 0, 25387, 9058, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 3069),
     (@GUID+1, 10, 9),
     (@GUID+1, 15, 0),
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
-    (@GUID+1, 22, 0);
+    (@GUID+1, 22, 0),
+(@GUID+2,  0, 3069),
+(@GUID+2, 10,    9),
+(@GUID+2, 15,    0),
+(@GUID+2, 20,    0),
+(@GUID+2, 21,    0),
+(@GUID+2, 22,    0);
 -- --------------------------------------
 -- ASSASSINATION: Deathmite Queen
 -- --------------------------------------
@@ -22038,8 +22051,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- Ammunition Crate
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
-    (@GUID+1, 10, 26919, @WORLD, 637, -4406.624, -965.6165, -588.8393, 1.791215, -2.421437E-08, 1.767475E-13, 21977, 0, 219, 219, 796455);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 26919, @WORLD, 637, -4406.624, -965.6165, -588.8393, 1.791215, -2.421437E-08, 1.767475E-13, 21977, 0, 219, 219, 796455, 0);
 -- --------------------------------------
 -- Mercenary Arkos
 -- --------------------------------------
@@ -32241,3 +32254,16 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- (@GUID+1, 0, 10476, @WORLD, 1357, -5747.53, -971.764, -623.129, -1.13418, 0, 0, 26523, 9197, 610, 610);
 -- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- (@GUID+1, 0, 1);
+-- --------------------------------------
+-- Agent Lex (fix coordinates) script spawn?
+-- --------------------------------------
+-- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+-- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+-- (@GUID+1, 0, 26908, @WORLD, 637, -4433.408, -968.19, -623.0668, -2.6333, 0, 0, 26446, 9082, 170, 170);
+-- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+-- (@GUID+1, 0, 9.897122E+07),
+-- (@GUID+1, 10, 50),
+-- (@GUID+1, 15, 0),
+-- (@GUID+1, 20, 8.497122E+07),
+-- (@GUID+1, 21, 18),
+-- (@GUID+1, 22, 0);
