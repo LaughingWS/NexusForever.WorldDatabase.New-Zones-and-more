@@ -364,7 +364,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27697, @WORLD, 0, -11865.9, 55.43921, -4057.59, 0, 0, 0, 35016, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- ---------------------------------------------
 -- Halon Ring - Tract 1 - Q9817 - Graylight Denizen - Ekos Male - Phase 3 Flavor - DJU
 -- ---------------------------------------------
@@ -566,7 +567,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27911, @WORLD, 1449, -11845.7, -68.4399, -4915.67, 0, 0, 0, 28889, 0, 363, 363);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- ---------------------------------------------
 -- Treasure Hunter Ahanu - Questgiver - Tract 1 - E3 - JGP
 -- ---------------------------------------------
@@ -574,7 +576,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 27913, @WORLD, 1449, -11811.3, -68.4396, -4896.51, 0, 0, 0, 28891, 0, 363, 363);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0, 36200),
+(@GUID+1, 10,    50);
 -- ---------------------------------------------
 -- Chief Balwa MICRO - Q6337 Quest Objective - Tract 1 - E3 - JGP
 -- ---------------------------------------------
@@ -651,8 +654,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Q6248 - Crate of Illicit Goods - Bomb - Tract 1 - Graylight - Goldenhand's Cellar (Quest Target)
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 27995, @WORLD, 0, -12200.4, -279.908, -4313.56, 0, 0, 0, 28173, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 20, 27995, @WORLD, 0, -12200.4, -279.908, -4313.56, 0, 0, 0, 28173, 0, 219, 219, 0);
 -- ---------------------------------------------
 -- Q6250 - Cosmotail Floater - Tract 1 - Graylight(Quest Target)
 -- ---------------------------------------------
@@ -710,7 +713,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28077, @WORLD, 1453, -13388.9, 67.55595, -5577.01, 0, 0, 0, 26004, 0, 1378, 1378);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- ---------------------------------------------
 -- Q6257 Quest Giver - Swiftfell Dynamite - Halon Ring - Tract 1 - Bandit Area (Quest Target)
 -- ---------------------------------------------
@@ -934,9 +938,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28250, @WORLD, 0, -12131.1, -51.6879, -5006.04, 0, 0, 0, 28934, 0, 999, 999);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,   0,  1),
-(@GUID+1,  10, 50),
-(@GUID+1,  20,  1);
+(@GUID+1,   0, 571100),
+(@GUID+1,  10,     50);
 -- ---------------------------------------------
 -- Pinga - Q6351 Quest NPC - Halon Ring - Tract 1 - E3 - WK
 -- ---------------------------------------------
@@ -1132,7 +1135,10 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28446, @WORLD, 1543, -11751.8, 64.79848, -4059.31, 1.64842, 0, 0, 28899, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- ---------------------------------------------
 -- Q6250 - Bartender Waz-Len (Dominion) - Grumpel - Tract 1 - Graylight (Quest Giver) - Consumables Merchant Vendor
 -- ---------------------------------------------
@@ -1141,6 +1147,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 28447, @WORLD, 1542, -11966.3, 56.80856, -3997.94, 0, 0, 0, 28899, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 1);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- ---------------------------------------------
 -- Lopp Mine - Halon Ring - Tract 1 - JGP
 -- ---------------------------------------------
@@ -1634,7 +1642,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 29531, @WORLD, 1449, -11792.4, -66.7105, -4883.36, 0, 0, 0, 28886, 0, 363, 363);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- ---------------------------------------------
 -- Halon Ring Tree - Disguise 1 - Harvesting - Woodcutting
 -- ---------------------------------------------
@@ -5310,20 +5319,20 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Q6248 - Crate of Illicit Goods - Splorg - Tract 1 - Graylight - Goldenhan's Cellar (Quest Target)
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 45890, @WORLD, 0, -12008.3, -303.61, -4322.54, 0, 0, 0, 28173, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 20, 45890, @WORLD, 0, -12008.3, -303.61, -4322.54, 0, 0, 0, 28173, 0, 219, 219, 2);
 -- ---------------------------------------------
 -- Q6248 - Crate of Illicit Goods - Painting - Tract 1 - Graylight - Goldenhan's Cellar (Quest Target)
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 45894, @WORLD, 0, -12052.6, -299.031, -4250.78, 0, 0, 0, 28173, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 20, 45894, @WORLD, 0, -12052.6, -299.031, -4250.78, 0, 0, 0, 28173, 0, 219, 219, 3);
 -- ---------------------------------------------
 -- Q6248 - Crate of Illicit Goods - Guns - Tract 1 - Graylight - Goldenhan's Cellar (Quest Target)
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 45895, @WORLD, 0, -12070.7, -305.077, -4392.76, 0, 0, 0, 28173, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 20, 45895, @WORLD, 0, -12070.7, -305.077, -4392.76, 0, 0, 0, 28173, 0, 219, 219, 4);
 -- ---------------------------------------------
 -- High Stakes Drunk - CH413 NPC - Halon Ring - Tract 1 - WK
 -- ---------------------------------------------
@@ -6748,8 +6757,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Q6248 - Crate of Illicit Goods - Lopp - Tract 1 - Graylight - Goldenhand's Cellar (Quest Target)
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 64922, @WORLD, 0, -12230.96, -286.47, -4346.80, 0, 0, 0, 28173, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 20, 64922, @WORLD, 0, -12230.96, -286.47, -4346.80, 0, 0, 0, 28173, 0, 219, 219, 1);
 -- ---------------------------------------------
 -- Electric Field - Q6260 Flavor - Halon Ring - T1 - WK
 -- ---------------------------------------------
@@ -8214,7 +8223,8 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 67887, @WORLD, 4466, -12664.8, 20.83305, -5353.68, 0, 0, 0, 28648, 0, 257, 257);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0, 1);
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- ---------------------------------------------
 -- Halon Ring - Tract 1 - Q9770 - Me and Missey - DJU
 -- ---------------------------------------------
@@ -8592,7 +8602,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 68476, @WORLD, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(@GUID+1, 20, 68476, @WORLD, 1450, -12012.2, 175.4274, -5687.47, 0, 0, 0, 0, 0, 0, 0);
 -- ---------------------------------------------
 -- Halon Ring - Tract 1 - Q9817 - Bandit Starfighter - Activate - DJU
 -- ---------------------------------------------
