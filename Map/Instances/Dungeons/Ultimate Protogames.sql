@@ -1,6 +1,9 @@
 -- --------------------------------------
 -- Ultimate Protogames Dungeon
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 2980;
+SET @WORLD = 2980;
+SET @EVENTID = 594;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(2980, 0, 42236);
+(@WORLD, 0, 42236);
+DELETE FROM `entity` WHERE `world` = @WORLD;

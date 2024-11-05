@@ -1,6 +1,9 @@
 -- --------------------------------------
--- Coldblood Citadel Dungeon
+-- Coldblood Citadel (Dungeon)
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 3522;
+SET @WORLD = 3522;
+SET @EVENTID = 907;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(3522, 0, 53153);
+(@WORLD, 0, 53153);
+DELETE FROM `entity` WHERE `world` = @WORLD;
