@@ -1,28 +1,32 @@
-Welcome to my custom Database! I have made many updates and changes to this database set, some of the files only work in Kirmmin's builds, some only work in Rework build, so you will have to add more tables or columns to your database if you want all the files to work for you. I have posted a SQL file that has all files in one SQL script, "All in one.sql" will add everything into your database, this is the best file to use for people who don't know what they are doing :) I also have "All in one with Halon Ring update.sql" for people that want that. The two files are in the all in one folder. Events are not in the all in one SQLs, so if you want one of the events run the SQL with that event. I also make some .sql for new content, if the maps are not in the latest client, then the .sql files can be found in the test zones folder. We do have some of the maps from older clients. But most of them are for looking at what we could have had.
+Welcome to my custom Database!                                                                                                                                                                                   
+This database is for expedition evil from the ether branch, the only file needing new tables is CreatureQuestLoot.sql. You can make the tables or use "all in one.sql" to make them for you. All other branchs will need to run "all in one.sql" to make your database support this set of scripts. "all in one.sql" has all the scripts made into one script and will create all the needed tables for you (at the time when they are posted). It will be updated twice a year, in June and December. Once you have used "all in one.sql" then you can apply the monthly updates.
+I made some .sql for new content, if the maps are not in the latest client, then the .sql files are placed in the test zones folder. We do have some of the maps from older clients, but most of them are for looking at what we could have had.
 This is my change list from the main Database. I will do updates every month.   
                                                       
-#1  Thayd: I have removed all the events from here (I hope) 100% completed             
-#2  Thayd: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                       
-#3  Whitevale: I removed Winterfest from here 100% completed                                                                                               
-#4  Celestion: removed Shades eve 100% completed                                                                                      
+#1  Thayd: I have removed all the events from here            
+#2  Thayd Halon Ring update: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                       
+#3  Whitevale: I removed Winterfest from here                                                                                              
+#4  Celestion: removed Shades eve                                                                                     
 #5  Northern Wilds: Added more things to the map to fixs quests.                                               
-#6  Illium: Removed zPrix event 100% completed                                                                       
-#7  Illium: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                                                         
+#6  Illium: Removed zPrix event                                                                      
+#7  Illium Halon Ring Update: This has a portal to Halon Ring, it is in the place that Carbine wanted it in.                                                                         
 #8  Illium Museum: 90% completed                                                                                                                  
-#9  Crimson Isle: Portal and NPC added                                                                                                               
+#9  Crimson Isle: Portal and NPCs added                                                                                                               
 #10 Levian Bay: Portals and NPCs added                                                                                                      
 #11 Deradune:Removed zPrix event and added more quest objects                                                                                             
 #12 Ellevar: Quest objects added                                                                                                                
 #13 Housing Skyplot 5% completed                                                                                                   
 #14 Datascape: 82% completed                                                                             
 #15 Initialization Core Y-83: 10% completed 
-#16 New Tutorial: 15% completed                                                                        
-#17 Ultimate Protogames Raid: 100%* completed                                                                  
-#18 Protopia: Maybe a new zone. 90% completed                                                              
-#19 Eternity Islands: Said to be a new zone. 100%* completed                                                
-#20 Murkmire: new zone. 26% completed                                                                               
-#21 Halon Ring: 20% completed                                                               
-#22 Dreadmoor: 40% completed                                           
+#16 New Tutorial zone: 15% completed                                                                        
+#17 Murkmire: new zone. 26% completed                                                                   
+#18 Halon Ring: 20% completed                                                               
+#19 Dreadmoor: 40% completed
+Not in client                                                                                                           
+-------------------------------------------------------------------------------------------------------------------------
+#20 Ultimate Protogames Raid: 100% Completed                                                                            
+#21 Protopia: Maybe a new zone. 90% completed                                                               
+#22 Eternity Islands: New zone. 100%* completed                                           
 #23 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 100%* completed         
 #24 Coralus: 1% completed                                                                       
 #25 Algoroc Neighborhood: 100%* completed                                                        
@@ -42,10 +46,7 @@ This is my change list from the main Database. I will do updates every month.
 #39 Pellicane test world: test zone 100%* completed                                                  
 #40 Public Quest Island: test zone 100%* completed                                                     
 #41 Quest Test Island: test zone 100%* completed                                                                                    
-#42 serrasar: zone that was never added 100%* completed                                                                                                        
-#43 coming soon: Looks like a new Dungeon                                                       
-#44 coming soon: Looks like a new Dungeon                                                       
-#45 Coming soon: Looks like a new Adventure                                                     
+#42 serrasar: zone that was never added 100%* completed                                                                                                                                                            
 
 
 * = This file has the most info that I can find, till i find a way to get the missing info (if I can) this is the best I can do.
