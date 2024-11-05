@@ -23,7 +23,7 @@ This is my change list from the main Database. I will do updates every month.
 #18 Halon Ring: 20% completed                                                               
 #19 Dreadmoor: 40% completed
 Not in client                                                                                                           
--------------------------------------------------------------------------------------------------------------------------
+====================================================================================================================
 #20 Ultimate Protogames Raid: 100% Completed                                                                            
 #21 Protopia: Maybe a new zone. 90% completed                                                               
 #22 Eternity Islands: New zone. 100%* completed                                           
