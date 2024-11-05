@@ -21,7 +21,7 @@ This is my change list from the main Database. I will do updates every month.
 #16 New Tutorial zone: 15% completed                                                                        
 #17 Murkmire: new zone. 26% completed                                                                   
 #18 Halon Ring: 20% completed                                                               
-#19 Dreadmoor: 40% completed
+#19 Dreadmoor: 40% completed                                                                                                                                                      
 Not in client                                                                                                           
 #20 Ultimate Protogames Raid: 100% Completed                                                                            
 #21 Protopia: Maybe a new zone. 90% completed                                                               
