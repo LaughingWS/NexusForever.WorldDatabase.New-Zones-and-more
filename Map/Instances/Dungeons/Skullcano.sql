@@ -28,6 +28,16 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 4);
 -- ---------------------------------------------
+-- Mordechai Redmoon - Normal
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 24489, @WORLD, 1912, -787.3383, -692.7036, -457.9291, 0, 0, 0, 25255, 0, 390, 390);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 10, 35);
+INSERT INTO entity_event (id, eventId, phase) VALUES
+(@GUID+1, @EVENTID, 8);
+-- ---------------------------------------------
 -- Stew-Shaman Tugga - Normal
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -38,30 +48,6 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 0);
 -- ---------------------------------------------
--- Cave Branch Door
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 24694, @WORLD, 4793, 75.50, -921.95, -534.09, 0, 0, 0, 23860, 0, 219, 219);
-INSERT INTO entity_event (id, eventId, phase) VALUES
-(@GUID+1, @EVENTID, 1);
--- ---------------------------------------------
--- Chasm Branch Door
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 20, 24696, @WORLD, 4793, 105.94, -921.50, -550.31, 0, 0, 0, 23860, 0, 885, 885);
-INSERT INTO entity_event (id, eventId, phase) VALUES
-(@GUID+1, @EVENTID, 1);
--- ---------------------------------------------
--- Cave Door
--- ---------------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 4, 32942, @WORLD, 4793, -200.80, -829.22, -804.50, 0, 0, 0, 21526, 0, 219, 219);
-INSERT INTO entity_event (id, eventId, phase) VALUES
-(@GUID+1, @EVENTID, 1);
--- ---------------------------------------------
 -- Chief Kaskalak - Normal
 -- ---------------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -70,4 +56,4 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 35);
 INSERT INTO entity_event (id, eventId, phase) VALUES
-(@GUID+1, @EVENTID, 1);
+(@GUID+1, @EVENTID, 2);
