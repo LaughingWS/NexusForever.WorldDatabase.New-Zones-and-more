@@ -1,0 +1,1 @@
+Both are the same, only Halon Ring update has portals to Halon Ring in the cities
