@@ -27,31 +27,31 @@ This is my change list from the main Database. I will do updates every month.
 #22 Tideborn Facility: 20% completed                                                                        
 #23 Dominion Arkship: 0% completed                                                                                                                                      
 #24 Exile Arkship: 0% completed                                                                                                                                                                          
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Not in client   
-#23 Ultimate Protogames Raid: 100% Completed                                                                            
-#24 Protopia: Maybe a new zone. 90% completed                                                               
-#25 Eternity Islands: New zone. 100%* completed                                           
-#26 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 100%* completed         
-#27 Coralus: 1% completed                                                                       
-#28 Algoroc Neighborhood: 100%* completed                                                        
-#29 Crowe's Nest: unknown zone. 100%* completed                                                        
-#30 Designer Island: maybe test zone. 100%* completed                                                          
-#31 Ikthian Island: unknown 100%* completed                                                               
-#32 Initiate Island: unknown 100%* completed                                                                   
-#33 Lopp Party Island: unknown 100%* completed                                                              
-#34 Neighborhood: Next level housing  100%* completed                                                                         
-#35 Randyland: test zone. 100%* completed                                                              
-#36 Resolution Point: unknown 100%* completed                                                           
-#37 The Smallholds: unknown 100%* completed                                                          
-#38 Valis: unknown. 100%* completed                                                                 
-#39 Whispering crag fields: unknown 100%* completed                                                  
-#40 AI Test World: test zone. 100%* completed                                                       
-#41 Berke Test World: test zone 100%* completed                                                        
-#42 Pellicane test world: test zone 100%* completed                                                  
-#43 Public Quest Island: test zone 100%* completed                                                     
-#44 Quest Test Island: test zone 100%* completed                                                                                    
-#45 serrasar: zone that was never added 100%* completed                                                                                                                                                            
+#25 Ultimate Protogames Raid: 100% Completed                                                                            
+#26 Protopia: Maybe a new zone. 90% completed                                                               
+#27 Eternity Islands: New zone. 100%* completed                                           
+#28 Inferalis: This was the alt zone for Malgrave, but only 3 things got into the client. 100%* completed         
+#29 Coralus: 1% completed                                                                       
+#30 Algoroc Neighborhood: 100%* completed                                                        
+#31 Crowe's Nest: unknown zone. 100%* completed                                                        
+#32 Designer Island: maybe test zone. 100%* completed                                                          
+#33 Ikthian Island: unknown 100%* completed                                                               
+#34 Initiate Island: unknown 100%* completed                                                                   
+#35 Lopp Party Island: unknown 100%* completed                                                              
+#36 Neighborhood: Next level housing  100%* completed                                                                         
+#37 Randyland: test zone. 100%* completed                                                              
+#38 Resolution Point: unknown 100%* completed                                                           
+#39 The Smallholds: unknown 100%* completed                                                          
+#40 Valis: unknown. 100%* completed                                                                 
+#41 Whispering crag fields: unknown 100%* completed                                                  
+#42 AI Test World: test zone. 100%* completed                                                       
+#43 Berke Test World: test zone 100%* completed                                                        
+#44 Pellicane test world: test zone 100%* completed                                                  
+#45 Public Quest Island: test zone 100%* completed                                                     
+#46 Quest Test Island: test zone 100%* completed                                                                                    
+#47 serrasar: zone that was never added 100%* completed                                                                                                                                                            
 
 
 * = This file has the most info that I can find, till i find a way to get the missing info (if I can) this is the best I can do.
