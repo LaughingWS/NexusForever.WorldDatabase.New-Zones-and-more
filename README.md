@@ -24,10 +24,10 @@ This is my change list from the main Database. I will do updates every month.
 #19 Dreadmoor: 40% completed
 #20 Arcterra: 0% completed                                                                                                                                                                                                                                                    
 #21 Skulls Eye: 10% completed                                                                                                                                                                                              
-#22 Tideborn Facility: 20% completed
+#22 Tideborn Facility: 20% completed                                                                        
 #23 Dominion Arkship: 0% completed                                                                                                                                      
 #24 Exile Arkship: 0% completed                                                                                                                                                                          
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Not in client   
 #23 Ultimate Protogames Raid: 100% Completed                                                                            
 #24 Protopia: Maybe a new zone. 90% completed                                                               
