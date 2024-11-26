@@ -1,6 +1,9 @@
 -- --------------------------------------
--- Stormtalon's Lair Dungeon
+-- Stormtalon's Lair (Dungeon)
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 382;
+SET @WORLD = 382;
+SET @EVENTID = 145;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(382, 0, 1275);
+(@WORLD, 0, 1275);
+DELETE FROM `entity` WHERE `world` = @WORLD;

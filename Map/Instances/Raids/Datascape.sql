@@ -5,15 +5,12 @@
 -- Todo: Find Displayinfo for Trash from Fire, Earth, and Escher Room.
 -- Need to fix up X, Y, Z, RX for all. 
 -- Get real HP (and shields if any) The HP and shield are just place holders, not 100% real
--- PublicEvents things need to be added. Not in SQL
--- PublicEvent ID : 157
 -- Look at all displayinfos
 -- Have someone look at all displayinfos and see if they match 100% and not 99.9%
 -- get real speed for splines
 -- ------------------------------------------------------------------------------------------------------------
-DELETE FROM map_entrance WHERE mapId = 1333;
-INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(1333, 0, 19279);
+SET @EVENTID = 157;
+DELETE FROM `entity_event` WHERE `eventId` = @EVENTID;
 SET @WORLD = 1333;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (1, 1301, 1349, 1590, 1592, 1594, 1602, 1603, 1604, 1605, 1607, 1609, 1610, 2371, 2372, 2373, 4474, 4475, 4476, 4477, 4478, 4479);
 -- ---------------------------------
@@ -28,6 +25,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 15900000),
 (@GUID+1, 10,       50);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, @EVENTID, 0);
 -- ---------------------------------
 -- Optimized Memory Probe TX-67 ~hp
 -- ---------------------------------
@@ -37,6 +36,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 15900000),
 (@GUID+1, 10,       50);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, @EVENTID, 0);
 -- ---------------------------------
 -- Optimized Memory Probe P2-Z ~hp
 -- ---------------------------------
@@ -46,6 +47,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 15900000),
 (@GUID+1, 10,       50);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, @EVENTID, 0);
 -- ---------------------------------
 -- Avatus ~hp
 -- ---------------------------------
@@ -163,6 +166,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 14400000),
 (@GUID+1, 10,       50);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, 157, 0);
 -- ---------------------------------
 -- Binary System Daemon ~hp
 -- ---------------------------------
@@ -172,6 +177,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 14400000),
 (@GUID+1, 10,       50);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, 157, 0);
 -- ---------------------------------
 -- Firewall Core Protector ~hp
 -- ---------------------------------

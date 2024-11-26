@@ -1,7 +1,9 @@
 -- --------------------------------------
 -- Crimson Isle
 -- Edited by Laughing
--- --------------------------------------
+-- --------------------------------------------------
+-- TODO: get real ActivePropId for 25886, atm it's 1
+-- --------------------------------------------------
 SET @WORLD = 870;
 DELETE FROM `entity` WHERE `world` = @WORLD;
 -- --------------------------------------
@@ -4778,7 +4780,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 24337, @WORLD, 1284, -7582.703, -953.7923, -1292.1, 0, 0, 0, 25202, 9079, 170, 170);
+(@GUID+1, 0, 24337, @WORLD, 1284, -7582.71, -953.788, -1292.1, 0, 0, 0, 25202, 9079, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 9.897122E+07),
 (@GUID+1, 10, 50),
@@ -4794,7 +4796,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 24338, @WORLD, 1284, -7587.974, -953.9289, -1300.335, 0, 0, 0, 25194, 9076, 170, 170);
+(@GUID+1, 0, 24338, @WORLD, 1284, -7588.02, -954.307, -1300.45, 0, 0, 0, 25194, 9076, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 9.897122E+07),
 (@GUID+1, 10, 50),
@@ -6223,7 +6225,7 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
     (@GUID+1, 10, 25886, @WORLD, 1325, -7048.574, -997.1969, -1021.181, 2.612353, 0, 0, 25526, 0, 219, 219, 1118716),
-(@GUID+2, 10, 25886, @WORLD, 1325, -7079.58, -1045.62, -1037.51, 0, 0, 0, 25526, 0, 219, 219, 1118716);
+(@GUID+2, 10, 25886, @WORLD, 1325, -7079.58, -1045.62, -1037.51, 0, 0, 0, 25526, 0, 219, 219, 1);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 13, 0),
     (@GUID+1, 14, 647606),

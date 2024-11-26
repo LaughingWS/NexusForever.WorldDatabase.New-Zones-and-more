@@ -4996,6 +4996,12 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+5, 8, 9767, @WORLD, 490, -5799.537, -998.6491, 15.43434, -2.389162, -1.241919E-06, 0, 22637, 0, 219, 219, 282914),
     (@GUID+6, 8, 9767, @WORLD, 490, -5796.628, -998.3854, 21.69356, -0.3675387, -1.241919E-06, 0, 22637, 0, 219, 219, 282918);
 -- --------------------------------------
+-- Q3160 - Invisible Ship Engine - Deradune - Tract 2 (Quest Target)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 9768, @WORLD, 490, -5686.801, -999.34, 120.7465, 0, 0, 0, 27794, 0, 219, 219);
+-- --------------------------------------
 -- Ullana Shadeleaf
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -5027,6 +5033,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 445),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Q3166 - Firewalker Jarrok - Deradune - Tract 1 (Quest Target)
+-- --------------------------------------
+-- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+-- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+-- (@GUID+1, 0, 9799, @WORLD, 1339, -5399.47, -993.1393, 56.89588, 0, 0, 0, 26571, 9194, 219, 219);
+-- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+-- (@GUID+1, 0, 1);
 -- --------------------------------------
 -- Tamolo
 -- --------------------------------------
@@ -5383,6 +5397,12 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1,  0, 974),
     (@GUID+1, 10,   7);
+-- --------------------------------------
+-- Q3160 - Invisible Ship Cockpit - Deradune - Tract 2 (Quest Target)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 10343, @WORLD, 490, -5689.452, -991.3369, 126.1874, 0, 0, 0, 27794, 0, 219, 219);
 -- --------------------------------------
 -- Exile Ship
 -- --------------------------------------
@@ -13575,6 +13595,24 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21,    0),
     (@GUID+1, 22,    0);
 -- --------------------------------------
+-- Q5519 - Mechari Torso - Deradune - Tract 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 24001, @WORLD, 587, -4647.015, -859.0995, -1918.85, 0, 0, 0, 25247, 0, 170, 170);
+-- --------------------------------------
+-- Q5519 - Mechari Legs - Deradune - Tract 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 24002, @WORLD, 587, -4379.215, -858.3469, -1742.61, 0, 0, 0, 25246, 0, 170, 170);
+-- --------------------------------------
+-- Q5519 - Mechari Arms - Deradune - Tract 2
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 24003, @WORLD, 587, -4484.045, -852.0482, -1624.786, 0, 0, 0, 25245, 0, 170, 170);
+-- --------------------------------------
 -- Falkrin Hut
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -13588,14 +13626,14 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- Bloodtalon Totem
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 24006, @WORLD, 587, -4522.965, -852.2694, -1729.082, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+2, 10, 24006, @WORLD, 587, -4578.042, -854.5912, -1737.203, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+3, 10, 24006, @WORLD, 587, -4483.637, -854.3386, -1604.587, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+4, 10, 24006, @WORLD, 587, -4365.879, -863.5732, -1725.797, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+5, 10, 24006, @WORLD, 587, -4504.254, -856.4409, -1827.122, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+6, 10, 24006, @WORLD, 587, -4699.523, -862.8812, -1862.202, -3.141593, 0, 0, 25517, 0, 231, 231),
-    (@GUID+7, 10, 24006, @WORLD, 587, -4669.073, -862.9079, -1954.698, -3.141593, 0, 0, 25517, 0, 231, 231);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+    (@GUID+1, 10, 24006, @WORLD, 587, -4522.965, -852.2694, -1729.082, -3.141593, 0, 0, 25517, 0, 231, 231, 0),
+    (@GUID+2, 10, 24006, @WORLD, 587, -4578.042, -854.5912, -1737.203, -3.141593, 0, 0, 25517, 0, 231, 231, 1),
+    (@GUID+3, 10, 24006, @WORLD, 587, -4483.637, -854.3386, -1604.587, -3.141593, 0, 0, 25517, 0, 231, 231, 2),
+    (@GUID+4, 10, 24006, @WORLD, 587, -4365.879, -863.5732, -1725.797, -3.141593, 0, 0, 25517, 0, 231, 231, 3),
+    (@GUID+5, 10, 24006, @WORLD, 587, -4504.254, -856.4409, -1827.122, -3.141593, 0, 0, 25517, 0, 231, 231, 4),
+    (@GUID+6, 10, 24006, @WORLD, 587, -4699.523, -862.8812, -1862.202, -3.141593, 0, 0, 25517, 0, 231, 231, 5),
+    (@GUID+7, 10, 24006, @WORLD, 587, -4669.073, -862.9079, -1954.698, -3.141593, 0, 0, 25517, 0, 231, 231, 6);
 -- --------------------------------------
 -- Bride Vultura{p:Bride Vultura}
 -- --------------------------------------
@@ -16088,6 +16126,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+7, 21, 0),
     (@GUID+7, 22, 0);
 -- --------------------------------------
+-- Q5694 - Eldan Datacube - Deradune - Tract 2 - Exo-Lab 79 (Quest Target)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 24858, @WORLD, 0, -4996.22, -1203, -1757.86, 0, 0, 0, 23302, 0, 219, 219);
+-- --------------------------------------
 -- SWAT: Toxic Aurin
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -16656,6 +16700,17 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+6, 20, 332),
     (@GUID+6, 21, 0),
     (@GUID+6, 22, 0);
+-- --------------------------------------
+-- Q5694 - Eldan Datacube Fragment - Deradune - Tract 2 (Quest Collectable)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 25248, @WORLD, 0, -5033.31, -1208.66, -1807.23, 0, 0, 0, 24695, 0, 219, 219),
+(@GUID+2, 8, 25248, @WORLD, 0, -4999.14, -1208.81, -1817.21, 0, 0, 0, 24695, 0, 219, 219),
+(@GUID+3, 8, 25248, @WORLD, 0, -4974.25, -1208.62, -1796.11, 0, 0, 0, 24695, 0, 219, 219),
+(@GUID+4, 8, 25248, @WORLD, 0, -4944.10, -1208.81, -1793.09, 0, 0, 0, 24695, 0, 219, 219),
+(@GUID+5, 8, 25248, @WORLD, 0, -4991.80, -1205.77, -1761.58, 0, 0, 0, 24695, 0, 219, 219),
+(@GUID+6, 8, 25248, @WORLD, 0, -4973.29, -1208.76, -1746.82, 0, 0, 0, 24695, 0, 219, 219);
 -- --------------------------------------
 -- Purple Bulbs
 -- --------------------------------------
@@ -22048,11 +22103,61 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Deradune - 3 - Q6037 - Councilor Vaelen (Corpse) - Arkos Trail – PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 0, 26910, @WORLD, 637, -4430.73, -968.342, -618.1575, 0, 0, 0, 21574, 9362, 170, 170, 0);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
+-- Deradune - 3  Q6037 - Abandoned Coins - Flavor - PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26911, @WORLD, 637, -4416.95, -965.57, -586.72, 0, 0, 0, 26003, 0, 219, 219, 1);
+-- --------------------------------------
+-- Deradune - 3 - Q6037 -  Firewalker Guard Human - Flavor - PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26912, @WORLD, 637, -4392.68, -968.39, -610.58, 0, 0, 0, 31071, 9004, 170, 170, 2);
+-- --------------------------------------
+-- Deradune - 3 - Q6037 - Firewalker Guard - Flavor – PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26917, @WORLD, 637, -4419.96, -967.95, -624.52, 0, 0, 0, 26045, 9004, 170, 170, 3);
+-- --------------------------------------
 -- Ammunition Crate
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`, `QuestChecklistIdx`) VALUES
-    (@GUID+1, 10, 26919, @WORLD, 637, -4406.624, -965.6165, -588.8393, 1.791215, -2.421437E-08, 1.767475E-13, 21977, 0, 219, 219, 796455, 0);
+    (@GUID+1, 10, 26919, @WORLD, 637, -4406.624, -965.6165, -588.8393, 1.791215, -2.421437E-08, 1.767475E-13, 21977, 0, 219, 219, 796455, 4);
+-- --------------------------------------
+-- Deradune - 3 - Q6037 - Vaelen's Holo Projector - Flavor - PWMl
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26932, @WORLD, 637, -4449.192, -966.2534, -621.7909, 0, 0, 0, 26007, 0, 219, 219, 5);
+-- --------------------------------------
+-- Deradune - 3 - Q6037 - Cage Door - Flavor - PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 26953, @WORLD, 637, -4432.98, -968.34, -589.26, 0, 0, 0, 26083, 0, 219, 219, 6);
+-- --------------------------------------
+-- Deradune - 3 - Q6045 - Injured ICI Agent - Quest Objective – PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 26968, @WORLD, 638, -4229.741, -948.6008, -156.1833, 0, 0, 0, 30354, 9497, 170, 170);
+-- --------------------------------------
+-- Deradune -  3 - Q6045 - Stolen ICI Speeder - Quest Objective - PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 26978, @WORLD, 640, -4423.377, -967.511, 35.89315, 0, 0, 0, 21667, 0, 170, 170);
 -- --------------------------------------
 -- Mercenary Arkos
 -- --------------------------------------
@@ -25236,6 +25341,20 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+3, 21, 0),
     (@GUID+3, 22, 0);
 -- --------------------------------------
+-- Deradune - 3 - Q6045 - Dominion Medical Kit  -Quest Objective - PWMl
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 33732, @WORLD, 638, -4184.008, -940.0106, -464.0779, 0, 0, 0, 23423, 0, 219, 219);
+-- --------------------------------------
+-- Deradune - 3 - Q6045 - Wounded Game Huntress - Quest Objective - PWM
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 33733, @WORLD, 638, -4294.296, -944.6004, -346.6971, 0, 0, 0, 26575, 9201, 170, 170);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- Firewalker Guard
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -27930,6 +28049,12 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 10, 40186, @WORLD, 1339, -5142.12, -1150.22, 429.08, -3.141593, 0, 0, 23302, 0, 219, 219);
 -- --------------------------------------
+-- DATACUBE: Augmented Skeletons
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 40187, @WORLD, 1478, -5102.409, -1207.511, 595.1894, 0, 0, 0, 23302, 0, 219, 219);
+-- --------------------------------------
 -- DATACUBE: Tragic Monument
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -29035,6 +29160,13 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Q3160 - Explosive Charge - Deradune - 1 - RBG
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 51712, @WORLD, 490, -5702.826, -991.074,  117.187,  0, 0, 0, 24352, 0, 219, 219),
+(@GUID+2, 10, 51712, @WORLD, 490, -5672.874, -991.0283, 124.5208, 0, 0, 0, 24352, 0, 219, 219);
 -- --------------------------------------
 -- Feralplain Climber
 -- --------------------------------------
@@ -32249,21 +32381,21 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 -- Clanlord Makaza (fix location)
 -- --------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 10476, @WORLD, 1357, -5747.53, -971.764, -623.129, -1.13418, 0, 0, 26523, 9197, 610, 610);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1, 0, 1);
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 10476, @WORLD, 1357, -5747.53, -971.764, -623.129, -1.13418, 0, 0, 26523, 9197, 610, 610);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
--- Agent Lex (fix coordinates) script spawn?
+-- Agent Lex script spawn?
 -- --------------------------------------
--- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
--- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
--- (@GUID+1, 0, 26908, @WORLD, 637, -4433.408, -968.19, -623.0668, -2.6333, 0, 0, 26446, 9082, 170, 170);
--- INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
--- (@GUID+1, 0, 9.897122E+07),
--- (@GUID+1, 10, 50),
--- (@GUID+1, 15, 0),
--- (@GUID+1, 20, 8.497122E+07),
--- (@GUID+1, 21, 18),
--- (@GUID+1, 22, 0);
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 26908, @WORLD, 637, -4432.764, -968.342, -620.9954, -2.6333, 0, 0, 26446, 9082, 170, 170);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
