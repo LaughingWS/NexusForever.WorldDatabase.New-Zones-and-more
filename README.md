@@ -17,7 +17,7 @@ This is my change list from the main Database. I will do updates every month.
 #12 Ellevar: Quest objects added                                                                                                                
 #13 Housing Skyplot 5% completed                                                                                                   
 #14 Datascape: 82% completed                                                                             
-#15 Initialization Core Y-83: 10% completed 
+#15 Initialization Core Y-83: 10% completed                                                                
 #16 New Tutorial zone: 15% completed                                                                        
 #17 Murkmire: new zone. 26% completed                                                                   
 #18 Halon Ring: 20% completed                                                               
@@ -27,7 +27,7 @@ This is my change list from the main Database. I will do updates every month.
 #22 Tideborn Facility: 20% completed
 #23 Dominion Arkship: 0% completed                                                                                                                                      
 #24 Exile Arkship: 0% completed                                                                                                                                                                          
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Not in client   
 #23 Ultimate Protogames Raid: 100% Completed                                                                            
 #24 Protopia: Maybe a new zone. 90% completed                                                               
