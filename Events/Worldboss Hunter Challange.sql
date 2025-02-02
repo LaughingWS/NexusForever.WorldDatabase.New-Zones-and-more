@@ -11,6 +11,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0,     1),
 (@GUID+1, 10,    50);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);
 -- --------------------------------------
 -- Nate Baydock - Boss Hunter Challange Merchant (maybe lopp also)
 -- --------------------------------------
@@ -20,3 +22,5 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0,     1),
 (@GUID+1, 10,    50);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1);

@@ -7,12 +7,15 @@ DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUE
 (@WORLD, 0, 50210);
 DELETE FROM `entity` WHERE `world` = @WORLD;
+DELETE FROM `entity_event` WHERE `eventId` = @EVENTID;
 -- --------------------------------------
 -- Return to Nexus
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 14, 70992, @WORLD, 0, -453.29156, -844.28516, 119.41937, -1.5761896, 0, 0, 23953, 0, 219, 219);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID + 1, @EVENTID, 0);
 -- --------------------------------------
 -- Captain Weir
 -- --------------------------------------
@@ -21,6 +24,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 70999, @WORLD, 4836, -422.1375, -844.95026, 122.07739, 0.74550223, 0, 0, 28578, 0, 843, 843);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID + 1, @EVENTID, 0);
 -- --------------------------------------
 -- Gather Ring
 -- --------------------------------------
@@ -110,6 +115,13 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 71037, @WORLD, 0, -53.6292, -836.1417, 362.948, -3.1415923, -0, 0, 37671, 10588, 218, 218);
 INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 (@GUID+1, @EVENTID, 22);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'KatjaZarkhovEntityScript');
+INSERT INTO `entity_property` (`Id`, `Property`, `Value`) VALUES
+(@GUID+1, 7, 28300),
+(@GUID+1, 41, 8500);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 10, 23);
 -- --------------------------------------
 -- Katja Zarkhov (Veteran)
 -- --------------------------------------
@@ -146,6 +158,10 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+3, 10, 23),
 (@GUID+4, 10, 23),
 (@GUID+5, 10, 23);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'RavenousRefugeeEntityScript'),
+(@GUID+2, 'RavenousRefugeeEntityScript'),
+(@GUID+3, 'RavenousRefugeeEntityScript');
 -- --------------------------------------
 -- Ravenous Refugee (Normal)
 -- --------------------------------------
@@ -186,6 +202,13 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+6, 10, 23),
 (@GUID+7, 10, 23),
 (@GUID+8, 10, 23);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'RavenousRefugeeEntityScript'),
+(@GUID+2, 'RavenousRefugeeEntityScript'),
+(@GUID+3, 'RavenousRefugeeEntityScript'),
+(@GUID+4, 'RavenousRefugeeEntityScript'),
+(@GUID+5, 'RavenousRefugeeEntityScript'),
+(@GUID+6, 'RavenousRefugeeEntityScript');
 -- --------------------------------------
 -- Ravenous Crewman (Normal)
 -- --------------------------------------
@@ -246,6 +269,8 @@ INSERT INTO `entity_property` (`Id`, `Property`, `Value`) VALUES
 (@GUID+1, 7, 11400);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 23);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'RavenousReaperEntityScript');
 -- --------------------------------------
 -- Ravenous Reaper (Veteran)
 -- --------------------------------------
@@ -254,6 +279,8 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- (@GUID+1, 0, 71076, @WORLD, 0, 45.68145, -850.07117, -167.29419, -3.1415925, -0, 0, 29278, 9903, 218, 218);
 -- INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- (@GUID+1, @EVENTID, 5);
+-- INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+-- (@GUID+1, 'RavenousReaperEntityScript');
 -- --------------------------------------
 -- Etheric Portal
 -- --------------------------------------
@@ -279,7 +306,7 @@ INSERT INTO `entity_template_stat` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 71134, @WORLD, 0, -53.400387, -832.34875, 378.288, 8.9407E-08, -0, 0, 36894, 0, 218, 218);
+(@GUID+1, 0, 71134, @WORLD, 0, -53.400387, -832.34875, 378.288, 8.9407E-08, -0, 0, 36894, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 23);
 INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
@@ -287,24 +314,24 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- --------------------------------------
 -- Tethered Organism
 -- --------------------------------------
-SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1,  0, 71135, @WORLD, 0, -53.290672, -844.9462, 222.53696, 0, 0, 0, 28700, 0, 218, 218),
-(@GUID+2,  0, 71135, @WORLD, 0, -56.176018, -844.9584, 223.17937, 0, 0, 0, 28700, 0, 218, 218),
-(@GUID+3,  0, 71135, @WORLD, 0, -50.405327, -844.9584, 223.17937, 0, 0, 0, 28700, 0, 218, 218),
-(@GUID+4,  0, 71135, @WORLD, 0, -45.917805, -842.63513, 280.5657, 2.6005409, 0, 0, 28700, 0, 218, 218),
-(@GUID+5,  0, 71135, @WORLD, 0, -52.806637, -842.563, 343.12378, -0.45378566, 0, 0, 28700, 0, 218, 218),
-(@GUID+6,  0, 71135, @WORLD, 0, -43.431675, -842.28345, 281.27856, 2.6005409, 0, 0, 28700, 0, 218, 218),
-(@GUID+7,  0, 71135, @WORLD, 0, -78.55642, -838.92487, 310.41754, -0.6981318, 0, 0, 28700, 0, 218, 218),
-(@GUID+8,  0, 71135, @WORLD, 0, -47.71243, -842.63824, 278.70416, 2.6005409, 0, 0, 28700, 0, 218, 218),
-(@GUID+9,  0, 71135, @WORLD, 0, -55.346897, -842.5321, 342.62952, -0.45378566, 0, 0, 28700, 0, 218, 218),
-(@GUID+10, 0, 71135, @WORLD, 0, -80.897064, -838.8976, 309.32816, -0.6981318, 0, 0, 28700, 0, 218, 218),
-(@GUID+11, 0, 71135, @WORLD, 0, -50.131207, -842.6256, 277.97513, 2.6005409, 0, 0, 28700, 0, 218, 218),
-(@GUID+12, 0, 71135, @WORLD, 0, -77.07393, -838.9472, 312.5323, -0.6981318, 0, 0, 28700, 0, 218, 218),
-(@GUID+13, 0, 71135, @WORLD, 0, -50.853924, -842.5816, 344.82172, -0.45378566, 0, 0, 28700, 0, 218, 218),
-(@GUID+14, 0, 71135, @WORLD, 0, -48.380802, -842.6115, 345.33847, -0.45378566, 0, 0, 28700, 0, 218, 218),
-(@GUID+15, 0, 71135, @WORLD, 0, -74.795586, -838.9738, 313.62943, -0.6981318, 0, 0, 28700, 0, 218, 218),
-(@GUID+16, 0, 71135, @WORLD, 0, -48.380802, -842.6115, 345.33847, -0.45378566, 0, 0, 28700, 0, 218, 218);
+-- SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+-- INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+-- (@GUID+1,  0, 71135, @WORLD, 0, -53.290672, -844.9462, 222.53696, 0, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+2,  0, 71135, @WORLD, 0, -56.176018, -844.9584, 223.17937, 0, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+3,  0, 71135, @WORLD, 0, -50.405327, -844.9584, 223.17937, 0, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+4,  0, 71135, @WORLD, 0, -45.917805, -842.63513, 280.5657, 2.6005409, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+5,  0, 71135, @WORLD, 0, -52.806637, -842.563, 343.12378, -0.45378566, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+6,  0, 71135, @WORLD, 0, -43.431675, -842.28345, 281.27856, 2.6005409, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+7,  0, 71135, @WORLD, 0, -78.55642, -838.92487, 310.41754, -0.6981318, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+8,  0, 71135, @WORLD, 0, -47.71243, -842.63824, 278.70416, 2.6005409, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+9,  0, 71135, @WORLD, 0, -55.346897, -842.5321, 342.62952, -0.45378566, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+10, 0, 71135, @WORLD, 0, -80.897064, -838.8976, 309.32816, -0.6981318, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+11, 0, 71135, @WORLD, 0, -50.131207, -842.6256, 277.97513, 2.6005409, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+12, 0, 71135, @WORLD, 0, -77.07393, -838.9472, 312.5323, -0.6981318, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+13, 0, 71135, @WORLD, 0, -50.853924, -842.5816, 344.82172, -0.45378566, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+14, 0, 71135, @WORLD, 0, -48.380802, -842.6115, 345.33847, -0.45378566, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+15, 0, 71135, @WORLD, 0, -74.795586, -838.9738, 313.62943, -0.6981318, 0, 0, 28700, 0, 218, 218),
+-- (@GUID+16, 0, 71135, @WORLD, 0, -48.380802, -842.6115, 345.33847, -0.45378566, 0, 0, 28700, 0, 218, 218);
 -- --------------------------------------
 -- Upper Deck Teleporter
 -- --------------------------------------
@@ -370,9 +397,9 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 71221, @WORLD, 0, -54.99814, -842.47327, 347.617, -0.46533903, -0, 0, 36894, 0, 218, 218),
-(@GUID+2, 0, 71221, @WORLD, 0, -81.76298, -839.2635, 314.23898, -0.70317346, -0, 0, 36894, 0, 218, 218),
-(@GUID+3, 0, 71221, @WORLD, 0, -43.34448, -842.4745, 276.283, 2.6140773, -0, 0, 36894, 0, 218, 218);
+(@GUID+1, 0, 71221, @WORLD, 0, -54.99814, -842.47327, 347.617, -0.46533903, -0, 0, 36894, 0, 219, 219),
+(@GUID+2, 0, 71221, @WORLD, 0, -81.76298, -839.2635, 314.23898, -0.70317346, -0, 0, 36894, 0, 219, 219),
+(@GUID+3, 0, 71221, @WORLD, 0, -43.34448, -842.4745, 276.283, 2.6140773, -0, 0, 36894, 0, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 23),
 (@GUID+2, 10, 23),
@@ -597,6 +624,8 @@ INSERT INTO `entity_property` (`Id`, `Property`, `Value`) VALUES
 (@GUID+1, 41, 8700);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 23);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'SecurityChiefKondovichEntityScript');
 -- --------------------------------------
 -- Security Chief Kondovich (Veteran)
 -- --------------------------------------
@@ -605,35 +634,35 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- (@GUID+1, 0, 71288, @WORLD, 0, -60.694702, -844.99994, -127.21677, -2.4627595, -0, 0, 37686, 10548, 218, 218);
 -- INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- (@GUID+1, @EVENTID, 7);
+-- INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+-- (@GUID+1, 'SecurityChiefKondovichEntityScript');
 -- --------------------------------------
 -- Security Laser
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1,  10, 71311, @WORLD, 0, -53.489975, -844.79, -27.949966, -3.1415925, -0, 0,         23939, 0, 219, 219),
-(@GUID+2,  10, 71311, @WORLD, 0, -51.779953, -844.79, -61.91004,  -3.1415925, -0, 0,         23939, 0, 219, 219),
-(@GUID+3,  10, 71311, @WORLD, 0, -55.759956, -844.99, -58.040047, -3.1415925, -0, 0,         23939, 0, 219, 219),
-(@GUID+4,  10, 71311, @WORLD, 0, -61.000042, -844.16, -74.85993,   1.5707964,  1.5707964, 0, 23939, 0, 219, 219),
-(@GUID+5,  10, 71311, @WORLD, 0, -61.769966, -843.25, -38.020065,  1.5707964,  1.5707964, 0, 23939, 0, 219, 219),
-(@GUID+6,  10, 71311, @WORLD, 0, -50.97997,  -845.07, -40.57995,  -3.1415925, -0, 0,         23939, 0, 219, 219),
-(@GUID+7,  10, 71311, @WORLD, 0, -46.95999,  -843.67, -17.299858, -1.5707964,  1.5707964, 0, 23939, 0, 219, 219),
-(@GUID+8,  10, 71311, @WORLD, 0, -60.87995,  -844.19, -59.409943,  1.5707964,  1.5707964, 0, 23939, 0, 219, 219),
-(@GUID+9,  10, 71311, @WORLD, 0, -49.459984, -844.79, -25.819862, -3.1415925, -0, 0,         23939, 0, 219, 219),
-(@GUID+10, 10, 71311, @WORLD, 0, -54.65995, -844.79, -65.69003, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+11, 10, 71311, @WORLD, 0, -50.922775, -845.0073, -31.52996, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+12, 10, 71311, @WORLD, 0, -55.76997, -845.01, -35.359962, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+13, 10, 71311, @WORLD, 0, -44.74, -843.078, -67.56, 6.357302E-08, -6.357302E-08, 1.570797, 23939, 0, 219, 219),
-(@GUID+14, 10, 71311, @WORLD, 0, -57.449966, -845.07, -42.57995, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+15, 10, 71311, @WORLD, 0, -52.20995, -844.79, -70.38003, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+16, 10, 71311, @WORLD, 0, -55.77004, -845, -77.84003, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+17, 10, 71311, @WORLD, 0, -57.459984, -845.09, -19.669868, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+18, 10, 71311, @WORLD, 0, -57.490044, -845.03, -73.10003, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+19, 10, 71311, @WORLD, 0, -53.319958, -845.0073, -55.139946, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+20, 10, 71311, @WORLD, 0, -51.22999, -845.07, -15.849876, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+21, 10, 71311, @WORLD, 0, -51.000046, -845.01, -77.52002, -3.1415925, -0, 0, 23939, 0, 219, 219),
-(@GUID+22, 10, 71311, @WORLD, 0, -61.819977, -843.24, -22.669876, 1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
-(@GUID+23, 10, 71331, @WORLD, 0, -38.386585, -847.0553, 32.68179, 1.5702709, -6.504706E-07, -1.4210855E-12, 26172, 0, 219, 219);
-INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1,  10, 71311, @WORLD, 0, -49.459984, -844.79, -25.819862, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+2,  10, 71311, @WORLD, 0, -54.65995, -844.79, -65.69003, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+3,  10, 71311, @WORLD, 0, -61.819977, -843.24, -22.669876, 1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
+(@GUID+4,  10, 71311, @WORLD, 0, -50.922775, -845.0073, -31.52996, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+5,  10, 71311, @WORLD, 0, -55.76997, -845.01, -35.359962, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+6,  10, 71311, @WORLD, 0, -53.489975, -844.79, -27.949966, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+7,  10, 71311, @WORLD, 0, -55.759956, -844.99, -58.040047, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+8,  10, 71311, @WORLD, 0, -51.779953, -844.79, -61.91004, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+9,  10, 71311, @WORLD, 0, -61.000042, -844.16, -74.85993, 1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
+(@GUID+10, 10, 71311, @WORLD, 0, -61.769966, -843.25, -38.020065, 1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
+(@GUID+11, 10, 71311, @WORLD, 0, -50.97997, -845.07, -40.57995, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+12, 10, 71311, @WORLD, 0, -46.95999, -843.67, -17.299858, -1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
+(@GUID+13, 10, 71311, @WORLD, 0, -60.87995, -844.19, -59.409943, 1.5707964, 1.5707964, 0, 23939, 0, 219, 219),
+(@GUID+14, 10, 71311, @WORLD, 0, -44.74, -843.078, -67.56, 6.357302E-08, -6.357302E-08, 1.570797, 23939, 0, 219, 219),
+(@GUID+15, 10, 71311, @WORLD, 0, -57.449966, -845.07, -42.57995, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+16, 10, 71311, @WORLD, 0, -52.20995, -844.79, -70.38003, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+17, 10, 71311, @WORLD, 0, -55.77004, -845, -77.84003, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+18, 10, 71311, @WORLD, 0, -57.459984, -845.09, -19.669868, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+19, 10, 71311, @WORLD, 0, -57.490044, -845.03, -73.10003, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+20, 10, 71311, @WORLD, 0, -53.319958, -845.0073, -55.139946, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+21, 10, 71311, @WORLD, 0, -51.22999, -845.07, -15.849876, -3.1415925, -0, 0, 23939, 0, 219, 219),
+(@GUID+22, 10, 71311, @WORLD, 0, -51.000046, -845.01, -77.52002, -3.1415925, -0, 0, 23939, 0, 219, 219);INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 (@GUID+1, @EVENTID, 8),
 (@GUID+2, @EVENTID, 8),
 (@GUID+3, @EVENTID, 8),
@@ -655,8 +684,7 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 (@GUID+19, @EVENTID, 8),
 (@GUID+20, @EVENTID, 8),
 (@GUID+21, @EVENTID, 8),
-(@GUID+22, @EVENTID, 8),
-(@GUID+23, @EVENTID, 8);
+(@GUID+22, @EVENTID, 8);
 -- --------------------------------------
 -- Spare Parts Crate
 -- --------------------------------------
@@ -681,8 +709,8 @@ INSERT INTO entity_event (id, eventId, phase) VALUES
 -- Medbay Generator
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
-INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 10, 71328, @WORLD, 0, 77.65443, -851.62494, -178.72134, -1.570797, 0, 0, 26172, 0, 219, 219);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
+(@GUID+1, 10, 71328, @WORLD, 0, 77.65443, -851.62494, -178.72134, -1.570797, 0, 0, 26172, 0, 219, 219, 36515818975108);
 INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 (@GUID+1, @EVENTID, 5);
 -- --------------------------------------
@@ -954,6 +982,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 71789, @WORLD, 0, -433.5895, -845.09607, 126.948395, 1.4666995, -0, 0, 28577, 0, 843, 843);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 0);
 -- --------------------------------------
 -- Comm Officer Kilpax
 -- --------------------------------------
@@ -962,6 +992,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 71790, @WORLD, 0, -436.20752, -845.03217, 126.73839, 2.4730158, -0, 0, 21349, 0, 466, 466);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 0);
 -- --------------------------------------
 -- Science Officer Starck
 -- --------------------------------------
@@ -970,6 +1002,8 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 (@GUID+1, 0, 71792, @WORLD, 0, -436.99554, -845.0271, 112.64521, 0.7458134, -0, 0, 25802, 9220, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 0);
 -- --------------------------------------
 -- Astral Drive Schematics
 -- --------------------------------------
@@ -981,7 +1015,7 @@ INSERT INTO `entity_template` (`Id`, `Type`, `DisplayInfo`, `OutfitInfo`, `Facti
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 71832, @WORLD, 0, -53.691555, -830.04047, 345.535, -3.1415925, -0, 0, 37671, 10588, 218, 218);
+(@GUID+1, 0, 71832, @WORLD, 0, -53.691555, -830.04047, 345.535, -3.1415925, -0, 0, 37671, 10588, 219, 219);
 INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 (@GUID+1, @EVENTID, 18);
 -- --------------------------------------
@@ -992,6 +1026,8 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- (@GUID+1, 0, 71833, @WORLD, 0, -53.691555, -830.04047, 345.535, -3.1415925, -0, 0, 37671, 10588, 218, 218);
 -- INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 -- (@GUID+1, @EVENTID, 18);
+-- INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+-- (@GUID+1, 'KatjaZarkhovEntityScript');
 -- --------------------------------------
 -- Drive Spark
 -- --------------------------------------
@@ -1072,24 +1108,32 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 71997, @WORLD, 0, 36.5657, -851.8484, -75.5791, -0.85726404, -0, 0, 26389, 0, 219, 219);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 2);
 -- --------------------------------------
 -- Goodbye Letter
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 71998, @WORLD, 0, -3.4095802, -837.1454, 153.254, 1.5707963, 0.29316008, 0, 27906, 0, 219, 219);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 11);
 -- --------------------------------------
 -- Supply Log
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 71999, @WORLD, 0, -61.787823, -843.8511, -96.528015, -2.0068083, -0, -1.5707968, 26847, 0, 219, 219);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 7);
 -- --------------------------------------
 -- Reaper's Recollection
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 72000, @WORLD, 0, -44.70024, -844.4645, 16.35329, -2.439056, -0, 0, 26389, 0, 219, 219);
+INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+(@GUID+1, @EVENTID, 9);
 -- --------------------------------------
 -- Ravenous Mordesh
 -- --------------------------------------
@@ -1246,3 +1290,5 @@ INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 75332, @WORLD, 0, -46.709618, -843.83356, 204.63399, 2.121145, -0, 0, 24353, 0, 219, 219);
+-- INSERT INTO `entity_event` (`id`, `eventId`, `phase`) VALUES
+-- (@GUID+1, @EVENTID, 24); -- I am not sure that it 'spawns' after the boss kill, I think it's before

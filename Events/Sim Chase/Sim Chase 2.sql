@@ -17,7 +17,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 73337, 22, 2193, -3301.317, -883.6865,  -473.6589, -0.7200596,,   0, 0, 36441, 9488, 219, 219),
+(@GUID+1, 0, 73337, 22, 2193, -3301.317, -883.6865,  -473.6589, -0.7200596,    0, 0, 36441, 9488, 219, 219),
 (@GUID+2, 0, 73337, 51, 4959,  4076.27,  -791.9728, -2432.74,   -3.1415926536, 0, 0, 36441, 9488, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0, 60500),

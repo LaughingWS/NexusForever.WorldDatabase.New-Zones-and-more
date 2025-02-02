@@ -8,6 +8,16 @@ INSERT INTO map_entrance (mapId, team, worldLocationId) VALUE
 (@WORLD, 0, 37466);
 DELETE FROM `entity` WHERE `world` = @WORLD;
 -- --------------------------------------
+-- Major Lee Barmy
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 45812, @WORLD, 2482, -40.0482, 4.858062, 310.5947, 0, 0, 0, 29020, 9128, 219, 219);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+INSERT INTO entity_event (id, eventId, phase) VALUES
+(@GUID+1, @EVENTID, 1);
+-- --------------------------------------
 -- Captain Tero
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);

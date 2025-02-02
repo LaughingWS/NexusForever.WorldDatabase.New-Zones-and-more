@@ -1,6 +1,8 @@
 -- --------------------------------------
--- Journey into OMNICore-1
+-- Jouney into OMNICore-1
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 3045;
+SET @WORLD = 3045;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(3045, 0, 45947);
+(@WORLD, 0, 45947);
+DELETE FROM `entity` WHERE `world` = @WORLD;

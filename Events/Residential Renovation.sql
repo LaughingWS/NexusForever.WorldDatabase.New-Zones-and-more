@@ -7,10 +7,13 @@
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 75914, 51, 0, 0, 1, 1, 1, 0, 0, 1, 1, 219, 219);
+(@GUID+1, 0, 75914, 51, 0, 0, 1, 1, 1, 0, 0, 1, 1, 219, 219),
+(@GUID+2, 0, 75914, 22, 0, 0, 1, 1, 1, 0, 0, 1, 1, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0,     1),
-(@GUID+1, 10,    50);
+(@GUID+1, 10,    50),
+(@GUID+2, 0,     1),
+(@GUID+2, 10,    50);
 -- --------------------------------------
 -- Housing - Decor - Activated - BSR
 -- --------------------------------------
@@ -71,18 +74,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 11, 75952, 51, 0, 0, 1, 1, 1, 0, 0, 21396, 1, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1, 0,     1),
-(@GUID+1, 10,   50);
 -- ---------------------------------
 -- Table of Really Fresh and Delicious Food
 -- ---------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 7, 51, 1,    1,      1,   1,  1,  0, 0, 32985, 219, 219);
-INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,     1),
-(@GUID+1, 10,    50);
 -- ---------------------------------
 -- CameraBot
 -- ---------------------------------
@@ -133,7 +130,13 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- ---------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 0, 75976, 51, 1,    1,      1,   1,  1,  0, 0, 40135, 219, 219);
+(@GUID+1, 0, 75976, 51, 1,    1,      1,   1,  1,  0, 0, 40135, 219, 219),
+(@GUID+2, 0, 75976, 22, 1,    1,      1,   1,  1,  0, 0, 40135, 219, 219);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1,  0,     1),
-(@GUID+1, 10,    50);
+(@GUID+1, 10,    50),
+(@GUID+2,  0,     1),
+(@GUID+2, 10,    50);
+INSERT INTO `entity_vendor` (`Id`, `BuyPriceMultiplier`, `SellPriceMultiplier`) VALUES
+(@GUID+1, 1, 1),
+(@GUID+2, 1, 1);

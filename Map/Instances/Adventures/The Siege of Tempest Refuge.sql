@@ -1,6 +1,7 @@
--- --------------------------------------
--- The Siege of Tempest Refuge Adventure
--- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 1233;
+-- ----------------------------------------
+-- The Siege of Tempest Refuge (Adventure)
+-- ----------------------------------------
+SET @WORLD = 1233;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(1233, 0, 15587);
+(@WORLD, 0, 15587);

@@ -1,6 +1,7 @@
 -- --------------------------------------
--- Malgrave Trail Adventure
+-- Malgrave Trail (Adventure)
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 1181;
+SET @WORLD = 1181;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(1181, 0, 13662);
+(@WORLD, 0, 13662);

@@ -1,6 +1,8 @@
 -- --------------------------------------
--- Deep Space Exploration
+-- Deep Space Exploration (Expedition)
 -- --------------------------------------
-DELETE FROM map_entrance WHERE mapId = 2188;
+SET @WORLD  = 2188;
+SET @EVENTID = 477;
+DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUE
-    (2188, 0, 38906);
+(@WORLD, 0, 38906);
