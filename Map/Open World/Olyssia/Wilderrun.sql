@@ -714,6 +714,15 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+3, 10, 26320, @WORLD, 2073, 2274.42, -779.1572, -4411.773, 0.5921286, 0, 0, 24086, 0, 219, 219),
     (@GUID+4, 10, 26320, @WORLD, 2073, 2312.149, -775.1577, -4479.699, 2.471254, 0, 0, 24086, 0, 219, 219);
 -- --------------------------------------
+-- Dorian Walker
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 27455, @WORLD, 1485, 2202.065, -747.2379, -2251.023, 0, 0, 0, 25510, 8952, 171, 171),
+(@GUID+2, 8, 27455, @WORLD, 1493, 2291.032, -741.162, -2961.861, 0, 0, 0, 25510, 8952, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- Mysterious Stone Head
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -6301,6 +6310,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 8, 27841, @WORLD, 1485, 2380.279, -746.773, -2377.353, -3.141593, 0, 0, 23011, 0, 219, 219);
+-- --------------------------------------
+-- Dorian Walker - Pumera Holdout 
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 27843, @WORLD, 1485, 2498.601, -770.3557, -2453.118, 0, 0, 0, 25510, 8952, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Holo Terminal
 -- --------------------------------------
@@ -31958,6 +31975,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+25, 20, 0),
     (@GUID+25, 21, 0),
     (@GUID+25, 22, 0);
+-- --------------------------------------
+-- Dorian Walker
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 8, 58746, @WORLD, 1443, 2192.342, -716.5844, -3415.263, 0, 0, 0, 25510, 8952, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Rotwood Researcher
 -- --------------------------------------

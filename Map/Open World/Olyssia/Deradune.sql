@@ -19212,14 +19212,21 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 0, 26119, @WORLD, 639, -4668.9, -970.0922, -429.8286, -2.507029, 0, 0, 26020, 9058, 170, 170);
+    (@GUID+1, 0, 26119, @WORLD, 639, -4668.9, -970.0922, -429.8286, -2.507029, 0, 0, 26020, 9058, 170, 170),
+(@GUID+2, 0, 26119, @WORLD, 639, -4668.9, -970.0922, -429.8286, -2.507029, 0, 0, 26020, 9058, 170, 170);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 0, 6417),
     (@GUID+1, 10, 15),
     (@GUID+1, 15, 0),
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
-    (@GUID+1, 22, 0);
+    (@GUID+1, 22, 0),
+(@GUID+2, 0, 6417),
+(@GUID+2, 10, 15),
+(@GUID+2, 15, 0),
+(@GUID+2, 20, 0),
+(@GUID+2, 21, 0),
+(@GUID+2, 22, 0);
 -- --------------------------------------
 -- Lord Venator
 -- --------------------------------------

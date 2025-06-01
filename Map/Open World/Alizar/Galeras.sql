@@ -1,9 +1,9 @@
 -- --------------------------------------
--- Galeras Zone Dump
+-- Galeras Zone
+-- Edited by Laughing
 -- --------------------------------------
 SET @WORLD = 51;
 DELETE FROM `entity` WHERE `world` = @WORLD AND `area` IN (29, 32, 121, 126, 937, 939, 940, 941, 942, 943, 944, 945, 946, 950, 963, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 988, 989, 993, 994, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1008, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1020, 1032, 1034, 1036, 1037, 1054, 1088, 1089, 1090, 1101, 1102, 1103, 1104, 1109, 1110, 1113, 1114, 1118, 1121, 1122, 1123, 1125, 1126, 1127, 1146, 1147, 1191, 1192, 1193, 1300, 1362, 1927, 1983, 1984, 1985, 1986, 1996, 2126, 2388, 4072, 4107, 4122, 4123, 4124, 4125, 4126, 4127, 4174, 4176, 4177, 4187, 4846, 4849);
-
 -- --------------------------------------
 -- Hostile Invisible Unit for Fields (1.2 hit radius)
 -- --------------------------------------
@@ -2116,6 +2116,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Research Assistant Jayna
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 16595, @WORLD, 943, 5602.096, -1012.111, -2424.289, 0, 0, 0, 26838, 9104, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 10827),
+(@GUID+1, 10, 18),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 0),
+(@GUID+1, 21, 0),
+(@GUID+1, 22, 0);
+-- --------------------------------------
 -- Trooper Tarog
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -3701,6 +3714,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Lead Scientist Armin
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 16814, @WORLD, 943, 5611.08, -1013.147, -2436.631, 0, 0, 0, 26021, 9103, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 10827),
+(@GUID+1, 10, 18),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 0),
+(@GUID+1, 21, 0),
+(@GUID+1, 22, 0);
+-- --------------------------------------
 -- Shaleclaw Broodmother
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -4182,6 +4208,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+3, 20, 0),
     (@GUID+3, 21, 0),
     (@GUID+3, 22, 0);
+-- --------------------------------------
+-- Sergeant Kara
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 17063, @WORLD, 974, 6525.015, -786.4, -2615.737, 2.323033, 0, 0, 27877, 9066, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
 -- --------------------------------------
 -- Wounded Farmer
 -- --------------------------------------
@@ -5871,6 +5906,15 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
     (@GUID+1, 8, 17123, @WORLD, 989, 5918.484, -880.7518, -2143.958, -2.491266E-09, 0.1892689, -1.146257E-08, 25047, 0, 171, 171);
 -- --------------------------------------
+-- Corporal Darby
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 17168, @WORLD, 973, 6207.62, -888.8044, -2818.614, 0.501433, 0, 0, 26029, 9730, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 20);
+-- --------------------------------------
 -- Darby's Trooper
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -5912,6 +5956,19 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Commander Durek
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 17175, @WORLD, 976, 6241.896, -838.2636, -3096.284, 0, 0, 0, 22825, 9065, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Skywatch Trooper
 -- --------------------------------------
@@ -6152,6 +6209,12 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+7, 20, 0),
     (@GUID+7, 21, 0),
     (@GUID+7, 22, 0);
+-- --------------------------------------
+-- Landing Flare Location 1 -- get RY, RZ
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 17258, @WORLD, 975, 6542.984, -787.3366, -2646.946, 2.342755, 0, 0, 27794, 0, 219, 219, 0);
 -- --------------------------------------
 -- Stormwing Annihilator
 -- --------------------------------------
@@ -8461,6 +8524,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+4, 21, 0),
     (@GUID+4, 22, 1116);
 -- --------------------------------------
+-- Sergeant Kara
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 17744, @WORLD, 1015, 5084.525, -874.9418, -2919.496, 0, 0, 0, 27877, 9066, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
+-- --------------------------------------
 -- Corporal Fellrock
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -10425,6 +10497,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Warden Ranix
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 17921, @WORLD, 1018, 4696.752, -881.8394, -3149.815, 0, 0, 0, 27255, 9688, 170, 170);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 17);
+-- --------------------------------------
 -- Chief Medical Officer Terentius
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -10690,6 +10771,21 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 0),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Sue Digstone
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 18028, @WORLD, 1017, 5132.395, -744.3779, -3917.729, 0, 0, 0, 27275, 9107, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 6595),
+(@GUID+1, 10, 17),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 2358857),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 0),
+(@GUID+1, 21, 0),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Granok Test Subject
 -- --------------------------------------
@@ -11801,6 +11897,22 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Belle Walker
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 18489, @WORLD, 940, 5657.304, -983.4514, -3170.023, -0.66287, 0, 0, 23604, 9068, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 12, 0),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 1.311977E+07),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
+-- --------------------------------------
 -- Eldan Switch{p:Eldan Switches}
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -11886,6 +11998,22 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 8.497122E+07),
     (@GUID+1, 21, 18),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Belle Walker
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 18505, @WORLD, 940, 5657.439, -984.0212, -3166.638, 0, 0, 0, 23604, 9068, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 9.897122E+07),
+(@GUID+1, 10, 50),
+(@GUID+1, 12, 0),
+(@GUID+1, 13, 0),
+(@GUID+1, 14, 1.311977E+07),
+(@GUID+1, 15, 0),
+(@GUID+1, 20, 8.497122E+07),
+(@GUID+1, 21, 18),
+(@GUID+1, 22, 0);
 -- --------------------------------------
 -- Exile Patrol
 -- --------------------------------------
@@ -12707,6 +12835,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 12, 0),
     (@GUID+1, 13, 0),
     (@GUID+1, 14, 3.049881E+07);
+-- --------------------------------------
+-- Sergeant Kara
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 18843, @WORLD, 1121, 5194.587, -885.5767, -2319.761, 1.07966, 0, 0, 27877, 9066, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
 -- --------------------------------------
 -- Wounded Soldier
 -- --------------------------------------
@@ -13862,6 +13998,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Matthias Black
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 19102, @WORLD, 1000, 4542.907, -827.7128, -2440.109, -1.9685568, 0, 0, 27521, 9608, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 17);
+-- --------------------------------------
 -- HOLDOUT: Quell the Dominion Invaders
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -14274,6 +14419,24 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+7, 20, 0),
     (@GUID+7, 21, 0),
     (@GUID+7, 22, 0);
+-- --------------------------------------
+-- Daniel Bronson
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 19202, @WORLD, 1089, 4461.597, -831.4141, -2320.8, -1.996831, 0, 0, 26354, 8978, 219, 219); -- Is C2 wrong about the faction?
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 14);
+-- --------------------------------------
+-- Kit Brinny
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 19203, @WORLD, 1000, 4629.013, -847.6744, -2366.746, 0, 0, 0, 27567, 8980, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 14);
 -- --------------------------------------
 -- Invis Unit - Ravenok Nest
 -- --------------------------------------
@@ -17243,6 +17406,15 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+4, 10, 19638, @WORLD, 940, 5533.413, -999.8556, -2966.479, 1.570797, 0, 0, 24805, 0, 219, 219, 1120426, 2),
     (@GUID+5, 10, 19638, @WORLD, 940, 5714.031, -964.3972, -2944.629, 1.570798, 0, 0, 24805, 0, 219, 219, 1120429, 5),
     (@GUID+6, 10, 19638, @WORLD, 940, 5666.143, -985.9652, -3022.809, 1.570798, 0, 0, 24805, 0, 219, 219, 1120431, 4);
+-- --------------------------------------
+-- Daniel Bronson - Bloody Corpse
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 19654, @WORLD, 1001, 4587.391, -794.3918, -2466.042, -2.833891, 0, 0, 26354, 8978, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 14);
 -- --------------------------------------
 -- Teleport Panel
 -- --------------------------------------
@@ -20293,6 +20465,14 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
 -- --------------------------------------
+-- Agent Ostrow
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 21625, @WORLD, 1015, 5083.481, -875.472, -2936.103, 0, 0, 0, 29768, 8991, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1, 0, 1);
+-- --------------------------------------
 -- Poison Barrel
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -20721,6 +20901,24 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
     (@GUID+1, 10, 21769, @WORLD, 937, 5633.11, -1011.85, -2136.09, 2.559526, -0.6741815, -0.2081496, 24059, 0, 219, 219, 999886, 1),
     (@GUID+2, 10, 21769, @WORLD, 937, 5611.57, -1012.72, -2148.07, -0.5825384, -0.313956, -0.2176415, 24059, 0, 219, 219, 945637, 0);
 -- --------------------------------------
+-- Sergeant Kara
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 21779, @WORLD, 1015, 5074.04, -875.5046, -3239.532, -0.074874, 0, 0, 27877, 9066, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 50);
+-- --------------------------------------
+-- Agent Ostrow -- maybe wrong coordinatess
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 21781, @WORLD, 1146, 5086.768, -873.3167, -3234.149, 1.366767, 0, 0, 29768, 8991, 752, 752); -- could be wrong faction on C2
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 18);
+-- --------------------------------------
 -- Quartermaster Izabel Petrova
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
@@ -20756,6 +20954,15 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `ActivePropId`) VALUES
     (@GUID+1, 10, 21835, @WORLD, 1034, 5086.536, -863.6831, -3600.159, -3.141593, 0, 0, 24340, 0, 219, 219, 928497);
+-- --------------------------------------
+-- Trooper Rowe
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 21844, @WORLD, 1146, 5293.542, -820.4427, -3503.491, -0.398633, 0, 0, 25744, 8979, 171, 171);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  0,  1),
+(@GUID+1, 10, 18);
 -- --------------------------------------
 -- Fuelfuze Supplier
 -- --------------------------------------
@@ -34688,6 +34895,18 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
     (@GUID+1, 20, 1673),
     (@GUID+1, 21, 0),
     (@GUID+1, 22, 0);
+-- --------------------------------------
+-- Landing Flare Location 2 -- get RZ(?)
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 56991, @WORLD, 975, 6527.27, -786.4568, -2615.847, -1.165530, 0, 0, 27794, 0, 219, 219, 1);
+-- --------------------------------------
+-- Landing Flare Location 3 -- get RY, RZ
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
+(@GUID+1, 10, 56992, @WORLD, 975, 6505.006, -782.4623, -2648.048, -0.331961, 0, 0, 27794, 0, 219, 219, 2);
 -- --------------------------------------
 -- Reinforced Chua Tunnel
 -- --------------------------------------

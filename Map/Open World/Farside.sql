@@ -17,11 +17,3 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 20, 8.497122E+07),
 (@GUID+1, 21, 18),
 (@GUID+1, 22, 0);
--- --------------------------------------
--- [WB] Mechathorn
--- --------------------------------------
-DELETE FROM `entity_template` WHERE `Id` = 44195;
-INSERT INTO `entity_template` (`Id`, `Type`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(44195, 0, 28341, 0, 239, 239);
-INSERT INTO `entity_template_stat` (`Id`, `Stat`, `Value`) VALUES
-(44195, 10, 50);

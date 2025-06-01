@@ -6,7 +6,7 @@ SET @EVENTID = 679;
 DELETE FROM `entity` WHERE `world` = @WORLD;
 DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(@WORLD, 0, 47085);
+(@WORLD, 0, 47085); -- exit portal 49320|  49197 trigger location
 -- --------------------------------------
 -- Gather Marker Mall Greeter
 -- --------------------------------------

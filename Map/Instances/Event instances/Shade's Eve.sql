@@ -1,12 +1,12 @@
 -- --------------------------------------
--- Shade's Eve instance
+-- Quiet Downs (Shade's Eve Instance)
 -- --------------------------------------
 SET @WORLD = 3044;
 SET @EVENTID = 597;
 DELETE FROM map_entrance WHERE mapId = @WORLD;
 INSERT INTO map_entrance (mapId, team, worldLocationId) VALUES
-(@WORLD, 0, 45922);
--- the other random spawns are 46352, 46353, 46354, 46355, 46356, 46660, 46866, 46874 // we should only have 4 more, I need to look on youtube for the real ones
+(@WORLD, 0, 46354);
+-- the other random spawns are 46352, 46353, 46355, 46356, 46660, 46866, 46874 // we should only have 4 more, I need to look on youtube for the real ones
 DELETE FROM `entity` WHERE `world` = @WORLD;
 -- --------------------------------------
 -- Etty Windsen
@@ -19,6 +19,40 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 10, 50);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 1);
+-- --------------------------------------
+-- Gather Marker: Morgue
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 62974, 3044, 567.7052001953125, -954.9246215820312, 21.940231323242188, -3.141592502593994, 0, 0, 30327, 0, 219, 219);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, @EVENTID, 0);
+-- --------------------------------------
+-- Gather Marker: Flee
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 62975, 3044, 567.691162109375, -946.1953735351562, 325.77978515625, 0, 0, 0, 30327, 0, 219, 219);
+-- INSERT INTO entity_event (id, eventId, phase) VALUES
+-- (@GUID+1, @EVENTID, 0);
+-- --------------------------------------
+-- Supply Crate 
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 63025, 3044, 116.6048355102539, -892.151611328125, -361.92034912109375, 0, 0, 0, 21977, 0, 219, 219);
+-- --------------------------------------
+-- Bunker Door
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `activePropId`) VALUES
+(@GUID+1, 10, 63053, 3044, 546.9969482421875, -853.4804077148438, -336.325927734375, 2.2017905712127686, 0, 0, 35103, 0, 219, 219, 6044617);
+-- --------------------------------------
+-- Exit Bunker Door
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 63078, 3044, 729.731201171875, -956.7667236328125, -252.44790649414062, -3.141592502593994, 0, 0, 25248, 0, 219, 219);
 -- --------------------------------------
 -- Fountain Gathering Circle
 -- --------------------------------------
@@ -34,13 +68,7 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`, `activePropId`) VALUES
 (@GUID+1, 10, 65191, @WORLD, 468.9841613769531, -832.47802734375, -263.7579040527344, 1.565817952156067, 0, 0, 36267, 0, 219, 219, 6075078);
 -- --------------------------------------
--- Jack's Hat
--- --------------------------------------
-DELETE FROM `entity_template` WHERE `Id` = 66102;
-INSERT INTO `entity_template` (`Id`, `Type`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(66102, 0, 21780, 0, 233, 218);
--- --------------------------------------
--- Quiet Mound - Settler Depot
+-- Quiet Mound - Settler Depot 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES

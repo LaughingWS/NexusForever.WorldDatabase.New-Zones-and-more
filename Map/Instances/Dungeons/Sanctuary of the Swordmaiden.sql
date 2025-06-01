@@ -1,5 +1,5 @@
 -- --------------------------------------
--- Sanctuary of the Swordmaiden (Dungeon)
+-- Sanctuary of the Swordmaiden dungeon
 -- --------------------------------------
 SET @WORLD = 1271;
 SET @EVENTID = 166;
@@ -14,7 +14,6 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28600, @WORLD, 4802, 4259.535, -799.4544, -3886.189, -3.1415926, 0, 0, 25705, 9151, 1306, 1306);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 0);
@@ -25,7 +24,6 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28721, @WORLD, 4805, 4033.019, -773.2111, -2560.412, 0, 0, 0, 28820, 0, 978, 978);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 6);
@@ -36,7 +34,6 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28733, @WORLD, 4804, 5040.481, -758.0708, -3319.173, 0, 0, 0, 25705, 9150, 1306, 1306);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 4);
@@ -47,10 +44,19 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 28774, @WORLD, 1554, 4278.816, -794.3449, -2668.502, 0, 0, 0, 25603, 0, 978, 978);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 6);
+-- ---------------------------------------------
+-- Corrupted Edgesmith Torian (Normal)
+-- ---------------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 0, 28985, @WORLD, 1556, 3946.46, -776.3362, -3602.4, 0.793775, 0, 0, 25705, 9524, 978, 978);
+INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
+(@GUID+1,  10, 40);
+INSERT INTO entity_event (id, eventId, phase) VALUES
+(@GUID+1, @EVENTID, 2);
 -- ---------------------------------------------
 -- Flame Crazed Demon (Normal)
 -- ---------------------------------------------
@@ -58,10 +64,11 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 29254, @WORLD, 1556, 4877.322, -797.6906, -3318.368, 0, 0, 0, 24811, 0, 978, 978);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 4);
+INSERT INTO `entity_script` (`id`, `scriptName`) VALUES
+(@GUID+1, 'FlameCrazedDemonEntityScript');
 -- ---------------------------------------------
 -- Hammerfist Moldjaw (Normal)
 -- ---------------------------------------------
@@ -69,7 +76,6 @@ SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 0, 41219, @WORLD, 1348, 4594.504, -809.4622, -3686.559, 0, 0, 0, 27899, 0, 978, 978);
 INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
-(@GUID+1,  0,  1),
 (@GUID+1,  10, 40);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 2);

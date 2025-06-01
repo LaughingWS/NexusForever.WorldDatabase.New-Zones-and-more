@@ -17,3 +17,9 @@ INSERT INTO `entity_stats` (`Id`, `Stat`, `Value`) VALUES
 (@GUID+1, 0, 1);
 INSERT INTO entity_event (id, eventId, phase) VALUES
 (@GUID+1, @EVENTID, 0);
+-- --------------------------------------
+-- Gather Marker unknown
+-- --------------------------------------
+SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
+INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
+(@GUID+1, 10, 58979, @WORLD, 2620, 523.0805, 0.1994047, -507.9437, 0, 0, 0, 30327, 0, 219, 219);
