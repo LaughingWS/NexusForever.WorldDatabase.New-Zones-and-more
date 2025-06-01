@@ -37,31 +37,35 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, 
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 20, 74800, 51, 4959,  4076.30, -793.44, -2425.09,  0, 0, 21396, 0, 219, 219, 0);
+(@GUID+1, 20, 74800, 51, 4959,  4073, -793.37, -2428.06, 0, 0, 0, 21396, 219, 219, 0);
 -- --------------------------------------
 -- Starfall Firework Holder (Exile Red)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 20, 74801, 51, 4959,  4080.76, -793.44, -2425.09,  0, 0, 21396, 0, 219, 219, 1);
+(@GUID+1, 20, 74801, 51, 4959,  4076.30, -793.44, -2425.09,  0, 0, 0, 21396, 219, 219, 1), 
+(@GUID+2, 20, 74801, 51, 4959,  4071.80, -793.36, -2430.36,  0, 0, 0, 21396, 219, 219, 2);
 -- --------------------------------------
 -- Starfall Firework Holder (Exile Blue)
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `Faction1`, `Faction2`, `QuestChecklistIdx`) VALUES
-(@GUID+1, 20, 74802, 51, 4959,  0, 0, 0,  0, 0, 21396, 0, 219, 219, 2);
+(@GUID+1, 20, 74802, 51, 4959,  4080.76, -793.44, -2425.09,  0, 0, 0, 21396, 219, 219, 3),
+(@GUID+2, 20, 74802, 51, 4959,  4071.8,  -793.37, -2435.55,  0, 0, 0, 21396, 219, 219, 4);
 -- ---------------------------------
 -- Excellent Party Chest
 -- ---------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 25, 74854, 22, 4957, -3363.04,  -887.46,  -527.48,  -0.7,  0, 0, 39568, 0, 219, 219);
+(@GUID+1, 25, 74854, 22, 4957, -3363.04,  -887.46,   -527.48,  -0.7,  0, 0, 39568, 0, 219, 219),
+(@GUID+2, 25, 74854, 51, 4959,  4070.49,  -797.83,  -2426.73,   0,    0, 0, 39568, 0, 219, 219);
 -- ---------------------------------
 -- Legendary Party Chest
 -- ---------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-(@GUID+1, 25, 74856, 22, 4957, -33,  -887.46,  -52,  -0.7,  0, 0, 39569, 0, 219, 219);
+(@GUID+1, 25, 74856, 22, 4957, -33,       -887.46,   -52,      -0.7,  0, 0, 39569, 0, 219, 219),
+(@GUID+2, 25, 74856, 51, 4959,  4072.32,  -797.83,  -2422.20,   0,    0, 0, 39569, 0, 219, 219);
 -- ---------------------------------
 -- Emperor Myrcalus (week 1)
 -- ---------------------------------
