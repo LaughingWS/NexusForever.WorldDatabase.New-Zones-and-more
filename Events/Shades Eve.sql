@@ -3544,7 +3544,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68356, @WORLD, 2545, 3538.99, -836.996, -2002.179, -2.551919, -0.08918791, 0.04125649, 27906, 0, 219, 219);
+(@GUID+1, 10, 68356, @WORLD, 2545, 3538.99, -836.996, -2002.179, -2.551919, -0.08918791, 0.04125649, 27906, 0, 219, 219);
 -- --------------------
 -- Quit Burning My Scare (DOM)
 -- --------------------
@@ -3556,7 +3556,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68358, @WORLD, 2554, 3883.644, -841.4609, -1853.71, 1.990925, 0, 0, 26389, 0, 219, 219);
+(@GUID+1, 10, 68358, @WORLD, 2554, 3883.644, -841.4609, -1853.71, 1.990925, 0, 0, 26389, 0, 219, 219);
 -- --------------------
 -- Shades of Terror (DOM)
 -- --------------------
@@ -3568,7 +3568,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68360, @WORLD, 4408, 3728.122, -838.6354, -1643.65, -3.141593, -0.1138775, -9.998752E-09, 26389, 0, 219, 219);
+(@GUID+1, 10, 68360, @WORLD, 4408, 3728.122, -838.6354, -1643.65, -3.141593, -0.1138775, -9.998752E-09, 26389, 0, 219, 219);
 -- --------------------
 -- My Favorite Fears (DOM)
 -- --------------------
@@ -3580,7 +3580,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68362, @WORLD, 4408, 3742.548, -840.694, -1665.061, 3.118072, 0.04532273, -0.1383684, 26389, 0, 219, 219);
+(@GUID+1, 10, 68362, @WORLD, 4408, 3742.548, -840.694, -1665.061, 3.118072, 0.04532273, -0.1383684, 26389, 0, 219, 219);
 -- --------------------
 -- The Mystery Report (DOM)
 -- --------------------
@@ -3592,7 +3592,7 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68364, @WORLD, 4408, 3724.446, -838.2689, -1655.402, 3.141157, -0.02014152, 0.02161632, 26389, 0, 219, 219);
+(@GUID+1, 10, 68364, @WORLD, 4408, 3724.446, -838.2689, -1655.402, 3.141157, -0.02014152, 0.02161632, 26389, 0, 219, 219);
 -- --------------------
 -- Walk of Angels (DOM)
 -- --------------------
@@ -3604,10 +3604,148 @@ INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `R
 -- --------------------------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `Area`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
-    (@GUID+1, 10, 68366, @WORLD, 122, 3750.269, -834.9494, -1637.437, 2.499229, 0.003597653, -0.002851558, 26389, 0, 219, 219);
+(@GUID+1, 10, 68366, @WORLD, 122, 3750.269, -834.9494, -1637.437, 2.499229, 0.003597653, -0.002851558, 26389, 0, 219, 219);
 -- --------------------
 -- Shade's Eve Treats (DOM)
 -- --------------------
 SET @GUID = (SELECT IFNULL(MAX(`id`), 0) FROM `entity`);
 INSERT INTO `entity` (`Id`, `Type`, `Creature`, `World`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `DisplayInfo`, `OutfitInfo`, `Faction1`, `Faction2`) VALUES
 (@GUID+1, 10, 68367, 22, -3452.363525390625, -883.6157836914062, -958.8447875976562, -3.141592502593994, 0.03763160482048988, 3.2914135861261684e-9, 26389, 0, 219, 219);
+-- --------------------------------------
+-- Store items
+-- --------------------------------------
+REPLACE INTO `store_offer_group` (`id`, `displayFlags`, `name`, `description`, `displayInfoOverride`, `visible`) VALUES
+(1724, 8, 'Jack Shade Costume', 'Strike a frightful pose when you dress up as everyone\'s favorite holiday creep, Jack Shade. These items can be imported into the Holo-Wardrobe for all characters on your account.', 0, 1),
+(1726, 8, 'Dye Pack: Shade\'s Eve Collection', 'The haunting hues of Shade\'s Eve in one convenient pack. Includes black, purple, and orange dyes. This purchase is a multi-redeem item which can be claimed by all characters on your account.', 0, 1),
+(1727, 8, 'Ghastly Skeletal Warpig', 'This Warpig mount radiates spooky and generates horror. Get one today to haunt and torment your friends. This purchase can only be claimed by a single character.', 0, 1),
+(2093, 8, 'Haunted House FABkit', 'Produces a haunted house suited for spooky housing plots, that allows an additional house on your plot that can be decorated inside and out. Once claimed, use this item to permanently unlock the Haunted House option in the Landscape menu of your housing plot. This purchase is for a single character only.', 0, 1),
+(2100, 8, 'Angel Costume', 'Honor the legendary Angel who saved the ancient Cassians from the Shades plague with these ethereal threads. These items can be imported into the Holo-Wardrobe for all characters on your account.', 0, 1),
+(2915, 8, 'Dark Delights Decor Pack', 'The Dark Delights décor pack contains everything you need to perform your own ritual of questionable intent (haunted trees and creepy eyes included!). This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 0, 1),
+(2916, 8, 'Faces of Shades Eve Décor Pack', 'The face is the thing! The Faces of Shades Eve décor pack contains a myriad of masks and a plethora of grimgourds. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 0, 1),
+(2917, 8, 'Graveyard Decor Pack', 'Gothic statues, check. Horrific trees, check. The Graveyard Décor Pack contains everything you need to create a nice, quiet gothic exterior for the recently (and not-so-recently) departed. Ghosts not included. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 0, 1),
+(2918, 8, 'Haunted Hayride Décor Pack', 'Grimgourds, effigies, and hayride wagons oh my! This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 0, 1),
+(2919, 8, 'Spooky Lighting Decor Pack', 'Shades Eve is a time for thrills, chills, and home decorating contests. The Spooky Lighting décor pack offers the complete collection of Shade\'s Eve themed lighting decorations. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 0, 1);
+REPLACE INTO `store_offer_group_category` (`id`, `categoryId`, `index`, `visible`) VALUES
+(1724, 27, 41, 1),
+(1724, 28, 16, 1),
+(1724, 132, 113, 1),
+(1726, 27, 42, 1),
+(1726, 39, 53, 1),
+(1726, 132, 89, 1),
+(1727, 31, 62, 1),
+(1727, 33, 35, 1),
+(1727, 132, 88, 1),
+(2093, 79, 78, 1),
+(2093, 82, 5, 1),
+(2093, 132, 119, 1),
+(2100, 27, 40, 1),
+(2100, 28, 15, 1),
+(2100, 132, 112, 1),
+(2915, 80, 28, 1),
+(2915, 132, 111, 1),
+(2916, 80, 29, 1),
+(2916, 132, 115, 1),
+(2917, 80, 30, 1),
+(2917, 132, 116, 1),
+(2918, 80, 31, 1),
+(2918, 132, 117, 1),
+(2919, 80, 32, 1),
+(2919, 132, 118, 1);
+REPLACE INTO `store_offer_item` (`id`, `groupId`, `name`, `description`, `displayFlags`, `field_6`, `field_7`, `visible`) VALUES
+(1724, 1724, 'Jack Shade Costume', 'Strike a frightful pose when you dress up as everyone\'s favorite holiday creep, Jack Shade. These items can be imported into the Holo-Wardrobe for all characters on your account.', 8, -1016071787, 0, 1),
+(1726, 1726, 'Dye Pack: Shade\'s Eve Collection', 'The haunting hues of Shade\'s Eve in one convenient pack. Includes black, purple, and orange dyes. This purchase is a multi-redeem item which can be claimed by all characters on your account.', 8, -1016071787, 0, 1),
+(2093, 2093, 'Haunted House FABkit', 'Produces a haunted house suited for spooky housing plots, that allows an additional house on your plot that can be decorated inside and out. Once claimed, use this item to permanently unlock the Haunted House option in the Landscape menu of your housing plot. This purchase is for a single character only.', 8, -1016071787, 0, 1),
+(2100, 2100, 'Angel Costume', 'Honor the legendary Angel who saved the ancient Cassians from the Shades plague with these ethereal threads. These items can be imported into the Holo-Wardrobe for all characters on your account.', 8, -1016071787, 0, 1),
+(2566, 1727, 'Ghastly Skeletal Warpig', 'This Warpig mount radiates spooky and generates horror. Get one today to haunt and torment your friends. This purchase can only be claimed by a single character.', 8, -1016071787, 0, 1),
+(2567, 1727, 'Ghastly Skeletal Warpig (Account)', 'This Warpig mount radiates spooky and generates horror. Get one today to haunt and torment your friends. This purchase is a multi-redeem item which can be claimed for all characters on your account.', 8, -1016071787, 0, 1),
+(2915, 2915, 'Dark Delights Decor Pack', 'The Dark Delights décor pack contains everything you need to perform your own ritual of questionable intent (haunted trees and creepy eyes included!). This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 8, -1016071787, 0, 1),
+(2916, 2916, 'Faces of Shades Eve Décor Pack', 'The face is the thing! The Faces of Shades Eve décor pack contains a myriad of masks and a plethora of grimgourds. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 8, -1016071787, 0, 1),
+(2917, 2917, 'Graveyard Decor Pack', 'Gothic statues, check. Horrific trees, check. The Graveyard Décor Pack contains everything you need to create a nice, quiet gothic exterior for the recently (and not-so-recently) departed. Ghosts not included. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 8, -1016071787, 0, 1),
+(2918, 2918, 'Haunted Hayride Décor Pack', 'Grimgourds, effigies, and hayride wagons oh my! This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 8, -1016071787, 0, 1),
+(2919, 2919, 'Spooky Lighting Decor Pack', 'Shades Eve is a time for thrills, chills, and home decorating contests. The Spooky Lighting décor pack offers the complete collection of Shade\'s Eve themed lighting decorations. This decor pack includes all of the decor items shown below and can only be claimed by a single character.', 8, -1016071787, 0, 1);
+REPLACE INTO `store_offer_item_data` (`id`, `itemId`, `type`, `amount`) VALUES
+(1724, 368, 0, 1),
+(1724, 369, 0, 1),
+(1724, 370, 0, 1),
+(1724, 371, 0, 1),
+(1724, 372, 0, 1),
+(1726, 586, 0, 1),
+(1726, 587, 0, 1),
+(1726, 588, 0, 1),
+(2093, 602, 0, 1),
+(2100, 373, 0, 1),
+(2100, 374, 0, 1),
+(2100, 375, 0, 1),
+(2566, 625, 0, 1),
+(2567, 794, 0, 1),
+(2915, 301, 0, 2),
+(2915, 302, 0, 6),
+(2915, 303, 0, 3),
+(2915, 310, 0, 1),
+(2915, 544, 0, 5),
+(2915, 545, 0, 5),
+(2915, 547, 0, 5),
+(2915, 548, 0, 5),
+(2915, 550, 0, 3),
+(2915, 551, 0, 5),
+(2915, 552, 0, 1),
+(2915, 553, 0, 5),
+(2916, 318, 0, 1),
+(2916, 322, 0, 3),
+(2916, 323, 0, 1),
+(2916, 539, 0, 5),
+(2916, 540, 0, 5),
+(2916, 541, 0, 5),
+(2916, 543, 0, 5),
+(2917, 299, 0, 1),
+(2917, 300, 0, 9),
+(2917, 306, 0, 4),
+(2917, 307, 0, 6),
+(2917, 308, 0, 1),
+(2917, 309, 0, 1),
+(2917, 2707, 0, 2),
+(2917, 2708, 0, 1),
+(2917, 2709, 0, 1),
+(2917, 2710, 0, 2),
+(2917, 2711, 0, 6),
+(2917, 2712, 0, 6),
+(2918, 312, 0, 1),
+(2918, 314, 0, 1),
+(2918, 321, 0, 6),
+(2918, 328, 0, 1),
+(2918, 329, 0, 4),
+(2918, 330, 0, 8),
+(2918, 331, 0, 1),
+(2918, 537, 0, 5),
+(2918, 538, 0, 5),
+(2919, 311, 0, 1),
+(2919, 313, 0, 4),
+(2919, 319, 0, 2),
+(2919, 320, 0, 2),
+(2919, 324, 0, 6),
+(2919, 325, 0, 6),
+(2919, 326, 0, 5),
+(2919, 327, 0, 2);
+REPLACE INTO `store_offer_item_price` (`id`, `currencyId`, `price`, `discountType`, `discountValue`, `field_14`, `expiry`) VALUES
+(1724, 6, 595, 0, 0, 436193793, -1016071787),
+(1724, 11, 1190, 0, 0, -235145984, -1016071787),
+(1726, 6, 115, 0, 0, 436193793, -1016071787),
+(1726, 11, 230, 0, 0, -235145984, -1016071787),
+(2093, 6, 795, 0, 0, 436193793, -1016071787),
+(2093, 11, 1590, 0, 0, -235145984, -1016071787),
+(2100, 6, 315, 0, 0, 436193793, -1016071787),
+(2100, 11, 630, 0, 0, -235145984, -1016071787),
+(2566, 6, 795, 0, 0, 1005968334, -1016071787),
+(2566, 11, 1590, 0, 0, 1442443215, -1016071787),
+(2567, 6, 1390, 0, 0, 1005968334, -1016071787),
+(2567, 11, 2780, 0, 0, 1442443215, -1016071787),
+(2915, 6, 115, 0, 0, -839746051, -1016071787),
+(2915, 11, 230, 0, 0, -839746051, -1016071787),
+(2916, 6, 115, 0, 0, -839746051, -1016071787),
+(2916, 11, 230, 0, 0, -839746051, -1016071787),
+(2917, 6, 115, 0, 0, -839746051, -1016071787),
+(2917, 11, 230, 0, 0, -839746051, -1016071787),
+(2918, 6, 115, 0, 0, -839746051, -1016071787),
+(2918, 11, 230, 0, 0, -839746051, -1016071787),
+(2919, 6, 115, 0, 0, -839746051, -1016071787),
+(2919, 11, 230, 0, 0, -839746051, -1016071787);
